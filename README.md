@@ -17,3 +17,7 @@ This is the site map for the new piratar.is site. The map has been developed usi
 * Constituency (kjördæmi)
 * Group/association
 * Alþingi
+
+# Theme
+
+The theme used for the Pirate Party site is the Underscores starter theme created by WordPress/Automattic.
