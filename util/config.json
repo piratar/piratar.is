@@ -1,8 +1,8 @@
 {
     "fb": {
-        "app_id":"559166537576987",
-        "app_secret":"44f82be0e2a143680a83c28222cecf53",
-        "access_token":"559166537576987|K_dbCt0qly69cofyNffKd5_4IEo",
+        "app_id":"999999999999999",
+        "app_secret":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "access_token":"999999999999999|aaaaaaaaaaaaaaaaaaaaaaaaaaa",
         "event_url_prefix":"https://www.facebook.com/events/"
     },
     "db": {
