@@ -1,0 +1,16 @@
+{
+    "fb": {
+        "app_id":"559166537576987",
+        "app_secret":"44f82be0e2a143680a83c28222cecf53",
+        "access_token":"559166537576987|K_dbCt0qly69cofyNffKd5_4IEo",
+        "event_url_prefix":"https://www.facebook.com/events/"
+    },
+    "db": {
+        "user":"piratar",
+        "password":"piratar",
+        "database":"piratar",
+        "hostname":"localhost",
+        "tablename":"wp_aec_event",
+        "user_id":"999999"
+    }
+}
