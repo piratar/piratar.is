@@ -102,8 +102,8 @@ function piratar_widgets_init() {
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	) );
 }
 add_action( 'widgets_init', 'piratar_widgets_init' );
@@ -112,7 +112,10 @@ add_action( 'widgets_init', 'piratar_widgets_init' );
  * Enqueue scripts and styles.
  */
 function piratar_scripts() {
+
 	wp_enqueue_style( 'piratar-style', get_stylesheet_uri() );
+
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '', true );
 
 	wp_enqueue_script( 'piratar-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
@@ -148,3 +151,11 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/*Google fonts*/
+
+function load_fonts() {
+    wp_register_style('et-googleFonts', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900');
+    wp_enqueue_style( 'et-googleFonts');
+}
+add_action('wp_print_styles', 'load_fonts');
