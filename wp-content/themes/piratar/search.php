@@ -5,8 +5,8 @@
 			<img title="Mynd" alt="" src="http://piratar.gre.is/wp-content/uploads/2015/10/northernlights-web.jpg">
 		</figure>
 		<div class="intro">			
-			<h3><span>Search Results for</span></h3>
-			<h2><?php echo get_search_query(); ?></h2>
+			<h3><span>Leitar niðurstöður fyrir :</span></h3>
+			<h2 style="color:#51297e;"><?php echo get_search_query(); ?></h2>
 		</div>
 	</article>
 </div>
@@ -15,8 +15,9 @@
 		<div class="alpha full">
             <?php if ( have_posts() ) : ?>
                 <?php while ( have_posts() ) : the_post(); ?>
-                
-                <?php get_template_part( 'content', get_post_format() ); ?>
+               
+                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+      		<?php the_excerpt(); ?> 
                 <?php endwhile; ?>
             <?php else : ?>
                 <?php get_template_part( 'content', 'none' ); ?>

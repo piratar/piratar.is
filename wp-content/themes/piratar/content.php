@@ -34,24 +34,8 @@
             }
         ?></div>
         
-        
-        
-        <?php
-            foreach ($flag as &$value) {
-                if ($value) {
-                    if ($value == "bestseller") { $nafnrib = "best seller"; } else {  $nafnrib = $value; }
-                echo '<div class="ribbon ribbon-small ribbon-' . $value . '"><div class="banner"><div class="text">' . $nafnrib . '</div></div></div>';
-                }
-            }
-        ?>
+
         
         </span>
-        <div class="verdfra">
-        <?php if (!empty($pricefrom)) { 
-            $format_number = number_format($pricefrom, 0, ',', '.');
-        ?>
-            <h3 class="tour-operated" style="margin-bottom:2px;">Price from</h3>
-            <strong><?php echo $format_number; ?> ISK</strong> per person.<br/><br/>
-        <?php } ?>
-        </div>
+
 </article>

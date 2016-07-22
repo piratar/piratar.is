@@ -1,0 +1,67 @@
+td.caret .dashicons-admin-generic
+{
+	display: none;
+}
+.section.checked td.caret .dashicons-admin-generic
+{
+	display: inline;
+}
+.section .suboptions,
+.section .explanation
+{
+	display: none;
+}
+.section .suboptions
+{
+	margin-bottom: 10px;
+}
+.section.checked.geared .suboptions,
+.section.explained .explanation
+{
+	display: table-row;
+}
+.section.checked.geared .caret .dashicons,
+.section.explained .caret .dashicons
+{
+	opacity: 1;
+}
+.section .suboptions td p
+{
+	margin-bottom: 10px;
+}
+
+.explanation
+{
+	box-shadow:  0 1px 1px 0 rgba( 0, 0, 0, 0.1 );
+	background-color: #fff;
+	position: relative;
+}
+td.caret
+{
+	position: relative;
+}
+.explained td.caret:after
+{
+	content: '';
+	display: block;
+	border: 10px solid transparent;
+	border-bottom-color: #fff;
+	position: absolute;
+	bottom: 0;
+	right: 10px;
+}
+
+/* Smallest screens */
+@media screen and (max-width:782px) {
+	.suboptions td
+	{
+		padding-left: 30px;
+	}
+}
+/* Larger screens */
+@media screen and (min-width:783px) {
+	.suboptions td
+	{
+		border-top: 1px solid #ccc;
+	}
+}

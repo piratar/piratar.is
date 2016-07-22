@@ -1,0 +1,66 @@
+p.submit-fixed
+{
+	height: 30px;
+	padding: 20px;
+	margin: -45px -20px 60px -20px;
+
+	-webkit-transform: translateY( 100% );
+	transform: translateY( 100% );
+
+	-webkit-transition: -webkit-transform 0.5s ease;
+	transition: transform 0.5s ease;
+}
+.edited p.submit-fixed
+{
+	border-top: 1px solid #ccc;
+	background: rgba( 242, 242, 242, 0.95 );
+	margin: 0;
+	position: fixed;
+	bottom: 0;
+	left: 160px;
+	right: 0;
+	z-index: 10;
+
+	-webkit-transform: translateY( 0% );
+	transform: translateY( 0% );
+}
+.edited.folded p.submit-fixed
+{
+	left: 36px;
+}
+#wpbody
+{
+	padding-bottom: 100px;
+}
+#wpfooter
+{
+	margin-bottom: 100px;
+}
+
+/* Smaller screens */
+@media only screen and (max-width:960px) {
+	.edited.auto-fold p.submit-fixed
+	{
+		left: 36px;
+	}
+}
+/* Smallest screens */
+@media screen and (max-width:782px) {
+	.edited.auto-fold p.submit-fixed
+	{
+		padding: 10px;
+		left: 0;
+	}
+	p.submit-fixed input[name="preview"]
+	{
+		display: none !important;
+	}
+}
+/* Larger screens */
+@media screen and (min-width:783px) {
+	p.submit-fixed input[name="submit"]
+	{
+		position: absolute;
+		left: 240px;
+	}
+}

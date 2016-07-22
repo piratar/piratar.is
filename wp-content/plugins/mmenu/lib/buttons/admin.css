@@ -1,0 +1,87 @@
+.buttons div
+{
+	margin-top: 10px;
+}
+.buttons .buttons-head span
+{
+	font-style: italic;
+	font-size: 12px;
+	display: inline-block;
+}
+.buttons .buttons-head span:first-child
+{
+	width: 216px;
+	margin-left: 40px;
+}
+.buttons .button.dashicons-picker
+{
+	padding: 0;
+}
+.dashicon-picker-container .dashicon-picker-control input
+{
+	width: 185px;
+}
+.buttons a.dashicons-no
+{
+	padding: 7px 5px 3px 5px;
+	color: #999;
+}
+
+/* Smallest screens */
+@media screen and (max-width:782px) {
+
+	.buttons-head
+	{
+		display: none !important;
+	}
+	.buttons-button
+	{
+		padding-left: 60px;
+		position: relative;
+	}
+	.buttons-button .dashicons-picker
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.buttons a.dashicons-no
+	{
+		margin-bottom: 10px;
+	}
+}
+/* Larger screens */
+@media screen and (min-width:783px) {
+	.buttons_html
+	{
+		border-bottom: 1px solid #ccc;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+	}
+	.buttons
+	{
+		border-top: 1px solid #ccc;
+		padding-top: 10px;
+		margin-top: 20px;
+	}
+	.buttons .button.dashicons-picker
+	{
+		font-size: 18px;
+		line-height: 26px;
+		width: 30px;
+		height: 28px;
+	}
+	.form-table .buttons input[type="text"],
+	.form-table .buttons select
+	{
+		margin: 0 0 0 5px;
+	}
+	.form-table .buttons input[type="text"]
+	{
+		width: 212px;
+	}
+	.form-table .buttons select
+	{
+		width: 153px;
+	}
+}

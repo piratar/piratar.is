@@ -1,0 +1,44 @@
+// overwriting variables
+
+// Grayscale and brand colors for use across Bootstrap.
+
+$gray-dark:                 #262027 !default;
+$gray:                      #ada6ad !default;
+$gray-light:                #efede8 !default;
+
+$secondary-green:           #1e9649 !default;
+$secondary-blue:            #0a5b96 !default;
+$secondary-red:             #bc2543 !default;
+
+$brand-primary:             #572d85 !default;
+$brand-success:             #1e9649 !default;
+$brand-info:                #0a5b96 !default;
+$brand-warning:             #bc2543 !default;
+$brand-danger:              #bc2543 !default;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:                    #fff !default;
+$body-color:                 $gray !default;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:     "Source Sans Pro", sans-serif !default;
+$font-family-serif:          Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:           $font-family-sans-serif !default;
+
+// Pixel value used to responsively scale all typography. Applied to the `<html>` element.
+$font-size-root:             18px !default;
+
+$font-size-h1:               3.25rem !default;
+$font-size-h2:               1.5rem !default;
+
+$headings-font-weight:       900 !default;
+
+// custom variables
+$headings2-font-weight:      300 !default;

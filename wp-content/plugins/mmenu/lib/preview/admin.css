@@ -1,0 +1,81 @@
+
+.wrap .phone,
+.wrap .submit-preview
+{
+	display: none;
+}
+.wrap.mmenu-preview .phone,
+.wrap.mmenu-preview .submit-preview
+{
+	display: block;
+}
+.wrap.mmenu-preview h2,
+.wrap.mmenu-preview .section,
+.wrap.mmenu-preview p.intro,
+.wrap.mmenu-preview p.submit-fixed
+{
+	display: none;
+}
+.wrap.mmenu-preview #mmenu-settings:before
+{
+	bottom: 85px;
+}
+.phone
+{
+	width: 450px;
+	padding: 132px 0;
+	margin: -20px 0 0 0;
+	position: relative;
+	z-index: 1;
+}
+.phone:before,
+.phone:after
+{
+	content: '';
+	background: url( ../lib/preview/phone-example.png ) center top no-repeat transparent;
+	display: block;
+	width: 100%;
+	height: 50%;
+	position: absolute;
+	left: 0;
+	z-index: -1;
+}
+.phone:before
+{
+	top: 0;
+}
+.phone:after
+{
+	background-position: center bottom;
+	bottom: 0;
+}
+.phone iframe
+{
+	border-radius: 5px;
+	overflow: hidden;
+	background: #111;
+	border: none;
+	display: block;
+	width: 280px;
+	height: 450px;
+	margin: 0 auto;
+}
+.submit-preview
+{
+	padding: 75px 0 0 85px;
+	position: absolute;
+	top: 175px;
+	left: 370px;
+}
+.submit-preview strong
+{
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	font-size: 23px;
+	line-height: 50px;
+	color: #fff;
+}
+.submit-preview a
+{
+	display: inline-block;
+	margin-top: 10px;
+}

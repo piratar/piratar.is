@@ -1,0 +1,20 @@
+.radio-preview .header-image
+{
+	background: url( ../lib/header/mm_header_image_placeholder_logo.png ) center center / contain no-repeat transparent;
+	height: 60px;
+	position: absolute;
+	top: 31px;
+	right: 31px;
+	left: 11px;
+}
+.radio-preview .header-image.cover
+{
+	border-radius: 30px 30px 0 0;
+	background-image: url( ../lib/header/mm_header_image_placeholder_background.png );
+	background-size: cover;
+	overflow: hidden;
+	height: 80px;
+	top: 21px;
+	right: 21px;
+	left: 1px;
+}

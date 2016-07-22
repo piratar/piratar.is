@@ -1,0 +1,192 @@
+/**
+ * Author: Alin Marcu 
+ * Author URI: https://deconf.com
+ * Copyright 2013 Alin Marcu 
+ * License: GPLv2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+/* Real-Time content */
+.gadwp-pline {
+	width: 100%;
+	margin: 0 0;
+	padding: 5px 0 5px 0;
+	background: #fff;
+	-moz-box-shadow: 0px 0px 3px 0px #BBB;
+	-webkit-box-shadow: 0px 0px 3px 0px #BBB;
+	box-shadow: 0px 0px 3px 0px #BBB;
+	display: table;
+	overflow: hidden;
+}
+
+.gadwp-pleft {
+	width: 90%;
+	float: left;
+	padding-left: 5px;
+}
+
+.gadwp-pright {
+	width: 5%;
+	float: right;
+	padding-right: 5px;
+}
+
+[id^=gadwp-realtime-] {
+	margin: 10px 0 0 0;
+	width: 100%;
+}
+
+.gadwp-rt-box {
+	width: 100%;
+	margin: 0 0;
+	background: #fff;
+	text-align: center;
+	-moz-box-shadow: 0px 0px 5px 0px #BBB;
+	-webkit-box-shadow: 0px 0px 5px 0px #BBB;
+	box-shadow: 0px 0px 5px 0px #BBB;
+	display: table;
+}
+
+.gadwp-tdo-left {
+	width: 60%;
+	padding: 33px 0;
+	float: left;
+	text-align: center;
+}
+
+.gadwp-tdo-right {
+	width: 35%;
+	margin: 0px 10px 0px 0;
+	text-align: left;
+	font-weight: bold;
+	vertical-align: middle;
+	float: right;
+	display: table;
+}
+
+.gadwp-online {
+	font-size: 100px;
+	font-weight: normal;
+	line-height: 1em;
+	margin: 0 auto;
+	width: 80%;
+}
+
+.gadwp-bigtext {
+	font-size: 14px;
+	width: 100%;
+	margin: 0 0;
+	padding: 5px 5px 5px 5px;
+	background: #fff;
+	-moz-box-shadow: 0px 0px 3px 0px #BBB;
+	-webkit-box-shadow: 0px 0px 3px 0px #BBB;
+	box-shadow: 0px 0px 3px 0px #BBB;
+	display: table;
+	overflow: hidden;
+}
+
+.gadwp-bleft {
+	float: left;
+	width: 80%;
+}
+
+.gadwp-bright {
+	float: right;
+	width: 20%;
+}
+
+.gadwp-pgdetailsr {
+	padding-left: 20px;
+	text-align: right;
+}
+
+.gadwp-pgdetailsl {
+	min-width: 250px;
+}
+
+[id^=gadwp-areachart-] {
+	width: 98%;
+	height: 100%;
+	margin: 10px auto 10px 0;
+	height: 250px;
+}
+
+.gadwp-floatwraper {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+[id^=gadwp-piechart-].halfsize {
+	width: 47%;
+	margin: 10px 0 0 0;
+	height: 200px;
+	float: left;
+}
+
+[id^=gadwp-piechart-].floatleft {
+	float: left;
+}
+
+[id^=gadwp-piechart-].floatright {
+	float: right;
+}
+
+[id^=gadwp-tablechart-], [id^=gadwp-tablechart-] {
+	width: 98%;
+	height: 100%;
+	margin: 10px auto 10px 0;
+}
+
+#dashboard-widgets-wrap .postbox {
+	margin-right: 10px;
+}
+
+/* Admin Widget content */
+[id^=gadwp-progressbar-] {
+	width: 100%;
+	height: 3px;
+	margin: 5px 0 0px 0;
+}
+
+[id^=gadwp-bottomstats-] {
+	width: 100%;
+}
+
+[id^=gadwp-bottomstats-] .inside {
+	display: table;
+	margin: 0 auto;
+	padding: 0px;
+}
+
+#gadwp-widget .inside .small-box {
+	width: 30%;
+	float: left;
+	margin: 0 5px 10px 5px;
+	background: #fff;
+	text-align: center;
+	-moz-box-shadow: 0px 0px 7px 0px #BBB;
+	-webkit-box-shadow: 0px 0px 7px 0px #BBB;
+	box-shadow: 0px 0px 7px 0px #BBB;
+}
+
+#gadwp-widget .inside .small-box h3 {
+	font-size: 1em;
+	color: #777;
+	padding: 0px 5px 0px 5px;
+	margin: 0px 0px 0px 0px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#gadwp-widget .inside .small-box p {
+	font-size: 1.2em;
+	margin: 0px 0px 2px 0px;
+}
+
+@media screen and (max-width: 410px) {
+	[id^=gadwp-bottomstats-] .inside .small-box {
+		width: 45%;
+	}
+}

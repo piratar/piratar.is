@@ -1,0 +1,148 @@
+#locate
+{
+	display: none;
+}
+#locate-content
+{
+	width: 100%;
+	height: 100%;
+}
+#locate-sidebar,
+#locate-frame
+{
+	box-sizing: border-box;
+	height: 100%;
+	margin: 0;
+	float: left;
+}
+#locate-sidebar
+{
+	background: #5ac6ff;
+	color: #fff;
+	width: 30%;
+	padding: 20px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+#locate-sidebar h3,
+#locate-sidebar p
+{
+	color: #fff !important;
+	padding: 0 !important;
+	margin: 0 0 10px 0 !important;
+}
+#locate-menu
+{
+	width: auto;
+	background: none;
+}
+#locate-menu .mm-navbar-top .dashicons
+{
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	box-shadow: none;
+	color: rgba(255, 255, 255, 0.5);
+	outline: none;
+	font-size: 20px;
+	display: block;
+	width: 40px;
+	height: 40px;
+}
+#locate-menu .mm-navbar-top .dashicons:hover,
+#locate-content.smartphone .mm-navbar-top .dashicons-smartphone,
+#locate-content.tablet .mm-navbar-top .dashicons-tablet,
+#locate-content.desktop .mm-navbar-top .dashicons-desktop
+{
+	color: #fff;
+}
+
+#locate-menu .mm-listview
+{
+	min-height: 40px;
+}
+#locate-menu .mm-listview:empty:after
+{
+	content: '...';
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	display: block;
+	padding-top: 20px;
+}
+#locate-menu .mm-listview > li > span
+{
+	color: #fff;
+}
+#locate-menu .mm-navbar-top .done
+{
+	border-color: #999;
+	color: #555;
+	width: auto;
+	margin: 5px 10px 0 0;
+	float: right;
+}
+#locate-menu label.mm-toggle:before {
+    background: #5bc5ff;
+}
+#locate-menu label.mm-toggle
+{
+	background: rgba(255, 255, 255, 0.5);
+}
+#locate-menu input.mm-toggle:checked ~ label.mm-toggle {
+    background: #fff;
+}
+
+#locate-frame
+{
+	background: #f3f3f3;
+	overflow: hidden;
+	width: 70%;
+}
+#locate-frame iframe
+{
+	background: inherit;
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+.smartphone #locate-frame iframe,
+.tablet #locate-frame iframe
+{
+	border: 1px solid #ccc;
+	height: 90%;
+	height: calc( 100% - 40px );
+	margin-top: 20px;
+}
+.smartphone #locate-frame iframe
+{
+	width: 320px;
+}
+.tablet #locate-frame iframe
+{
+	width: 768px;
+}
+
+
+
+
+/*
+	Thickbox fixes for locate popup
+*/
+.locate #TB_window
+{
+	width: 100% !important;
+	height: 100% !important;
+	margin: 0 !important;
+	left: 0 !important;
+	top: 0 !important;
+}
+.locate #TB_title
+{
+	display: none;
+}
+.locate #TB_ajaxContent
+{
+	width: 100% !important;
+	height: 100% !important;
+	padding: 0 !important;
+}

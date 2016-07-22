@@ -1,0 +1,24 @@
+tr.warning
+{
+	background: #fed;
+}
+tr.error
+{
+	background: #fdd;
+}
+.selector-warning,
+.selector-error
+{
+	display: none;
+	padding: 10px 0;
+}
+.selector-warning .button,
+.selector-error .button
+{
+	margin-top: 5px;
+}
+tr.warning .selector-warning,
+tr.error .selector-error
+{
+	display: block;
+}

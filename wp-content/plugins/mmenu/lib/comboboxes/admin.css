@@ -1,0 +1,66 @@
+.form-table .combobox
+{
+	vertical-align: bottom;
+	position: relative;
+}
+.form-table .combobox input[type="text"],
+.form-table .combobox select
+{
+	width: 100%;
+}
+.form-table .combobox input[type="text"]
+{
+	display: block;
+}
+.form-table .combobox select
+{
+	display: none;
+}
+.form-table .combobox.is-combobox
+{
+	border: 1px solid #ddd;
+	margin: 1;
+}
+.form-table .combobox.is-combobox input[type="text"],
+.form-table .combobox.is-combobox select
+{
+	border: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+	margin: 0;
+}
+.form-table .combobox.is-combobox input[type="text"]
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80%;
+	width: calc( 100% - 30px );
+	z-index: 1;
+}
+.form-table .combobox.is-combobox select
+{
+	display: block;
+}
+
+/* Smallest screens */
+@media screen and (max-width:782px) {
+	.form-table .combobox
+	{
+		display: block;
+		margin-bottom: 5px;
+	}
+	.button.locate
+	{
+		display: none !important;
+	}
+}
+/* Larger screens */
+@media screen and (min-width:783px) {
+	.form-table .combobox
+	{
+		display: inline-block;
+		width: 250px;
+		margin-right: 5px;
+	}
+}
