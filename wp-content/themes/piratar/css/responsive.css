@@ -12,35 +12,37 @@
     #imagebanner, #imagebanner article {
         height:300px;
     }
-    
+
     #imagebanner2, #imagebanner2 article {
         height:300px !important;
     }
-    
-    #boxin_kynning .box {            
+
+    #boxin_kynning .box {
         width: calc(100% - 40px);
         margin: 20px 0;
     }
-    
+
     .ord {
         float: left;
         width:calc(100% - 40px);
     }
-    
+
     .blogarticle.fyrsta, .blogarticle {
         margin-right: 0px;
         width: calc(100% - 0px);
     }
-    
+
     .blogarticle.fyrsta figure {
         height:200px;
     }
-    
+
     footer .box.first, footer .box, footer .box.last {
         width:100%;
         margin:0;
     }
-    
+    .alpha {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -49,13 +51,13 @@
         height:180px;
         margin-bottom: 20px;
     }
-    
+
     .blogarticle .textinn, .blogarticle .smaforsidutexti, .blogarticle.nedri .smaforsidutexti {
         width:100%;
         padding: 0 0px;
         height:auto;
     }
-    
+
     .blogarticle, .blogarticle.fyrsta {
         height:auto;
         margin-bottom: 20px;
