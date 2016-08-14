@@ -24,6 +24,11 @@ This is the site map for the new piratar.is site. The map has been developed usi
 
 The theme used for the Pirate Party site is the Underscores starter theme created by WordPress/Automattic.
 
+There are two theme folders being used:
+
+* piratar        = piratar.is
+* piratar-child/ = piratar.is/kosningar
+
 
 # Setup with Docker Compose
 
