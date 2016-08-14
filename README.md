@@ -23,3 +23,18 @@ This is the site map for the new piratar.is site. The map has been developed usi
 # Theme
 
 The theme used for the Pirate Party site is the Underscores starter theme created by WordPress/Automattic.
+
+
+# Setup with Docker Compose
+
+If you have Docker and docker-compose installed, you can do:
+
+`docker-compose up`
+
+To create a wordpress and a mysql containers which mount the local folder inside the container.
+
+http://localhost:8000
+
+Go through the wordpress setup and activate the theme
+
+
