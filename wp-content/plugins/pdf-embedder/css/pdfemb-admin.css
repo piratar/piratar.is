@@ -24,6 +24,12 @@ input.textinput, textarea.textinput, select.select, input.checkbox {
     padding: 5px;
 }
 
+textarea#pdfemb_wm_text {
+    width: 350px;
+    height: 150px;
+    border: 1px solid;
+}
+
 label.radio {
     float: none;
     margin-left: 6px;

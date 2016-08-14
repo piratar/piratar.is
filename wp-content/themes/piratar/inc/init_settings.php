@@ -716,7 +716,7 @@ function pirates_stefnumal_cpt() {
 
 
 /* TAX fyrir Stefnumál Pírata, Stefnuflokkun 1 */
-function pirates_stefnuflokkun1_tax() {
+/*function pirates_stefnuflokkun1_tax() {
 	register_taxonomy(
 		'stefnuflokkun1',
 		array (
@@ -744,12 +744,12 @@ function pirates_stefnuflokkun1_tax() {
 		'show_admin_column' => true,
 		'rewrite' => array('slug' => 'stefnuflokkun1')
 	) );
-} add_action('init', 'pirates_stefnuflokkun1_tax');
+} add_action('init', 'pirates_stefnuflokkun1_tax');*/
 
 
 
 /* TAX fyrir Stefnumál Pírata, Stefnuflokkun 2 */
-function pirates_stefnuflokkun2_tax() {
+/*function pirates_stefnuflokkun2_tax() {
 	register_taxonomy(
 		'stefnuflokkun2',
 		array (
@@ -777,7 +777,7 @@ function pirates_stefnuflokkun2_tax() {
 		'show_admin_column' => true,
 		'rewrite' => array('slug' => 'stefnuflokkun2')
 	) );
-} add_action('init', 'pirates_stefnuflokkun2_tax');
+} add_action('init', 'pirates_stefnuflokkun2_tax');*/ 
 
 
 

@@ -18,17 +18,28 @@
 					while($custom_query->have_posts()) : $custom_query->the_post(); 
 				?>
 
-					<div class="thingfolks_listi">
-						<div class="narrow"><a href="<?php echo esc_url(get_permalink()); ?>"><?php the_post_thumbnail('thingfolk_thumb', array( 'class' => 'thingfolk_thumb_img')); ?></a></div>
+					<div id="<?php echo $fid ?>" class="frambj_listi">
+						<div class="narrow2">
+							<a href="<?php echo esc_url(get_permalink()); ?>"><?php if(the_post_thumbnail('thingfolk_thumb', array( 'class' => 'frambj_thumb_img'))) ?></a>
+						</div>
 						
-						<div class="wide">
+						<div class="wide2">
 							<h3>
 								<a href="<?php echo esc_url(get_permalink()); ?>" ><?php the_title(); ?></a>
 							</h3>
 
 							<p>
-								<?php echo excerpt(80); ?><h4><a href="<?php the_permalink(); ?>">Lesa meira</a></h4>
+								<?php echo excerpt(125); ?>
 							</p>
+							<h4><a href="<?php the_permalink(); ?>">Kynning á frambjóðenda</a></h4>
+							<?php
+								$x_hlekkur = get_field( "kosnignarvefur" );
+
+								if ($x_hlekkur) {
+									echo '<h4><a href="'. $x_hlekkur .'">Upplýsingar um frambjóðanda á kosningavef Pírata</a></h4>';
+								}	
+								
+							?>
 						</div>
 					</div>
 

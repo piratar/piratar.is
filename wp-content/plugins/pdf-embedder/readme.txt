@@ -2,8 +2,8 @@
 Contributors: danlester
 Tags: doc, docx, pdf, office, powerpoint, google, document, embed, intranet
 Requires at least: 3.5
-Tested up to: 4.5
-Stable tag: 2.5.5
+Tested up to: 4.6
+Stable tag: 2.7.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -26,7 +26,10 @@ Hyperlinks in your PDF will only be clickable in the Premium versions.
 
 **Now translation-ready!** Please contribute your translations.
 
-French translation contributed by Thierry Gaillou of [JDFitForme](http://www.jdfitforme.fr/) - Thank you!
+French translation contributed by Thierry Gaillou of [JDFitForme](http://www.jdfitforme.fr/)
+
+Spanish translation contributed by Armando Landois of [LANDOIS Diseño](https://landois.com/)
+
 
 = Usage =
 
@@ -69,6 +72,8 @@ download or print the original PDF document.
 
 This means that your PDF is unlikely to be shared outside your site where you have no control over who views, prints, or shares it.
 
+Optionally add a watermark containing the user's name or email address to discourage sharing of screenshots.
+
 See our website [wp-pdf.com](http://wp-pdf.com/secure/?utm_source=PDF%20Readme%20Secure&utm_medium=freemium&utm_campaign=Freemium) for more details and purchase options.
 
 = PDF Thumbnails =
@@ -80,6 +85,8 @@ It also displays the thumbnail as the ‘icon’ for the PDF in the Media Librar
 
 See our website [wp-pdf.com/thumbnails/](http://wp-pdf.com/thumbnails/?utm_source=PDF%20Readme%20Thumbnails&utm_medium=freemium&utm_campaign=Freemium) for more details and purchase options.
 
+With thanks to the Mozilla team for developing the underlying [pdf.js](https://github.com/mozilla/pdf.js) technology used by this plugin.
+
 == Screenshots ==
 
 1. Uploaded PDF is displayed within your page/post at the correct size to fit. 
@@ -89,7 +96,7 @@ See our website [wp-pdf.com/thumbnails/](http://wp-pdf.com/thumbnails/?utm_sourc
 
 = How can I obtain support for this product? =
 
-We have [instructions](https://wp-pdf.com/free-instructions/) and [troubleshooting](https://wp-pdf.com/troubleshooting/) pages explaining common setup queries and issues.
+We have [instructions](https://wp-pdf.com/free-instructions/) and a [Knowledge Base](https://wp-pdf.com/kb/) on our website explaining common setup queries and issues.
 
 Please feel free to email [contact@wp-pdf.com](mailto:contact@wp-pdf.com) with any questions.
 
@@ -163,6 +170,27 @@ the Plugins section of your Wordpress admin
 1. Follow the instructions from step 4 above
 
 == Changelog ==
+
+= 2.7.3 =
+
+**Please clear browser and any WordPress cache if you experience any problems following this upgrade.**
+
+Better support for high resolution screens.
+
+Improved SEO for embedded PDFs (which are now links initially before Javascript converts them into the interactive view).
+This also ensures the PDFs are accessible to users even if Javascript problems cause your site to break.
+
+Compatible with WordPress 4.6.
+
+Added a filter named my_pdfemb_override_send_to_editor that means the shortcode generation can be turned off if desired.
+
+Uses latest version of pdf.js library for rendering PDFs.
+
+Toolbar buttons have type="button" attribute to avoid conflicts with some other plugins.
+
+Spanish translation contributed by Armando Landois.
+
+Added pdfemb_filter_shortcode_attrs filter so developers can change default shortcode parameters through code.
 
 = 2.5.5 =
 

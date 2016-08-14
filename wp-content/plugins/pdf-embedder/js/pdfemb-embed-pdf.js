@@ -1,12 +1,54 @@
 
 // JQuery Plugin
 jQuery(document).ready(function ($) {
+
+    var PIXEL_RATIO = (function () {
+        var ctx = document.createElement("canvas").getContext("2d"),
+            dpr = window.devicePixelRatio || 1,
+            bsr = ctx.webkitBackingStorePixelRatio ||
+                ctx.mozBackingStorePixelRatio ||
+                ctx.msBackingStorePixelRatio ||
+                ctx.oBackingStorePixelRatio ||
+                ctx.backingStorePixelRatio || 1;
+
+        return dpr / bsr;
+    })();
+
+
+    createHiDPICanvas = function(w, h, ratio) {
+        if (!ratio) { ratio = PIXEL_RATIO; }
+        var can = document.createElement("canvas");
+        can.width = w * ratio;
+        can.height = h * ratio;
+        can.style.width = w + "px";
+        can.style.height = h + "px";
+        can.getContext("2d").setTransform(ratio, 0, 0, ratio, 0, 0);
+        return can;
+    };
 	
     $.fn.pdfEmbedder = function() {
 
-    	this.each(function(index, rawDivContainer) {
+    	this.each(function(index, rawAContainer) {
 
-    		var divContainer = $(rawDivContainer);
+            var divContainer;
+
+            var aContainer = $(rawAContainer);
+
+            if (aContainer.is('a')) {
+                // Copy 'a' to a 'div' version
+                var adata = aContainer.data();
+
+                divContainer = $('<div></div>', {
+                    'class': aContainer.attr('class'),
+                    'style': aContainer.attr('style')
+                });
+                divContainer.data($.extend({'pdf-url': aContainer.attr('href')}, adata));
+                aContainer.replaceWith(divContainer);
+            }
+            else {
+                // was a div all along
+                divContainer = aContainer;
+            }
 
    		    divContainer.append($('<div></div>', {'class': 'pdfemb-loadingmsg'}).append(document.createTextNode(pdfemb_trans.objectL10n.loading)));
 
@@ -137,7 +179,7 @@ jQuery(document).ready(function ($) {
                 divContainer.data('showIsSecure', showIsSecure);
                 divContainer.data('pageNumPending', null);
 
-                var startZoom = parseInt(divContainer.data('startzoom'));
+                var startZoom = divContainer.data('fullScreen') == 'on' ? parseInt(divContainer.data('startfpzoom')) : parseInt(divContainer.data('startzoom'));
                 if (isNaN(startZoom) || startZoom < 20 || startZoom > 500) { startZoom = 100;}
                 divContainer.data('zoom', startZoom);
                 if (startZoom != 100) {
@@ -192,7 +234,7 @@ jQuery(document).ready(function ($) {
                 initPdfDoc(divContainer.data('pdfDoc'), divContainer.data('showIsSecure'));
             }
             else {
-                var url = divContainer.attr('data-pdf-url');
+                var url = divContainer.data('pdf-url');
                 pdfembGetPDF(url, callback);
             }
     	});
@@ -257,7 +299,7 @@ jQuery(document).ready(function ($) {
                 oldCanvasWidth = canvas.width();
                 oldCanvasHeight = canvas.height();
                 canvasCxt = canvas[0].getContext('2d');
-                canvasImg = canvasCxt.getImageData(0,0,oldCanvasWidth, oldCanvasHeight);
+                canvasImg = canvasCxt.getImageData(0,0,oldCanvasWidth*PIXEL_RATIO, oldCanvasHeight*PIXEL_RATIO);
             }
 
 		    var scale = 1.0;
@@ -374,11 +416,13 @@ jQuery(document).ready(function ($) {
             }
 
 
-            canvas[0].width = wantCanvasWidth;
-            canvas[0].height = wantCanvasHeight;
+            canvas[0].width = wantCanvasWidth * PIXEL_RATIO;
+            canvas[0].height = wantCanvasHeight * PIXEL_RATIO;
 		      
             canvas.css('width', wantCanvasWidth);
             canvas.css('height', wantCanvasHeight);
+
+            canvas[0].getContext("2d").setTransform(PIXEL_RATIO, 0, 0, PIXEL_RATIO, 0, 0);
 
             canvas.css('left', canvasHMargin).css('top', canvasVMargin);
 		      
@@ -397,8 +441,8 @@ jQuery(document).ready(function ($) {
                     var oldMidX = oldScrollLeft + wantWidth / 2;
                     var oldMidY = oldScrollTop + wantHeight / 2;
 
-                    innerdiv.scrollLeft((oldMidX * toZoom / fromZoom) - wantWidth/2);
-                    innerdiv.scrollTop((oldMidY * toZoom / fromZoom) - wantHeight/2);
+                    innerdiv.scrollLeft(((oldMidX * toZoom / fromZoom) - wantWidth/2));
+                    innerdiv.scrollTop(((oldMidY * toZoom / fromZoom) - wantHeight/2));
                 }
 
                 divContainer.data('grabtopan').activate();
@@ -425,10 +469,14 @@ jQuery(document).ready(function ($) {
                     .attr("width", canvasImg.width)
                     .attr("height", canvasImg.height)[0];
 
+                // newCanvas.getContext("2d").setTransform(PIXEL_RATIO, 0, 0, PIXEL_RATIO, 0, 0);
+
                 newCanvas.getContext("2d").putImageData(canvasImg, 0, 0);
 
-                canvasCxt.scale(wantCanvasWidth/oldCanvasWidth, wantCanvasHeight/oldCanvasHeight);
+                canvasCxt.scale(wantCanvasWidth/(oldCanvasWidth*PIXEL_RATIO), wantCanvasHeight/(oldCanvasHeight*PIXEL_RATIO));
                 canvasCxt.drawImage(newCanvas, 0, 0);
+
+
 
                 return;
             }
@@ -443,6 +491,17 @@ jQuery(document).ready(function ($) {
 
             // Wait for rendering to finish
             renderTask.promise.then(function () {
+
+                if (typeof(pdfembPremiumPreRenderCanvas) == 'function'
+                        && $.isArray(pdfemb_trans.watermark_map)
+                        && pdfemb_trans.watermark_map.length > 0) {
+                    var url = divContainer.data('pdf-url');
+                    if (url.search("/?pdfemb-serveurl=") != -1
+                        && (typeof(pdfemb_trans.watermark_evenpagesonly) == 'undefined' || !pdfemb_trans.watermark_evenpagesonly || pageNum % 2 == 0)) {
+                        pdfembPremiumPreRenderCanvas($, ctx, pdfemb_trans.watermark_map, zoom);
+                    }
+                }
+
                 divContainer.data('pagenum', pageNum);
                 divContainer.data('pageRendering', false);
 
@@ -539,17 +598,17 @@ jQuery(document).ready(function ($) {
     $.fn.pdfEmbedder.addToolbar = function(divContainer, atTop, fixed, showIsSecure){
     	
     	var toolbar = $('<div></div>', {'class': 'pdfemb-toolbar pdfemb-toolbar'+(fixed ? '-fixed' : '-hover')+' '+(atTop ? ' pdfemb-toolbar-top' : 'pdfemb-toolbar-bottom')});
-    	var prevbtn = $('<button class="pdfemb-prev" title="'+pdfemb_trans.objectL10n.prev+'"></button>');
+    	var prevbtn = $('<button class="pdfemb-prev" title="'+pdfemb_trans.objectL10n.prev+'" type="button"></button>');
     	toolbar.append(prevbtn);
-    	var nextbtn = $('<button class="pdfemb-next" title="'+pdfemb_trans.objectL10n.next+'"></button>');
+    	var nextbtn = $('<button class="pdfemb-next" title="'+pdfemb_trans.objectL10n.next+'" type="button"></button>');
     	toolbar.append(nextbtn);
     	
     	toolbar.append($('<div class="pdfemb-page-area">'+pdfemb_trans.objectL10n.page+' <span class="pdfemb-page-num">0</span> / <span class="pdfemb-page-count"></span></div>'));
 
-		var zoomoutbtn = $('<button class="pdfemb-zoomout" title="'+pdfemb_trans.objectL10n.zoomout+'"></button>');
+		var zoomoutbtn = $('<button class="pdfemb-zoomout" title="'+pdfemb_trans.objectL10n.zoomout+'" type="button"></button>');
 		toolbar.append(zoomoutbtn);
 
-		var zoominbtn = $('<button class="pdfemb-zoomin" title="'+pdfemb_trans.objectL10n.zoomin+'"></button>');
+		var zoominbtn = $('<button class="pdfemb-zoomin" title="'+pdfemb_trans.objectL10n.zoomin+'" type="button"></button>');
     	toolbar.append(zoominbtn);
 
     	toolbar.append($('<div>'+pdfemb_trans.objectL10n.zoom+' <span class="pdfemb-zoom">100%</span></div>'));

@@ -514,3 +514,54 @@ a.more-link:visited {
     font-size: 14px;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.middlbox h2 {
+	text-align: center;
+}
+
+.middlebox img {
+	display: block;
+    margin: 0 auto;
+}
+
+
+.box {
+	min-height: 300px !important;
+	float:right !important;
+	
+}
+
+.ord {
+	min-height: 300px !important;
+	float:right !important;
+}
+
+.nedrabox {
+	
+	color: black !important;
+}
+
+.nedrabox a {
+	color: #51297e !important;
+}

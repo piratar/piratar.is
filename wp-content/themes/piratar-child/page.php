@@ -1,26 +1,6 @@
 <?php get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
-<div id="imagebanner2" class="">
-	<article class="">
-		<?php if (has_post_thumbnail( $post->ID ) ): ?>
-		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'figure' ); ?>
-			<figure class="" style="background-image:url(<?php echo $image[0]; ?>);background-color:white;background-size:contain;">
 
-			</figure>
-
-		<?php endif; ?>	
-        <div class="coloroverlay"></div>
-        <div class="wrapper">
-            <div class="tourinfo">			
-                <h1 class="adildartitle"><?php the_title(); ?></h1>
-                <div class="readmoretakkar">
-					<!-- Þurfum við þennan takka? (AVJ) --> 
-					<span class="title_time"><?php the_field('news_date'); ?></span>
-                </div>
-            </div>
-        </div>
-	</article>
-</div>
 <div class="efnid">
 	<div class="wrapper">
 		<div class="alpha full">
