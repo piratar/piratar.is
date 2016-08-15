@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <meta http-equiv="cleartype" content="on">
     <meta name="p:domain_verify" content="845dbe69683ef984602c7f8ef1a9b602"/>
-	
+	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
@@ -16,7 +16,7 @@
 	<link href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/frame.css?v=2.0" rel="stylesheet">
 	<link href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/menu.css?v=2.0" rel="stylesheet">
 	<link href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/responsive.css" rel="stylesheet">
-
+	<title> <?php wp_title('', true,''); ?> </title>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>

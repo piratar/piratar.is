@@ -326,6 +326,7 @@ input.pdfemb-page-num {
 .pdfembAnnotationLayer .linkAnnotation > a /* -ms-a */  {
 	background: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7") 0 0 repeat;
     border: none;
+	opacity: 0;
 }
 
 .pdfembAnnotationLayer .linkAnnotation > a:hover {

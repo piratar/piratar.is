@@ -173,7 +173,7 @@ footer {
 }
 
 figure {
-    background-color: #f7f2e4;
+    /*background-color: #f7f2e4;*/
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -417,7 +417,7 @@ li.selected#selfdrive .icon { background-position:-132px -30px; }
 }
 
 article figure {
-	background-color: white;
+	/*background-color: white;*/
     /*background-color: #f7f2e4;*/
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -1958,18 +1958,22 @@ footer ul li { width:100%;  }
 
 .blogarticle {
     float: left;
-    height: 250px;
+    height: 310px;
     width: calc(50% - 20px);
     overflow:visible;
 	/*border: 1px solid black;*/
     margin-right:20px;
+    margin-top:20px;
+    margin-bottom:20px;
+	background-color: #f3f3f3
 }
 
 .blogarticle.fyrsta {
     float: left;
-    height: 350px;
+    height: 400px;
     margin-right: 30px;
     width: calc(66.666% - 30px);
+	background-color: white !important;
 }
 
 .blogarticle figure {
@@ -2003,13 +2007,13 @@ footer ul li { width:100%;  }
     float: left;
     font-size: 14px;
     height: 200px;
-    padding: 0 20px;
+    padding: 20px;
     position: relative;
     width: calc(50% - 40px);
 }
 
 .blogarticle.nedri .smaforsidutexti  {
-    padding: 0 20px 0 0;
+    padding: 8px;
     width: calc(50% - 20px);
 }
 

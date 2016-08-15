@@ -17,14 +17,17 @@ get_header(); ?>
 
 <div id="boxin_kynning">
     <div class="wrapper">
-        <div class="box">
+        <div class="box" style="height:270px;">
             <?php the_field('frontbox_left', 37894); ?>
         </div>
-        <div class="box">
-            <h2>Viðburðadagatal</h2>
-            <a href="/vidburdir/"><p>Opna dagatal</p></a>
+        <div class="box middlebox" >
+            <!--<h2>Viðburðadagatal</h2>
+			<?php //echo do_shortcode('[ecs-list-events limit="3"]'); ?>
+			<p>&nbsp;</p>
+            <a href="/vidburdir/">Opna dagatal</a>-->
+			<?php the_content(); ?>
         </div>
-        <div class="box">
+        <div class="box" style="height:270px;">
 			<?php the_field('frontbox_right', 37894); ?>
         </div>
     </div>
@@ -35,7 +38,13 @@ get_header(); ?>
 
 <div class="frettir">  
     <div class="wrapper">
-    
+		<div class="ord">
+			<div class="box nedrabox" style="height:400px;">
+				<?php the_field('frontbox_lover_right', 37894); ?>
+								
+			</div>
+		</div>
+
 		<?php 
             $i = 1;
             $custom_query = new WP_Query('frettaflokkur=frettir&posts_per_page=5'); 
@@ -50,12 +59,7 @@ get_header(); ?>
             } 
         ?>	
         <?php if ($i == 1) { ?>
-            <div class='ord'>
-                <h2 class="section-title">Orðskýring</h2>
-                <h3> Borgararéttindi </h3>
-                <p>Borgararéttindi eru flokkur mannréttinda sem almennt má segja að tryggi jafnan rétt allra til þáttöku í lýðræðislegu þjóðfélagi. Oft er talað um að borgararéttindi megi skilgreina sem réttindi sem veita borgurunum frelsi frá afskiptum ríkisvaldsins á einn eða annan hátt.  Dæmi um borgararéttindi eru tjáningarfrelsi, félagafrelsi, trúfrelsi og rétturinn til sanngjarnrar málsmeðferðar
-                </p><a href="/taka-thatt/piratafraedarinn/borgararettindi/" class="nanar">Nánar</a>
-            </div>
+
         <?php } ?>
             <article class="blogarticle <?php echo $class; ?>">
                <?php if ($i == 1) { ?><h2 class="section-title"><a href="/piratar-a-thingi/frettir/">Fréttir</a></h2><?php } ?>
@@ -76,7 +80,7 @@ get_header(); ?>
                 <div class="smaforsidutexti">
 					
                     <h2><a class="title_uppercase" href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></h2>
-                    <p><?php the_excerpt(); ?> </p>
+                    <p><?php echo excerpt(30); ?><a class="title_uppercase" href="<?php the_permalink(); ?>">Lesa meira</a></p>
                 </div>
 					
             </article>

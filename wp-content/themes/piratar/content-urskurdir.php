@@ -6,8 +6,8 @@
 
 <div>   
     <form role="search" action="<?php echo site_url('/'); ?>" method="get" id="searchform">
-    <input type="text" name="s" placeholder="Leita af stefnumáli"/>
-    <input type="hidden" name="post_type" value="stefnumal" /> <!-- // hidden 'products' value -->
+    <input type="text" name="s" placeholder="Leita af úrskurði"/>
+    <input type="hidden" name="post_type" value="urskurdir" /> <!-- // hidden 'products' value -->
     <input type="submit" alt="Search" value="Leita" />
   </form>
   <br>

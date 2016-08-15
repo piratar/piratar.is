@@ -72,18 +72,33 @@ class core_pdf_embedder {
 	// Embed PDF shortcode instead of link
 	public function pdfemb_media_send_to_editor($html, $id, $attachment) {
 		$pdf_url = '';
+		$title = '';
 		if (isset($attachment['url']) && preg_match( "/\.pdf$/i", $attachment['url'])) {
 			$pdf_url = $attachment['url'];
+			$title = isset($attachment['post_title']) ? $attachment['post_title'] : '';
 		}
 		elseif ($id > 0) {
 			$post = get_post($id);
 			if ($post && isset($post->post_mime_type) && $post->post_mime_type == 'application/pdf') {
 				$pdf_url = wp_get_attachment_url($id);
+				$title = get_the_title($id);
 			}
 		}
 
 		if ($pdf_url != '') {
-			return '[pdf-embedder url="' . $pdf_url . '"]';
+			if ($title != '') {
+				$title_from_url = $this->make_title_from_url($pdf_url);
+				if ($title == $title_from_url || $this->make_title_from_url('/'.$title) == $title_from_url) {
+					// This would be the default title anyway based on URL
+					// OR if you take .pdf off title it would match, so that's close enough - don't load up shortcode with title param
+					$title = '';
+				}
+				else {
+					$title = ' title="' . esc_attr( $title ) . '"';
+				}
+			}
+
+			return apply_filters('pdfemb_override_send_to_editor', '[pdf-embedder url="' . $pdf_url . '"'.$title.']', $html, $id, $attachment);
 		} else {
 			return $html;
 		}
@@ -94,6 +109,8 @@ class core_pdf_embedder {
 	}
 
 	public function pdfemb_shortcode_display_pdf($atts, $content=null) {
+		$atts = apply_filters('pdfemb_filter_shortcode_attrs', $atts);
+
 		if (!isset($atts['url'])) {
 			return '<b>PDF Embedder requires a url attribute</b>';
 		}
@@ -133,17 +150,29 @@ class core_pdf_embedder {
             $toolbar_fixed = 'off';
         }
 
-		$returnhtml = '<div class="pdfemb-viewer" data-pdf-url="'.esc_attr($this->modify_pdfurl($url)).'" style="'.esc_attr($extra_style).'" '
+		$title = isset($atts['title']) && $atts['title'] != '' ? $atts['title'] : $this->make_title_from_url($url);
+
+		$pdfurl = $this->modify_pdfurl($url);
+		$esc_pdfurl = esc_attr($pdfurl);
+
+		$returnhtml = '<a href="'.$esc_pdfurl.'" class="pdfemb-viewer" style="'.esc_attr($extra_style).'" '
 						.'data-width="'.esc_attr($width).'" data-height="'.esc_attr($height).'" ';
 		
 		$returnhtml .= $this->extra_shortcode_attrs($atts, $content);
 						
-		$returnhtml .= ' data-toolbar="'.$toolbar.'" data-toolbar-fixed="'.$toolbar_fixed.'"></div>';
+		$returnhtml .= ' data-toolbar="'.$toolbar.'" data-toolbar-fixed="'.$toolbar_fixed.'">'.esc_html( $title ).'<br/></a>';
 		
 		if (!is_null($content)) {
 			$returnhtml .= do_shortcode($content);
 		}
 		return $returnhtml;
+	}
+
+	protected function make_title_from_url($url) {
+		if (preg_match( '|/([^/]+?)(\.pdf(\?[^/]*)?)?$|i', $url, $matches)) {
+			return $matches[1];
+		}
+		return $url;
 	}
 	
 	protected function extra_shortcode_attrs($atts, $content=null) {
@@ -332,6 +361,8 @@ class core_pdf_embedder {
 
         <p><?php esc_html_e('This means that your PDF is unlikely to be shared outside your site where you have no control over who views, prints, or shares it.', 'pdf-embedder'); ?></p>
 
+	    <p><?php esc_html_e("Optionally add a watermark containing the user's name or email address to discourage sharing of screenshots.", 'pdf-embedder'); ?></p>
+
         <p><?php printf( __('See our website <a href="%s">wp-pdf.com</a> for more details and purchase options.', 'pdf-embedder'), 'http://wp-pdf.com/secure/?utm_source=PDF%20Settings%20Secure&utm_medium=freemium&utm_campaign=Freemium' ); ?>
         </p>
 
@@ -500,8 +531,8 @@ class core_pdf_embedder {
 		add_filter( 'post_mime_types', array($this, 'pdfemb_post_mime_types') );
 
 		// Embed PDF shortcode instead of link
-		add_filter( 'media_send_to_editor', array($this, 'pdfemb_media_send_to_editor'), 20, 3 );
-		
+		add_filter( 'media_send_to_editor', array( $this, 'pdfemb_media_send_to_editor' ), 20, 3 );
+
 		register_setting( $this->get_options_pagename(), $this->get_options_name(), Array($this, 'pdfemb_options_validate') );
 
 		add_filter( 'attachment_fields_to_edit', array($this, 'pdfemb_attachment_fields_to_edit'), 10, 2 );

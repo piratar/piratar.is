@@ -7,7 +7,7 @@ $(function(){
     $('menu a').click(function(event) { 
 		console.log("click");
 		var currentId = $(this).parent().attr('id');
-        if (currentId == "menu-item-37244" && "menu-item-30" ) {
+        if (currentId == "menu-item-38328" && "menu-item-30" ) {
 			
             
         } else {

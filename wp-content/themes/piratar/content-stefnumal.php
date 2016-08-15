@@ -14,6 +14,9 @@
 <table>
   <tr>
     <td class="">Heiti samþykktrar stefnu</td>
+    <td class="">Já</td>
+    <td class="">Nei</td>
+    <td class="">Sitja hjá</td>
     <td class="">Dags samþ.</td>
   </tr>
   
@@ -21,6 +24,9 @@
 
   <tr>
     <td class=""><a href="<?php echo esc_url(get_field( "stefnumal_linkur" )); ?>"><?php the_title();?></a></td>
+    <td class=""><?php echo get_field( "votes_yes" ); ?></td>
+    <td class=""><?php echo get_field( "votes_no" ); ?></td>
+    <td class=""><?php echo get_field( "votes_draw" ); ?></td>
     <td class=""><?php echo get_field( "stefnumal_dagsetning" ); ?></td>
   </tr>
 
