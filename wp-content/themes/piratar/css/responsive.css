@@ -40,7 +40,14 @@
         width:100%;
         margin:0;
     }
-    
+	
+	.alpha {
+		width: calc(100% - 160px);
+		float: left;
+		margin-right: 0px;
+		line-height: 1.2;
+		font-size: 16px;
+	}
 }
 
 @media only screen and (max-width: 480px) {
@@ -62,5 +69,8 @@
         padding-bottom: 10px;
         border-bottom: 1px solid #51297e;
     }
-
+	
+	.alpha {
+		width: 100%;
+	}
 }

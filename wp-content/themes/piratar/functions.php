@@ -15,10 +15,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 //require ( get_template_directory(__FILE__) . '/kosningarhamur/kosningarhamur.php');
 
-add_filter('excerpt_length', 'my_excerpt_length');
-function my_excerpt_length() {
-return 25; }
-
 function excerpt($limit) {
       $excerpt = explode(' ', get_the_excerpt(), $limit);
       if (count($excerpt)>=$limit) {
@@ -95,14 +91,26 @@ function remove_menus( ) {
 
 //add_action('all_admin_notices', 'my_admin_notices');
 function my_admin_notices() {
+	global $pagenow;
+	
     if ($_GET['post_type'] == 'fundargerdir' ) {
     ?>
-    <div><h3>-ATH- Fundarfærslur eru flokkaðar vandlega með ýmissum Flokkum | Hakið einungis í þann flokk sem Fundargerðafærslan á við! (ef ekki viss contact webmaster) -ATH-</h3></div>
+    <div class="notice notice-success is-dismissible">
+		<h3>-ATH- Fundarfærslur eru flokkaðar vandlega með ýmissum Flokkum | Hakið einungis í þann flokk sem Fundargerðafærslan á við! (ef ekki viss contact webmaster) -ATH-</h3>
+	</div>
     <?php
     }    
+	
+	if ($_GET['post_type'] == 'bokhald' && ('post-new.php' == $pagenow ) ) {
+    ?>
+    <div class="notice notice-success is-dismissible">
+
+		<h3>-ATH- Veljið mánuð & hakið í viðeigandi bókhalds ár í glugganum hægra megin -ATH-</h3>
+	</div>
+    <?php
+	}	
 }
-
-
+add_action( 'admin_notices', 'my_admin_notices' );
 
 
 
@@ -438,6 +446,27 @@ add_filter('post_type_link', 'frettaflokkur_permalink', 1, 3);
 
 
 
+
+/* Hérna er filter til að fixa fundarflokks taxonomy slug. */
+function bokhalds_ar_permalink($permalink, $post_id, $leavename) {
+	
+    if (strpos($permalink, '%bokhalds_ar%') === FALSE) return $permalink;
+        // Get post
+        $post = get_post($post_id);
+        if (!$post) return $permalink;
+
+        // Get taxonomy terms
+        $terms = wp_get_object_terms($post->ID, 'bokhalds_ar');
+        if (!is_wp_error($terms) && !empty($terms) && is_object($terms[0]))
+        	$taxonomy_slug = $terms[0]->slug;
+        else $taxonomy_slug = 'bokhalds_ar';
+
+    return str_replace('%bokhalds_ar%', $taxonomy_slug, $permalink);
+}
+add_filter('post_link', 'bokhalds_ar_permalink', 1, 3);
+add_filter('post_type_link', 'bokhalds_ar_permalink', 1, 3);
+
+
 function pirate_parse_adildarfelog_request_trick( $query ) {
  
     // Only noop the main query
@@ -538,6 +567,97 @@ function pirates_framkvaemdarad_cpt() {
     ) );
 } add_action('init', 'pirates_framkvaemdarad_cpt');
 
+
+
+/* CPT fyrir Framkvæmdaráð Pírata */
+function pirates_bokhald_cpt() {
+    register_post_type('bokhald', array(
+            'label' 		=> 'Bókhald Pírata',
+            'menu_icon' 	=> 'dashicons-slides',
+            'description' 	=> 'Hérna listum við opið bókhald',
+            'public' 		=> true,
+            'show_ui' 		=> true,
+            'show_in_menu' 	=> true,
+            'capability_type'   => 'post',
+            'map_meta_cap' 	=> true,
+            'hierarchical' 	=> true,
+            'query_var' 	=> true,
+            'has_archive' 	=> true,
+			'rewrite' =>	array( 'slug' => '/um-pirata/bokhald-og-rekstur/bokhald/%bokhalds_ar%'),
+            'supports' 		=> array('title','editor'),
+            'labels' 		=> array (
+                'name'              => 'Bókhald',
+                'singular_name'     => 'Bókhald',
+                'menu_name'         => 'Bókhald',
+                'add_new'           => 'Bæta við bókhaldsfærslu',
+                'add_new_item'      => 'Bæta við bókhaldsfærslu á listann',
+                'edit'              => 'Breyta',
+                'edit_item'         => 'Breyta bókhaldsfærslu',
+                'new_item'          => 'Ný bókhaldsfærsla',
+                'view'              => 'Skoða',
+                'view_item'         => 'Skoða bókhaldsfærslu',
+                'search_items'      => 'Leita',
+                'not_found'         => 'Ekkert fannst',
+                'not_found_in_trash'=> 'Ekkert fannst í rusli'
+            )
+    ) );
+} add_action('init', 'pirates_bokhald_cpt');
+
+
+
+
+/* TAX fyrir Framkvæmda ár fyrir Fundargerði */
+function pirates_bokhalds_ar_tax() {
+	register_taxonomy(
+		'bokhalds_ar',
+		array (
+			0 => 'bokhald',
+		),
+		array(
+			'hierarchical'      => true,
+			'labels' 		=> array (
+					'name'              => 'Bókhaldsár',
+					'singular_name'     => 'Bókhaldsár',
+					'menu_name'         => 'Bókhaldsár',
+					'add_new'           => 'Bæta við bókhaldsári',
+					'add_new_item'      => 'Bæta við bókhaldsári á listann',
+					'edit'              => 'Breyta',
+					'edit_item'         => 'Breyta bókhaldsári',
+					'new_item'          => 'Nýtt bókhaldsár',
+					'view'              => 'Skoða',
+					'view_item'         => 'Skoða bókhaldsár',
+					'search_items'      => 'Leita',
+					'not_found'         => 'Ekkert fannst',
+					'not_found_in_trash'=> 'Ekkert fannst í rusli'
+				),
+			'show_ui'           => true,
+			'query_var'         => true,
+			'show_admin_column' => true,
+			'rewrite' => array('slug' => '/um-pirata/bokhald-og-rekstur/bokhald')
+		) );
+} add_action('init', 'pirates_bokhalds_ar_tax');
+
+
+
+/* TAX fyrir Framkvæmda ár fyrir Fundargerði */
+function pirates_bokhalds_manudur_tax() {
+	register_taxonomy(
+		'bokhalds_manudur',
+		array (
+			0 => 'bokhald',
+		),
+		array(
+			'hierarchical'      => true,
+			'labels' 		=> array (
+					'name'              => 'Bókhaldsmánuður',
+					'singular_name'     => 'Bókhaldsmánuður',
+					'menu_name'         => 'Bókhaldsmánuður',
+				),
+			'show_ui'           => true,
+			'query_var'         => false,
+			'show_admin_column' => true,
+		) );
+} add_action('init', 'pirates_bokhalds_manudur_tax');
 
 
 
@@ -1161,7 +1281,7 @@ function pirates_stefnumal_cpt() {
             'hierarchical' 	=> false,
             'query_var' 	=> true,
             'has_archive' 	=> false,
-            'supports' 		=> array('title','editor'),
+            'supports' 		=> array('title'),
             'labels' 		=> array (
                 'name'              => 'Stefnumál',
                 'singular_name'     => 'Stefnumál',
@@ -1183,7 +1303,7 @@ function pirates_stefnumal_cpt() {
 
 
 /* TAX fyrir Stefnumál Pírata, Stefnuflokkun 1 */
-function pirates_stefnuflokkun1_tax() {
+/*function pirates_stefnuflokkun1_tax() {
 	register_taxonomy(
 		'stefnuflokkun1',
 		array (
@@ -1211,12 +1331,12 @@ function pirates_stefnuflokkun1_tax() {
 		'show_admin_column' => true,
 		'rewrite' => array('slug' => 'stefnuflokkun1')
 	) );
-} add_action('init', 'pirates_stefnuflokkun1_tax');
+} add_action('init', 'pirates_stefnuflokkun1_tax');*/
 
 
 
 /* TAX fyrir Stefnumál Pírata, Stefnuflokkun 2 */
-function pirates_stefnuflokkun2_tax() {
+/*function pirates_stefnuflokkun2_tax() {
 	register_taxonomy(
 		'stefnuflokkun2',
 		array (
@@ -1244,7 +1364,7 @@ function pirates_stefnuflokkun2_tax() {
 		'show_admin_column' => true,
 		'rewrite' => array('slug' => 'stefnuflokkun2')
 	) );
-} add_action('init', 'pirates_stefnuflokkun2_tax');
+} add_action('init', 'pirates_stefnuflokkun2_tax');*/
 
 
 

@@ -1,9 +1,9 @@
 === Instagram Feed ===
 Contributors: smashballoon
-Tags: Instagram, Instagram feed, Instagram photos, Instagram plugin, Instagram stream, Custom Instagram Feed, responsive Instagram, mobile Instagram, Instagram posts, Instagram wall, Instagram account, Instagram gallery, Instagram photo, Instagram post, Instagram share, Instagram customized, Instagrams, Instagram feeds, Instagram plugins, Instagram responsive, Instagram mobile feed, Instagram accounts, public Instagram feed, Instagram photography, Instagram galleries, multiple Instagram, Instagram widget, Instagram clean, beautiful Instagram, custom Instagram design
+Tags: Instagram, Instagram feed, Instagram photos, Custom Instagram Feed, responsive Instagram, mobile Instagram, Instagram wall, Instagram gallery, Instagram galleries, Instagram widget, beautiful Instagram
 Requires at least: 3.0
-Tested up to: 4.5.3
-Stable tag: 1.4.6.2
+Tested up to: 4.6
+Stable tag: 1.4.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -561,6 +561,10 @@ No Waiver of Rights by Instagram: Instagram's failure to exercise or enforce any
 **Important:** Due to the recent Instagram API changes, in order for the Instagram Feed plugin to continue working after **June 1st** you must update the plugin and obtain a new Access Token on the plugin's Settings page.
 
 == Changelog ==
+
+= 1.4.7 =
+* Fix: Fixed a security vulnerability
+* Tested with upcoming WordPress 4.6 update
 
 = 1.4.6.2 =
 * Fix: Removed a comment from the plugin's JavaScript file which was causing an issue with some optimization plugins, such as Autoptimize.

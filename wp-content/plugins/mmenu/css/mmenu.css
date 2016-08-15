@@ -436,14 +436,3 @@ html.wpmm-force-bg
 {
 	display: none;
 }
-
-.mm-header-image
-{
-	background: url(http://piratar.is/kosningar/wp-content/uploads/sites/2/2016/07/piratar_logo.png) center center / contain no-repeat transparent;
-	padding: 0 !important;
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	bottom: 20px;
-	left: 20px;
-}

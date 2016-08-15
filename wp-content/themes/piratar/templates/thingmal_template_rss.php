@@ -10,7 +10,7 @@
 	$args = array(
         'post_type' 	=> 'thingmal',
 		'thingmalsflokkur' => 'thingmal_pirata',
-		'posts_per_page' 	=> 5,
+		'posts_per_page' 	=> -1,
 		'paged'				=> $paged
     );
     $frettir_loop = new  WP_Query( $args );
@@ -48,10 +48,7 @@
 				</div>
     
         <?php endwhile; ?>
-<nav>asd
-                <?php the_posts_pagination(); ?>
 
-            </nav>
 		</div>
     </div>
 </div>

@@ -175,17 +175,13 @@ jQuery(document).ready(function($) {
 	$menu.mmenu({
 		counters: true,
 			extensions: ["pageshadow", "effect-slide-menu"],
+			iconPanels: true,
 			offCanvas: {
 				moveBackground: false
 			},
-			navbars: [
-				{
-					height: 3,
-					content: [ "<div class=\"mm-header-image\" />" ]
-				},{
-					content: [ "prev", "title" ]
-				}
-			]
+			navbar: {
+				add: false
+			}
 	}, {
 		
 			offCanvas: {

@@ -9,7 +9,7 @@
 	
 	$args = array(
         'post_type' 	=> 'ur-raedustol',
-		'posts_per_page' 	=> 5,
+		'posts_per_page' 	=> -1,
 		'paged'				=> $paged
     );
     $frettir_loop = new  WP_Query( $args );

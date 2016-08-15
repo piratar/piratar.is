@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/PDFEmbedder\n"
-"POT-Creation-Date: 2016-02-15 12:07:35+00:00\n"
+"POT-Creation-Date: 2016-07-07 11:20:19+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,7 +16,7 @@ msgstr ""
 msgid "Options only available in Premium versions"
 msgstr ""
 
-#: basic_pdf_embedder.php:78 core/commercial_pdf_embedder.php:64
+#: basic_pdf_embedder.php:78 core/commercial_pdf_embedder.php:80
 msgid "Download Button"
 msgstr ""
 
@@ -24,7 +24,7 @@ msgstr ""
 msgid "Provide PDF download button on toolbar"
 msgstr ""
 
-#: basic_pdf_embedder.php:85 core/commercial_pdf_embedder.php:73
+#: basic_pdf_embedder.php:85 core/commercial_pdf_embedder.php:89
 msgid "Track Views/Downloads"
 msgstr ""
 
@@ -32,19 +32,19 @@ msgstr ""
 msgid "Count number of views and downloads"
 msgstr ""
 
-#: basic_pdf_embedder.php:92 core/commercial_pdf_embedder.php:82
+#: basic_pdf_embedder.php:92 core/commercial_pdf_embedder.php:98
 msgid "External Links"
 msgstr ""
 
-#: basic_pdf_embedder.php:94 core/commercial_pdf_embedder.php:85
+#: basic_pdf_embedder.php:94 core/commercial_pdf_embedder.php:101
 msgid "Open links in a new browser tab/window"
 msgstr ""
 
-#: basic_pdf_embedder.php:99 core/commercial_pdf_embedder.php:91
+#: basic_pdf_embedder.php:99 core/commercial_pdf_embedder.php:107
 msgid "Scroll to Top"
 msgstr ""
 
-#: basic_pdf_embedder.php:101 core/commercial_pdf_embedder.php:94
+#: basic_pdf_embedder.php:101 core/commercial_pdf_embedder.php:110
 msgid "Scroll to top of page when user clicks next/prev"
 msgstr ""
 
@@ -74,15 +74,15 @@ msgid ""
 "            the web page by mistake. Click Exit to return to the regular web page."
 msgstr ""
 
-#: basic_pdf_embedder.php:129 core/core_pdf_embedder.php:335
+#: basic_pdf_embedder.php:129 core/core_pdf_embedder.php:358
 msgid "See our website <a href=\"%s\">wp-pdf.com</a> for more details and purchase options."
 msgstr ""
 
-#: basic_pdf_embedder.php:175
+#: basic_pdf_embedder.php:187
 msgid "Track downloads and views with <a href=\"%s\" target=\"_blank\">PDF Embedder Premium</a>"
 msgstr ""
 
-#: basic_pdf_embedder.php:177
+#: basic_pdf_embedder.php:189
 msgid "Downloads/Views"
 msgstr ""
 
@@ -94,143 +94,143 @@ msgstr ""
 msgid "There is a new version of %1$s available. <a target=\"_blank\" class=\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s\">update now</a>."
 msgstr ""
 
-#: core/EDD_SL_Plugin_Updater.php:479
+#: core/EDD_SL_Plugin_Updater.php:486
 msgid "You do not have permission to install plugin updates"
 msgstr ""
 
-#: core/EDD_SL_Plugin_Updater.php:479
+#: core/EDD_SL_Plugin_Updater.php:486
 msgid "Error"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:53
+#: core/commercial_pdf_embedder.php:69
 msgid "License"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:67
+#: core/commercial_pdf_embedder.php:83
 msgid "Check to provide PDF download button in toolbar"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:76
+#: core/commercial_pdf_embedder.php:92
 msgid "Count number of views and downloads (figures will be shown in <a href=\"%s\">Media Library</a>)"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:104
+#: core/commercial_pdf_embedder.php:120
 msgid "Default Mobile Settings"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:106
+#: core/commercial_pdf_embedder.php:122
 msgid "When the document is smaller than the width specified below, the document displays only as a 'thumbnail' with a large 'View in Full Screen' button for the user to click to open."
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:108
+#: core/commercial_pdf_embedder.php:124
 msgid "Mobile Width"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:112
+#: core/commercial_pdf_embedder.php:128
 msgid "Enter an integer number of pixels, or 0 to disable automatic full-screen"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:116
+#: core/commercial_pdf_embedder.php:132
 msgid "Disable Device Zoom"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:119
+#: core/commercial_pdf_embedder.php:135
 msgid "Enable if you are experiencing quality issues on mobiles"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:124
+#: core/commercial_pdf_embedder.php:140
 msgid "Some mobile browsers will use their own zoom, causing the PDF Embedder to render at a lower resolution than it should, or lose the toolbar off screen."
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:125
+#: core/commercial_pdf_embedder.php:141
 msgid "Enabling this option may help, but could potentially affect appearance in the rest of your site."
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:126
+#: core/commercial_pdf_embedder.php:142
 msgid "See <a href=\"%s\" target=\"_blank\">documentation</a> for details."
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:137
+#: core/commercial_pdf_embedder.php:153
 msgid "You should have received a license key when you purchased this premium version of PDF Embedder."
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:138
+#: core/commercial_pdf_embedder.php:154
 msgid "Please enter it below to enable automatic updates, or <a href=\"%s\">email us</a> if you do not have one."
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:140
+#: core/commercial_pdf_embedder.php:156
 msgid "License Key"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:153
+#: core/commercial_pdf_embedder.php:169
 msgid "Current License"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:156
+#: core/commercial_pdf_embedder.php:172
 msgid "Status"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:160
+#: core/commercial_pdf_embedder.php:176
 msgid "Last Checked"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:168
+#: core/commercial_pdf_embedder.php:184
 msgid "License Expires"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:180
+#: core/commercial_pdf_embedder.php:196
 msgid "To renew your license, please <a href=\"%s\" target=\"_blank\">click here</a>."
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:183
+#: core/commercial_pdf_embedder.php:199
 msgid "You will receive a 50% discount if you renew before your license expires."
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:309
+#: core/commercial_pdf_embedder.php:325
 msgid "Mobile width should be an integer number of pixels, or 0 to turn off"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:310
+#: core/commercial_pdf_embedder.php:326
 msgid "License key is too short"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:312
+#: core/commercial_pdf_embedder.php:328
 msgid "License key failed to activate"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:313
+#: core/commercial_pdf_embedder.php:329
 msgid "License key does not exist in our system at all"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:314
+#: core/commercial_pdf_embedder.php:330
 msgid "License key entered is for the wrong product"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:315
+#: core/commercial_pdf_embedder.php:331
 msgid "License key has expired"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:316
+#: core/commercial_pdf_embedder.php:332
 msgid "License key is not permitted for this website"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:317
+#: core/commercial_pdf_embedder.php:333
 msgid "License key is not active for this website"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:318
+#: core/commercial_pdf_embedder.php:334
 msgid "License key has been disabled"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:319
+#: core/commercial_pdf_embedder.php:335
 msgid "License key was not provided"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:361
+#: core/commercial_pdf_embedder.php:377
 msgid "Downloads"
 msgstr ""
 
-#: core/commercial_pdf_embedder.php:365
+#: core/commercial_pdf_embedder.php:381
 msgid "Views"
 msgstr ""
 
@@ -262,7 +262,7 @@ msgstr ""
 msgid "Zoom Out"
 msgstr ""
 
-#: core/core_pdf_embedder.php:44 core/core_pdf_embedder.php:211
+#: core/core_pdf_embedder.php:44 core/core_pdf_embedder.php:232
 msgid "Secure"
 msgstr ""
 
@@ -304,153 +304,225 @@ msgid_plural "PDFs <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: core/core_pdf_embedder.php:172 core/core_pdf_embedder.php:177
+#: core/core_pdf_embedder.php:193 core/core_pdf_embedder.php:198
 msgid "PDF Embedder settings"
 msgstr ""
 
-#: core/core_pdf_embedder.php:172 core/core_pdf_embedder.php:177
+#: core/core_pdf_embedder.php:193 core/core_pdf_embedder.php:198
 msgid "PDF Embedder"
 msgstr ""
 
-#: core/core_pdf_embedder.php:197
+#: core/core_pdf_embedder.php:218
 msgid "PDF Embedder setup"
 msgstr ""
 
-#: core/core_pdf_embedder.php:199
+#: core/core_pdf_embedder.php:220
 msgid "To use the plugin, just embed PDFs in the same way as you would normally embed images in your posts/pages - but try with a PDF file instead."
 msgstr ""
 
-#: core/core_pdf_embedder.php:200
+#: core/core_pdf_embedder.php:221
 msgid ""
 "From the post editor, click Add Media, and then drag-and-drop your PDF file into the media library.\n"
 "                When you insert the PDF into your post, it will automatically embed using the plugin's viewer."
 msgstr ""
 
-#: core/core_pdf_embedder.php:209
+#: core/core_pdf_embedder.php:230
 msgid "Main Settings"
 msgstr ""
 
-#: core/core_pdf_embedder.php:210
+#: core/core_pdf_embedder.php:231
 msgid "Mobile"
 msgstr ""
 
-#: core/core_pdf_embedder.php:238
+#: core/core_pdf_embedder.php:259
 msgid "Save Changes"
 msgstr ""
 
-#: core/core_pdf_embedder.php:266
+#: core/core_pdf_embedder.php:287
 msgid "Default Viewer Settings"
 msgstr ""
 
-#: core/core_pdf_embedder.php:268
+#: core/core_pdf_embedder.php:289
 msgid "Width"
 msgstr ""
 
-#: core/core_pdf_embedder.php:272
+#: core/core_pdf_embedder.php:293
 msgid "Height"
 msgstr ""
 
-#: core/core_pdf_embedder.php:276
+#: core/core_pdf_embedder.php:297
 msgid "Enter <b>max</b> or an integer number of pixels"
 msgstr ""
 
-#: core/core_pdf_embedder.php:280
+#: core/core_pdf_embedder.php:301
 msgid "Toolbar Location"
 msgstr ""
 
-#: core/core_pdf_embedder.php:282
+#: core/core_pdf_embedder.php:303
 msgid "Top"
 msgstr ""
 
-#: core/core_pdf_embedder.php:283
+#: core/core_pdf_embedder.php:304
 msgid "Bottom"
 msgstr ""
 
-#: core/core_pdf_embedder.php:284
+#: core/core_pdf_embedder.php:305
 msgid "Both"
 msgstr ""
 
-#: core/core_pdf_embedder.php:289
+#: core/core_pdf_embedder.php:310
 msgid "Toolbar Hover"
 msgstr ""
 
-#: core/core_pdf_embedder.php:292
+#: core/core_pdf_embedder.php:313
 msgid "Toolbar appears only on hover over document"
 msgstr ""
 
-#: core/core_pdf_embedder.php:297
+#: core/core_pdf_embedder.php:318
 msgid "Toolbar always visible"
 msgstr ""
 
-#: core/core_pdf_embedder.php:309
+#: core/core_pdf_embedder.php:330
 msgid "You can override these defaults for specific embeds by modifying the shortcodes - see <a href=\"%s\" target=\"_blank\">instructions</a>."
 msgstr ""
 
-#: core/core_pdf_embedder.php:329
+#: core/core_pdf_embedder.php:350
 msgid "Protect your PDFs using PDF Embedder Secure"
 msgstr ""
 
-#: core/core_pdf_embedder.php:330
+#: core/core_pdf_embedder.php:351
 msgid ""
 "Our <b>PDF Embedder Premium Secure</b> plugin provides the same simple but elegant viewer for your website visitors, with the added protection that\n"
 "            it is difficult for users to download or print the original PDF document."
 msgstr ""
 
-#: core/core_pdf_embedder.php:333
+#: core/core_pdf_embedder.php:354
 msgid "This means that your PDF is unlikely to be shared outside your site where you have no control over who views, prints, or shares it."
 msgstr ""
 
-#: core/core_pdf_embedder.php:381
+#: core/core_pdf_embedder.php:356
+msgid "Optionally add a watermark containing the user's name or email address to discourage sharing of screenshots."
+msgstr ""
+
+#: core/core_pdf_embedder.php:404
 msgid "Width must be \"max\" or an integer (number of pixels)"
 msgstr ""
 
-#: core/core_pdf_embedder.php:382
+#: core/core_pdf_embedder.php:405
 msgid "Height must be \"max\" or an integer (number of pixels)"
 msgstr ""
 
-#: core/core_pdf_embedder.php:388
+#: core/core_pdf_embedder.php:411
 msgid "Unspecified error"
 msgstr ""
 
-#: core/core_pdf_embedder.php:429
+#: core/core_pdf_embedder.php:452
 msgid "Settings saved"
 msgstr ""
 
-#: core/core_pdf_embedder.php:525
+#: core/core_pdf_embedder.php:548
 msgid "Settings"
 msgstr ""
 
-#: premium_secure_pdf_embedder.php:164 premium_secure_pdf_embedder.php:166
+#: premium_secure_pdf_embedder.php:89
+msgid "Not logged in"
+msgstr ""
+
+#: premium_secure_pdf_embedder.php:230 premium_secure_pdf_embedder.php:232
 msgid "Secure PDFs"
 msgstr ""
 
-#: premium_secure_pdf_embedder.php:169
-msgid "Send PDF media uploads to 'securepdfs' folder"
+#: premium_secure_pdf_embedder.php:235
+msgid "Send new PDF media uploads to 'securepdfs' folder"
 msgstr ""
 
-#: premium_secure_pdf_embedder.php:175
+#: premium_secure_pdf_embedder.php:241
 msgid "Disable Right Click"
 msgstr ""
 
-#: premium_secure_pdf_embedder.php:178
-msgid "Disable right-click mouse menu"
+#: premium_secure_pdf_embedder.php:244
+msgid "Disable right-click mouse menu (affects secure PDFs only)"
 msgstr ""
 
-#: premium_secure_pdf_embedder.php:185
+#: premium_secure_pdf_embedder.php:250
+msgid "Watermark"
+msgstr ""
+
+#: premium_secure_pdf_embedder.php:252
+msgid "Text to display on secure PDFs"
+msgstr ""
+
+#: premium_secure_pdf_embedder.php:260
+msgid "Horizontal alignment"
+msgstr ""
+
+#: premium_secure_pdf_embedder.php:262
+msgid "Left"
+msgstr ""
+
+#: premium_secure_pdf_embedder.php:263
+msgid "Center"
+msgstr ""
+
+#: premium_secure_pdf_embedder.php:264
+msgid "Right"
+msgstr ""
+
+#: premium_secure_pdf_embedder.php:269
+msgid "Vertical offset (%)"
+msgstr ""
+
+#: premium_secure_pdf_embedder.php:274
+msgid "Font Size (pt)"
+msgstr ""
+
+#: premium_secure_pdf_embedder.php:279
+msgid "Opacity (%)"
+msgstr ""
+
+#: premium_secure_pdf_embedder.php:284
+msgid "Rotation (degrees)"
+msgstr ""
+
+#: premium_secure_pdf_embedder.php:289
+msgid "Page Display"
+msgstr ""
+
+#: premium_secure_pdf_embedder.php:292
+msgid "Show only on even page numbers"
+msgstr ""
+
+#: premium_secure_pdf_embedder.php:300
 msgid ""
 "If 'Secure PDFs' is checked above, your PDF uploads will be 'secure' by default.\n"
 "            That is, they should be uploaded to a 'securepdfs' sub-folder of your uploads area. These files should not be accessible directly,\n"
 "            and the plugin provides a backdoor method for the embedded viewer to obtain the file contents."
 msgstr ""
 
-#: premium_secure_pdf_embedder.php:189
+#: premium_secure_pdf_embedder.php:304
 msgid ""
 "This means that your PDF is unlikely to be shared outside your site where you have no control over who views, prints, or shares it.\n"
 "            Please note that it is still always possible for a determined user to obtain the original file. Sensitive information should never be presented to viewers in any form."
 msgstr ""
 
-#: premium_secure_pdf_embedder.php:192
+#: premium_secure_pdf_embedder.php:307
 msgid "See <a href=\"http://wp-pdf.com/premium-instructions/?utm_source=PDF%20Settings%20Secure&utm_medium=premium&utm_campaign=Premium\" target=\"_blank\">Instructions</a> for more details."
+msgstr ""
+
+#: premium_secure_pdf_embedder.php:396
+msgid "Watermark Vertical offset should be a numerical value between 0 and 100"
+msgstr ""
+
+#: premium_secure_pdf_embedder.php:397
+msgid "Font Size should be a numerical value"
+msgstr ""
+
+#: premium_secure_pdf_embedder.php:398
+msgid "Watermark Opacity should be a numerical value between 0 and 100"
+msgstr ""
+
+#: premium_secure_pdf_embedder.php:399
+msgid "Watermark Rotation should be a numerical value in degrees (0 to 360)"
 msgstr ""
 
 # wordpress plugin description

@@ -174,15 +174,16 @@ jQuery(document).ready(function($) {
 
 	$menu.mmenu({
 		counters: true,
-			extensions: ["pageshadow", "effect-slide-menu"],
+			extensions: ["pageshadow"],
 			offCanvas: {
-				moveBackground: false
+				moveBackground: false,
+				position: "bottom",
+				zposition: "front"
 			},
-			navbars: [
-				{
-					content: [ "prev", "title" ]
-				}
-			]
+			navbar: {
+				add: false
+			},
+			slidingSubmenus: false
 	}, {
 		
 			offCanvas: {

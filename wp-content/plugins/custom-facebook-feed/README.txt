@@ -1,9 +1,9 @@
 === Custom Facebook Feed ===
 Contributors: smashballoon
-Tags: Facebook, Facebook feed, Facebook posts, Facebook wall, Facebook events, Facebook page, Facebook group, Facebook groups, Facebook fans, Facebook likes, Facebook followers, Facebooks, Face book, posts, Facebook postings, Facebook feeds, Facebook pages, Facebook Like Box, Facebook plugin, Facebook plug-in, Facebook walls, Facebook hashtag, Facebook embed, Customizable Facebook Feed, custom, customizable, seo, responsive, mobile, social media
+Tags: Facebook, Facebook feed, Facebook posts, Facebook wall, Facebook events, Facebook page, Facebook group, Facebook fans, Facebook likes, Facebook followers, Face book, Facebook pages, Facebook Like Box, Facebook plugin, Facebook walls, custom, customizable, seo, responsive, mobile, social media
 Requires at least: 3.0
-Tested up to: 4.5
-Stable tag: 2.4.1.2
+Tested up to: 4.6
+Stable tag: 2.4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -361,6 +361,16 @@ Credit iMarketing Factory - "The Importance of Facebook for Small Businesses"
 9. It's super easy to display your Facebook feed in any page or post
 
 == Changelog ==
+= 2.4.3 =
+* Fix: Fixed a potential security vulnerability
+* Tested with upcoming WordPress 4.6 update
+
+= 2.4.2 =
+* Tweak: Group wall feed posts are now ordered based on recent activity, rather than by the date they were created, to better reflect the order on the Facebook Group wall.
+* Tweak: The "5 hours ago" date text strings can now be translated directly in the shortcode if you're displaying different feeds in different languages. See the bottom of the [Shortcode Options table](https://smashballoon.com/custom-facebook-feed/docs/shortcodes/) for more information.
+* Tweak: Created some specific [setup directions](https://smashballoon.com/custom-facebook-feed/docs/free/) for the free version.
+* Fix: Minor bug fixes
+
 = 2.4.1.2 =
 * Updated to be compatible with Facebook API version 2.6
 

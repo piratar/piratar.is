@@ -31,7 +31,7 @@
 
 <div class="overlayer"></div>
 
-<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/piratar_framework.js?v=0002"></script>
+<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/piratarchild_framework.js?v=0002"></script>
 
 <div class="instagram tag"></div>
 <?php wp_footer(); ?>
