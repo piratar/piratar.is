@@ -1,7 +1,7 @@
 ﻿<h3>Veljið ár til að skoða bókhald Pírata:</h3>
 <?php 
 
-		// your taxonomy name
+// your taxonomy name
 $tax = 'bokhalds_ar';
 
 // get the terms of taxonomy

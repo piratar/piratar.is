@@ -26,16 +26,14 @@
         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
         <a href="<?php the_permalink(); ?>"><?php echo get_field('short_description'); ?></a><br />
         <?php if ($Departures) { echo '<div class="departures"><div class="splitter h10"></div><i class="fa fa-calendar"></i> ' . $Departures . "</div>"; } ?>
-                        <?php if ($Duration) { echo '<div class="departures"><i class="fa fa-clock-o"></i> ' . $Duration . "</div>"; } ?>
+        <?php if ($Duration) { echo '<div class="departures"><i class="fa fa-clock-o"></i> ' . $Duration . "</div>"; } ?>
         <div class="touricons">
-        <?php
-            foreach ($merki as &$value) {
-                echo "<div class='icon_".$value."'></div>";
-            }
-        ?></div>
-        
-
-        
-        </span>
+            <?php
+                foreach ($merki as &$value) {
+                    echo "<div class='icon_".$value."'></div>";
+                }
+            ?>
+        </div>
+    </span>
 
 </article>
