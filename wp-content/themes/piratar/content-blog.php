@@ -18,5 +18,4 @@
         <time><?php the_time('F j, Y'); ?></time>
        <?php the_excerpt(); ?> 
     </div>
-    
 </article>
