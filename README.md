@@ -42,4 +42,6 @@ http://localhost:8000
 
 Go through the wordpress setup and activate the theme
 
+If you get a white page, you need to go to Settings - Reading and change the default page.
+
 
