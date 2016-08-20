@@ -36,12 +36,36 @@ If you have Docker and docker-compose installed, you can do:
 
 `docker-compose up`
 
-To create a wordpress and a mysql containers which mount the local folder inside the container.
+  Which creates a wordpress and mysql containers which mount the local folder inside the container.
 
-http://localhost:8000
+http://localhost:8000/wp-admin
 
 Go through the wordpress setup and activate the theme
 
-If you get a white page, you need to go to Settings - Reading and change the default page.
+If you get a white page on your frontpage, you need to go to Settings - Reading and change the default page.
 
 
+### Importing a database, f.x. from production or another project
+
+If you need to import your own database via Docker you can do the following:
+
+#### Importing the database to **mysql** container
+
+1. On your local machine, copy the .sql file to the repos *piratar.is/.data/db/* This directory is mounted as */var/lib/mysql/* in the container. 
+
+  Next you open a shell in that container, similar to SSH. 
+  (Do `docker ps` to get the correct container name.)
+1.  `docker exec -it pirataris_db_1 bash`  
+  
+  From within the container, import the .sql file. Pass & dbname = wordpress
+2.  `mysql -u root -p wordpress < /var/lib/mysql/FILE.sql`
+
+#### Edit wp-settings.php on **wordpress** container
+
+1. `docker exec -it pirataris_wordpress_1 bash`
+
+  You might need to install vim or nano in that container with apt-get:
+   
+2. `apt-get update && apt-get install vim`
+
+3. Edit the $table_prefix or DB_NAME, depending on if you imported the tables into the same db or not.
