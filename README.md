@@ -36,11 +36,13 @@ If you have Docker and docker-compose installed, you can do:
 
 `docker-compose up`
 
-  Which creates a wordpress and mysql containers which mount the local folder inside the container.
+Which creates a **wordpress** and **mysql** containers which mount the local folder inside the container.
 
-http://localhost:8000/wp-admin
+(If port 80 is in use, change it in docker-compose.yml)
 
-Go through the wordpress setup and activate the theme
+Visit `http://localhost/`
+
+Go through the wordpress setup and activate the theme.
 
 If you get a white page on your frontpage, you need to go to Settings - Reading and change the default page.
 
