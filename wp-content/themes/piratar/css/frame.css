@@ -1,6 +1,7 @@
 
 h1, h2, h3, h4, header .menu-item a, .submenu .padding > ul > li > a  {
 	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
 }
 
 h1, h2, h3, h4 {
@@ -63,7 +64,6 @@ h1.adildartitle {
 
 a {
 	color:#333;
-	text-decoration:none;
 }
 
 #lilja { height:115px; }
