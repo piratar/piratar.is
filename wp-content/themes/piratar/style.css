@@ -316,7 +316,7 @@ a.more-link:visited {
 /* Uppercase fix á frétta titlum á forsíðu */
 
 .title_uppercase {
-    text-transform: uppercase;
+    text-transform: lowercase;
     color: #51297e;
 }
 
