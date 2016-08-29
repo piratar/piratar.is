@@ -157,7 +157,7 @@
 
     <div class="frettir">
         <div class="wrapper">
-            <h2 class="section-title">Fréttir frá aðildafélagi</h2>
+            <h2 class="section-title">Fréttir frá aðildarfélagi</h2>
                 <div class="splitter h20"></div>
                 <?php
                     $i = 1;
