@@ -46,7 +46,7 @@
                         <a href="<?php the_permalink(); ?>"><img width="270" border="0" height="131" alt="" src="<?php echo $image[0]; ?>"></a>
                     </figure>
                     <div class="textinn">
-                        <h2><a class="title_uppercase" href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></h2>
+                        <h2><a class="purple" href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></h2>
                         <p><?php the_excerpt(); ?><h4><a href="<?php the_permalink(); ?>">Lesa meira</a></h4></p>
                     </div>
                 </article>
@@ -65,7 +65,7 @@
                         if($i <= 6) {
                     ?>
                         <div class="mini_stjornar_gluggi">
-                            <h2><a class="title_uppercase" href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></h2>
+                            <h2><a class="purple" href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></h2>
                         </div>
                     <?php }
                         endwhile;
@@ -81,7 +81,7 @@
                         if($x > 6) {
                     ?>
                         <div class="mini_stjornar_gluggi">
-                            <h2><a class="title_uppercase" href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></h2>
+                            <h2><a class="purple" href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></h2>
                         </div>
                     <?php }
                         endwhile;
@@ -189,7 +189,7 @@
                 <?php } ?>
 
                     <div class="smaforsidutexti">
-                        <h2><a class="title_uppercase" href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></h2>
+                        <h2><a class="purple" href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></h2>
                         <p><?php the_excerpt(); ?> </p>
                     </div>
                 </article>
