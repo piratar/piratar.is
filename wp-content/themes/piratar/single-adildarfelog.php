@@ -47,7 +47,7 @@
                     </figure>
                     <div class="textinn">
                         <h2><a class="purple" href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></h2>
-                        <p><?php the_excerpt(); ?><h4><a href="<?php the_permalink(); ?>">Lesa meira</a></h4></p>
+                        <p><?php the_excerpt(25); ?><h4><a href="<?php the_permalink(); ?>">Lesa meira</a></h4></p>
                     </div>
                 </article>
             <?php
@@ -190,7 +190,7 @@
 
                     <div class="smaforsidutexti">
                         <h2><a class="purple" href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></h2>
-                        <p><?php the_excerpt(); ?> </p>
+                        <p><?php the_excerpt(25); ?> </p>
                     </div>
                 </article>
 
