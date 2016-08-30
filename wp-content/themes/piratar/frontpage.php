@@ -74,7 +74,7 @@
                 </figure>
             <?php } ?>
                 <div class="smaforsidutexti">
-                    <h2><a class="title_uppercase" href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></h2>
+                    <h2><a class="purple" href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></h2>
                     <p><?php echo excerpt(30); ?><a class="title_uppercase" href="<?php the_permalink(); ?>">Lesa meira</a></p>
                 </div>
             </article>
