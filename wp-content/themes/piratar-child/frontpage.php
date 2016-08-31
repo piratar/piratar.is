@@ -5,7 +5,7 @@
 	
 get_header(); ?>
 
-	<div id="imagebanner">
+	<div id="imagebanner" style="display:none">
 		<div id="videokilltheradiostar"></div>
 		<article>
 			<figure style="background-image:url(wp-content/themes/piratar/img/piratar-crop.jpg);">
@@ -18,16 +18,24 @@ get_header(); ?>
 		<div id="boxin_kynning">
 		<div class="wrapper">
 			<div class="box">
-				<a href="/kosningar/profkjor-althingiskosningar/profkjor-nordvestur/"><h2>Norðvesturkjördæmi</h2></a>
 				<?php the_field('nordvesturbox', 42); ?>
 			</div>
 			<div class="box">
-				<a href="/kosningar/profkjor-althingiskosningar/profkjor-sudur/"><h2>Suðurkjördæmi</h2></a>
 				<?php the_field('sudurbox', 42); ?>
 			</div>
 			<div id="myList" class="box">
-				<a href="/kosningar/profkjor-althingiskosningar/profkjor-hofudborgarsvaedi/"><h2>Höfuðborgarsvæðið</h2></a>
 				<?php the_field('capitalbox', 42); ?>            
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="box">
+				<?php the_field('forsidubox_4', 42); ?>
+			</div>
+			<div class="box">
+				<?php the_field('forsidubox_5', 42); ?>
+			</div>
+			<div id="myList" class="box">
+				<?php the_field('forsidubox_6', 42); ?>            
 			</div>
 		</div>
 	</div>
