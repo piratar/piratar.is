@@ -23,7 +23,7 @@ get_header(); ?>
 			<div class="box">
 				<?php the_field('sudurbox', 42); ?>
 			</div>
-			<div id="myList" class="box">
+			<div class="box">
 				<?php the_field('capitalbox', 42); ?>            
 			</div>
 		</div>
@@ -34,7 +34,7 @@ get_header(); ?>
 			<div class="box">
 				<?php the_field('forsidubox_5', 42); ?>
 			</div>
-			<div id="myList" class="box">
+			<div class="box">
 				<?php the_field('forsidubox_6', 42); ?>            
 			</div>
 		</div>

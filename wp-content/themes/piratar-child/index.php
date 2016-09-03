@@ -22,7 +22,7 @@
 				<a href="/kosningar/profkjor-althingiskosningar/profkjor-sudur/"><h2>Suðurkjördæmi</h2></a>
 				<?php the_field('sudurbox', 42); ?>
 			</div>
-			<div id="myList" class="box">
+			<div class="box">
 				<a href="/kosningar/profkjor-althingiskosningar/profkjor-hofudborgarsvaedi/"><h2>Höfuðborgarsvæðið</h2></a>
 				<?php the_field('capitalbox', 42); ?>            
 			</div>

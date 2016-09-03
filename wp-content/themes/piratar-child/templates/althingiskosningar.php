@@ -17,7 +17,7 @@ get_header(); ?>
 			<div class="box">
 				<?php the_field('sudurbox', 42); ?>
 			</div>
-			<div id="myList" class="box">
+			<div  class="box">
 				<?php the_field('capitalbox', 42); ?>
 			</div>
 		</div>
@@ -28,11 +28,14 @@ get_header(); ?>
 			<div class="box">
 				<?php the_field('forsidubox_5', 42); ?>
 			</div>
-			<div id="myList" class="box">
+			<div class="box">
 				<?php the_field('forsidubox_6', 42); ?>
 			</div>
 		</div>
-		<h3>Sja alla</h3>
+	</div>
+
+	<div>
+		<a href="#">Sja alla</a>
 	</div>
 
 	<div id="boxin_kynning" class="">
@@ -41,9 +44,6 @@ get_header(); ?>
 			<div class="alpha full">
 				<?php the_content(); ?>
 			</div>
-			<div class="box nedrabox">
-				<?php the_field('kosningarbox1', 42); ?>
-			</div>
 		</div>
 	</div>
 
@@ -51,13 +51,13 @@ get_header(); ?>
 	<div id="boxin_kynning" class="">
 		<div class="wrapper">
 			<div class="box">
-				<h3>Hvernig á að kjósa?</h3>
+				<h2>Taka þátt</h2>
 			</div>
 			<div class="box">
-				<h3>Fyrir fjölmiðla</h3>
+				<h2>Fyrir fjölmiðla</h2>
 			</div>
 			<div class="box">
-				<h3>Taka þátt</h3>
+				<h2>Hvernig á að kjósa?</h2>
 			</div>
 		</div>
 	</div>
