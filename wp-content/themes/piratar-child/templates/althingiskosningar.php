@@ -7,6 +7,11 @@ get_header(); ?>
 	<div>
 		<h3>Stefnan</h3>
 	</div>
+	<div>
+		<hr />
+		<h3>Carolina fund banner</h3>
+		<hr />
+	</div>
 
 	<div id="boxin_kynning">
 		<h3>Topp 5 úr kjördæmum</h3>
