@@ -16,34 +16,32 @@ get_header(); ?>
     <div class="container">
         <h3>Topp 5 úr kjördæmum</h3>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
                 <div class="bgpurple">
                     <?php the_field('nordvesturbox', 42); ?>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
                 <div class="bgpurple">
                     <?php the_field('sudurbox', 42); ?>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
                 <div class="bgpurple">
                     <?php the_field('capitalbox', 42); ?>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
                 <div class="bgpurple">
                     <?php the_field('forsidubox_4', 42); ?>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
                 <div class="bgpurple">
                     <?php the_field('forsidubox_5', 42); ?>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
                 <div class="bgpurple">
                     <?php the_field('forsidubox_6', 42); ?>
                 </div>
