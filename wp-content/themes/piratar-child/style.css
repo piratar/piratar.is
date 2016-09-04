@@ -98,7 +98,6 @@ body {
     background-color: #51297e;
     color: #FFF;
     padding: 25px;
-    height: 250px;
     margin-bottom:25px;
 }
 
@@ -106,6 +105,15 @@ body {
     color: white;
     text-decoration: underline;
 }
+
+.h300 {
+    height: 300px;
+}
+
+.h250 {
+    height: 250px;
+}
+
 
 .mb30{
     margin-bottom: 30px;
