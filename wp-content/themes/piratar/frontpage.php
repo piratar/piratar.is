@@ -4,12 +4,15 @@
     get_header();
 ?>
 
-<div id="imagebanner">
+<div id="imagebanner" class="karolina">
     <div id="videokilltheradiostar"></div>
     <article>
-        <figure style="background-image:url(wp-content/themes/piratar/img/piratar-crop.jpg);">
+        <h1>Hópfjármögnun Pírata</h1>
+        <h2>Kraftur fjöldans í samstarfið við Karolina Fund</h2>
+        <p><a href="http://piratar.karolinafund.com/">Styrkja Pírata</a></p>
+        <!--figure style="background-image:url(wp-content/themes/piratar/img/piratar-crop.jpg);">
 
-        </figure>
+        </figure-->
         <div class="intro"></div>
     </article>
 </div>
