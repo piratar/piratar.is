@@ -21,10 +21,10 @@
                 $terms = wp_get_post_terms($post->ID, $taxonomies,  array("fields" => "names"));
         ?>
 
-            <div class="col-md-4 allborder" id="<?php echo $fid ?>" >
+            <div class="col-md-4 allborder h500" id="<?php echo $fid ?>" >
                 <div class="row">
                     <div class="col-md-4">
-                        <a href="<?php echo esc_url(get_permalink()); ?>"><?php if(the_post_thumbnail('thingfolk_thumb', array( 'class' => 'frambj_thumb_img'))) ?></a>
+                        <a href="<?php echo esc_url(get_permalink()); ?>"><?php if(the_post_thumbnail('thingfolk_thumb', array( 'class' => 'img-responsive'))) ?></a>
                     </div>
                     <div class="col-md-8">
                         <h3>
