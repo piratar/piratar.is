@@ -6,7 +6,7 @@
     get_header();
  ?>
  
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
             <h2 class="section-title">Frambjóðendur í Höfuðborgarkjördæmi</h2>
@@ -21,7 +21,7 @@
                 $terms = wp_get_post_terms($post->ID, $taxonomies,  array("fields" => "names"));
         ?>
 
-            <div class="col-md-4 h500" id="<?php echo $fid ?>" >
+            <div class="col-xs-12 col-md-6 col-lg-4 h500" id="<?php echo $fid ?>" >
                 <div class="allborder">
                     <div class="row">
                         <div class="col-md-4">
