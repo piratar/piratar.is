@@ -111,6 +111,7 @@ body {
 .allborder{
     border: 1px solid #e2e2e2;
     padding: 10px;
+    min-height:500px;
 }
 .h500{
     height: 550px;
