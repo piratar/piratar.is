@@ -19,19 +19,16 @@ get_header(); ?>
             <div class="col-md-4">
                 <div class="bgpurple">
                     <?php the_field('nordvesturbox', 42); ?>
-                    aaaaaaaaaaaaaa
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="bgpurple">
                     <?php the_field('sudurbox', 42); ?>
-                    bbbbbbbbb
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="bgpurple">
                     <?php the_field('capitalbox', 42); ?>
-                    cccccccc
                 </div>
             </div>
         </div>
@@ -39,19 +36,16 @@ get_header(); ?>
             <div class="col-md-4">
                 <div class="bgpurple">
                     <?php the_field('forsidubox_4', 42); ?>
-                    ddddddd
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="bgpurple">
                     <?php the_field('forsidubox_5', 42); ?>
-                    eeeeeeeee
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="bgpurple">
                     <?php the_field('forsidubox_6', 42); ?>
-                    ffffffff
                 </div>
             </div>
         </div>

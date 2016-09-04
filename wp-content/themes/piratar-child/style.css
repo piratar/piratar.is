@@ -102,6 +102,11 @@ body {
     margin-bottom:25px;
 }
 
+.bgpurple a{
+    color: white;
+    text-decoration: underline;
+}
+
 .mb30{
     margin-bottom: 30px;
 }
