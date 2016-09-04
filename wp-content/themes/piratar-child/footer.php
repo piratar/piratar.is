@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row mb30">
             <div class="col-md-4">
-
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo"><?php bloginfo( 'name' ); ?></a>
             </div>
             <div class="col-md-4">
                 <h3>Píratapartýið</h3>
