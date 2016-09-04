@@ -555,6 +555,15 @@ a.more-link:visited {
     background: #51297e url(img/karolina-bg.png) center center no-repeat !important;
     color: #fff;
     text-align: center;
+    float: none;
+    height: auto;
+    min-height: 500px;
+}
+
+#imagebanner.karolina article {
+    position: static;
+    float: none;
+    height: auto;
 }
 
 #imagebanner.karolina h1 {
