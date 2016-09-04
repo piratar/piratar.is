@@ -21,7 +21,7 @@
                 $terms = wp_get_post_terms($post->ID, $taxonomies,  array("fields" => "names"));
         ?>
 
-        <?php get_template_part( 'partials/each-candidate.php'); ?>
+        <?php get_template_part( 'each', 'candidate'); ?>
 
         <?php endwhile; ?>
     </div>
