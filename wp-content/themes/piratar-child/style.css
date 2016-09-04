@@ -110,6 +110,7 @@ body {
 }
 .allborder{
     border: 1px solid #e2e2e2;
+    padding: 10px;
 }
 .h500{
     height: 500px;
