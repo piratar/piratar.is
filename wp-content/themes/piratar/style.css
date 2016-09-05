@@ -492,6 +492,8 @@ a.more-link:visited {
     /*background:rgba(0,0,0,0.4); */
 }
 
+
+
 .adildarfelog_fix ul {
     list-style: outside disc;
     margin-left: 25px;
@@ -545,4 +547,54 @@ a.more-link:visited {
 
 .nedrabox a {
     color: #51297e !important;
+}
+
+/* Karolina Fund söfnun */
+
+#imagebanner.karolina {
+    background: #51297e url(img/karolina-bg.png) center center no-repeat !important;
+    color: #fff;
+    text-align: center;
+    float: none;
+    height: auto;
+    min-height: 500px;
+}
+
+#imagebanner.karolina article {
+    position: static;
+    float: none;
+    height: auto;
+}
+
+#imagebanner.karolina h1 {
+    font-size: 4em;
+    margin-top: 2.5em;
+    margin-bottom: 0;
+    color: #FAC90F !important;
+}
+
+
+#imagebanner.karolina h2 {
+    font-weight: normal;
+    margin-top: 0;
+}
+
+#imagebanner.karolina h1, #imagebanner.karolina h2 {
+    color: #fff;
+}
+
+#imagebanner.karolina p a {
+    display: inline-block;
+    margin: 0 auto;
+    background: #222;
+    color: #FAC90F;
+    padding: 0.66em 2em;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#imagebanner.karolina p a:hover {
+    background: #FAC90F;
+    color: #222;
 }
