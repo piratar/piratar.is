@@ -1,33 +1,37 @@
 <footer>
-    <div class="wrapper">
-        <div class="box first">
-            <h3>Píratapartýið</h3>
-            <p>Píratar eru stjórnmálaafl sem berst fyrir raunverulegu gegnsæi og ábyrgð í stjórnkerfinu, auknu aðgengi að upplýsingum, beinu lýðræði, upplýsingafrelsi og endurskoðun höfundarréttar.</p>
-	    </div>
-        <div class="box">
-            <?php
-                wp_nav_menu( array(
-                    'theme_location' => 'primary',
-                    'depth'          => 1,
-                ) );
-            ?>
+    <div class="container">
+        <div class="row mb30">
+            <div class="col-md-4">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo"><?php bloginfo( 'name' ); ?></a>
+            </div>
+            <div class="col-md-4">
+                <h3>Píratapartýið</h3>
+                <p>Píratar eru stjórnmálaafl sem berst fyrir raunverulegu gegnsæi og ábyrgð í stjórnkerfinu, auknu aðgengi að upplýsingum, beinu lýðræði, upplýsingafrelsi og endurskoðun höfundarréttar.</p>
+            </div>
+            <div class="col-md-4">
+                <?php
+                    wp_nav_menu( array(
+                        'theme_location' => 'primary',
+                        'depth'          => 1,
+                    ) );
+                ?>
+            </div>
         </div>
-        <div class="box last">
-           
+        <div class="row">
+            <div class="col-md-12">
+                <div class="info-box"><strong>© Píratar - Tortuga:</strong> Fiskislóð 31, 101 Reykjavík, <a href="mailto:piratar@piratar.is">piratar@piratar.is</a> Sími: 546-2000, Póstfang: Pósthólf 42, 121 Reykjavík</div>
+            </div>
         </div>
-        <div class="splitter h20"></div>
-        <div class="info-box"><strong>© Píratar - Tortuga:</strong> Fiskislóð 31, 101 Reykjavík, <a href="mailto:piratar@piratar.is">piratar@piratar.is</a> Sími: 546-2000, Póstfang: Pósthólf 42, 121 Reykjavík</div>
-        <!-- <div class="creator-box fr">Kóðað af <a target="_blank" href="http://www.gre.is/">gre</a> ~ <a target="_blank" href="mailto:arnarvalur88@gmail.com">avj</a></div> -->
+    </div> <!-- end container -->
+    <div style="display:none;">
+       <?php
+           wp_nav_menu( array(
+               'theme_location' => 'mobile',
+               'depth'          => 3,
+           ) );
+       ?>
     </div>
- <div style="display:none;">
-    <?php
-        wp_nav_menu( array(
-            'theme_location' => 'mobile',
-            'depth'          => 3,
-        ) );
-    ?>
-</div>   
-</footer>   
+</footer>
 
 <div class="overlayer"></div>
 

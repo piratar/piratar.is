@@ -93,3 +93,39 @@ body {
     padding: 0 10px;
     width: calc(100% - 20px);
 }
+
+.bgpurple {
+    background-color: #51297e;
+    color: #FFF;
+    padding: 25px;
+    margin-bottom:25px;
+}
+
+.bgpurple a{
+    color: white;
+    text-decoration: underline;
+}
+
+.h300 {
+    height: 300px;
+}
+
+.h250 {
+    height: 250px;
+}
+
+
+.mb30{
+    margin-bottom: 30px;
+}
+.white{
+    color: white;
+}
+.allborder{
+    border: 1px solid #e2e2e2;
+    padding: 10px;
+    min-height:500px;
+}
+.h500{
+    height: 550px;
+}
