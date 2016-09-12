@@ -4,17 +4,21 @@
     */
 get_header(); ?>
 
-    <div>
-        <h3>Stefnan</h3>
-    </div>
-    <div>
-        <hr />
-        <h3><?php the_field('banner_space' ); ?></h3>
-        <hr />
-    </div>
-
     <div class="container">
-        <h3>Topp 5 úr kjördæmum</h3>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Stefnan</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <hr />
+                <?php the_field('banner_space' ); ?>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-md-6 col-lg-4">
                 <div class="bgpurple h300">
