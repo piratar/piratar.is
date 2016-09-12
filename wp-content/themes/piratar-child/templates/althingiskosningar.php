@@ -9,7 +9,7 @@ get_header(); ?>
     </div>
     <div>
         <hr />
-        <h3>Carolina fund banner</h3>
+        <h3><?php the_field('banner_space' ); ?></h3>
         <hr />
     </div>
 
