@@ -1,0 +1,27 @@
+{
+  "name": "piratar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piratar/piratar.is"
+  },
+  "author": "Andri Sigurðsson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piratar/piratar.is/issues"
+  },
+  "homepage": "https://github.com/piratar/piratar.is/",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": ">=2.6.0",
+    "gulp-cssnano": ">=2.1.1",
+    "gulp-sass": ">=2.3.2",
+    "gulp-rename": ">=1.2.2",
+    "gulp-uglify": ">=1.5.2"
+  }
+}

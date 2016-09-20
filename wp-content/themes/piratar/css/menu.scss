@@ -1,55 +1,86 @@
-menu {
+@import "variables";
+
+//
+//  Header & menu
+// 
+
+header {
+    width: 100%;
+    background: #fff;
+    height: 84px;
+    float: left;
+    position: fixed;
+    z-index: 501;
+    top: 0;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.10);
+}
+
+.admin-bar header {
+    top: 32px;
+}
+
+header a.nanar { 
+    background:#51297E;
+    color: #fff !important;
+    display: inline !important;
+    padding:5px 10px;
+}
+
+header menu {
 	background:transparent;
 	height:41px;
 	line-height:41px;
 	padding:0;
-	margin:45px auto 0;
+	margin:20px auto 0;
 	float:right;
 }
 
-ul {
+header ul {
 	list-style-type: none;
     padding: 0px;
     margin: 0px;
 }
 
 
-li {
+header li {
 	float:left;
 }
 
-.delta li  {
-	float:left;
-    margin-bottom: 5px;
-    width: 100%;
-}
 
-menu li a {
+header menu li a {
 	background:transparent;
 	color:#51297E;
-	line-height:41px;
-	height:41px;
-	padding:0 10px;
-	margin-left:5px;
+	line-height: 38px;
+	height: 38px;
+	padding:0 0.75em;
 	display:block;
 	position:relative;
-    font-size: 18px;
+    font-weight: 700;
+    border: 2px solid transparent;
+    font-family: $font-sans;
+    text-decoration: none;
+    font-size: 16px;
 }
 
-menu li a:hover {
-	background:#f4f4f4;
+header menu li a:hover {
+	color: #222;
 }
 
-menu li.selected a {
-	background:#51297E;
-	color:#fff;
+header menu li.selected a {
+	background: #fff;
+	color: #222;
+    border-radius: 2em;
+    border: 2px solid #F5F5F5;
 }
 
-menu li.current-menu-item a, menu li.current-page-ancestor a {
-	border-bottom:3px solid #51297E;
+header menu li.current-menu-item a, header menu li.current-page-ancestor a {
+	border: 2px solid #F5F5F5;
+    color: #222;
+    border-radius: 2em;
+    background: #F5F5F5;
 }
 
-a.logo {
+header a.logo {
 	background:url(../img/piratar_logo.png);
     background-size: 183px 60px;
 	width: 183px;
@@ -63,7 +94,7 @@ a.logo {
     -moz-transition: 0.3s ease-in-out;
     -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
-    margin-top:22px;
+    margin-top:12px;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) {
@@ -82,44 +113,42 @@ a.logo {
     }
 }
 
-.menubar {
+header .menubar {
 	float:right;
-	width:calc(100% - 245px);
-	margin-left:44px;
+	width:calc(100% - 201px);
+	//margin-left:44px;
 }
 
-.searchbox {
-    background: #51297E none repeat scroll 0 0;
+header .searchbox {
+    background: #FFF;
     float: right;
     height: 32px;
     padding: 5px;
     position: absolute;
-    top: 101px;
+    top: 20px;
     width: 344px;
-    border: 1px solid #51297E;
-    right:10px;
+    right: 64px;
     display: none;
+    box-shadow: 0px 0px 8px 0 rgba(0,0,0,0.1);
+    z-index: 500;
+    border: 1px solid rgba(0,0,0,0.1);
 }
 
-.scroll .searchbox {
-    top: 79px;
-}
-
-.searchbox input[type="text"]{
-	border:1px solid #51297E;
+header .searchbox input[type="text"]{
+	border: 0;
 	float:left;
-	height: 30px;
-	line-height:30px;
+	height: 32px;
+	line-height:32px;
     padding: 0 5px;
-	width:300px;
-	font-family: 'Open Sans', sans-serif;
+	width: 300px;
+	font-family: 'Montserrat', sans-serif;
 	text-indent: 5px;
-    font-size:15px;
+    font-size: 16px;
 }
 
-.searchbox input[type="submit"]{
-	background:#51297E;
-	border:1px solid #51297E;
+header .searchbox input[type="submit"]{
+	background: #FFF;
+	border: 0;
 	float:left;
 	height:32px;
 	width:32px;
@@ -128,37 +157,42 @@ a.logo {
     cursor: pointer;
 }
 
-.searchbox span {
+header .searchbox span {
     position: relative;
-    color:#fff;
+    color: #51297e;
 }
 
-.searchbox span:after {
+header .searchbox span:after {
     font-family: FontAwesome;
     content: "\f002";
     font-size: 16px;
     pointer-events: none;
     position: relative;
     left: 320px;
-    top: -26px;
+    top: -29px;
+    color: #51297e;
+}
+
+header.search-on menu {
+    opacity: 0.35;
 }
 
 #svunta_menu-item-61, #svunta_menu-item-62, #svunta_menu-item-63, #svunta_menu-item-64, #svunta_menu-item-65, #svunta_menu-item-66 {
     display: none;
 }
+
 .submenu {
     display: block;
     left: 0;
     position: absolute;
-    top: 88px;
+    top: 84px;
     width: 100%;
     z-index: 400;
-    background-color: #51297e;
-    
+    background: #FFF;
+    box-shadow: 0px 0 4px 0px rgba(0,0,0,0.10);
 }
 .submenu div.rammi {
-    color: #fff;
-    min-height: 250px;
+    min-height: 150px;
     padding: 1em;
     position: relative;
     width: 100%;
@@ -192,30 +226,43 @@ a.logo {
     width: 100%;
 }
 .submenu div.rammi h3 {
-    color: #fff;
     font-size: 16px;
     margin: 0 0 1px;
     padding: 0;
 }
 .submenu div.rammi a {
-    color: #fff;
     display: block;
 }
 .submenu div.rammi ul {
     float: left;
-    width:33.333%;
+    width: 33.333%;
     min-height: 200px;
 }
 
 .submenu div.rammi ul li ul {
-    width:100%;
+    width: 100%;
     min-height: auto;
 }
 
-.submenu div.rammi ul .content { font-weight: 300; font-size:14px;color: rgba(255, 255, 255, 0.7); }
+.submenu div.rammi ul .content {
+    font-size: 16px;
+}
+
+.submenu div.rammi ul .content p {
+    margin-bottom: 1em;
+}
+
+.submenu div.rammi ul .content a {
+    text-decoration: none;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+
+.submenu div.rammi ul .content a:hover {
+    border-bottom: 2px solid #51297e;
+}
+
 .submenu div.rammi ul li {
     float: left;
-    font-weight: 700;
     margin-right: 40px;
     padding: 10px 0;
     width: calc(100% - 40px);
@@ -224,15 +271,12 @@ a.logo {
 .submenu > .rammi > .padding > ul > li > a {
     border-bottom: 3px solid rgba(255,255,255,0.4);
     display: inline-block;
-    font-size: 1.1em;
+    font-size: 1.25em;
     font-weight: bold;
     width: 100%;
-    padding-bottom: 2px;
-}
-
-.submenu div.rammi ul li span {
-    font-size: 14px;
-    font-weight: 400;
+    padding-bottom: 0.5em;
+    font-family: $font-sans;
+    text-decoration: none;
 }
 
 .submenu div.rammi ul li ul li {
@@ -262,7 +306,7 @@ a.logo {
 }
 
 .overlayer.open {
-    background: rgba(0, 0, 0, 0.4) repeat scroll 0 0;
+    background: fade_out($color-dark, 0.4);
     display: block;
     -webkit-transition: 0.3s ease-in-out;
     -moz-transition: 0.3s ease-in-out;
@@ -273,24 +317,24 @@ a.logo {
 
 a.searchicon {
     float: right;
-    height: 41px;
+    height: 38px;
     overflow: hidden;
     text-indent: -3000px;
-    width: 41px;
+    width: 38px;
     position: relative;
-    margin-top: 45px;
-    
+    margin-top: 22px;
+    line-height: 0.8;
+    border-radius: 2em;
 }
 
 a.searchicon:hover {
-    background: #cfd0cb;
+    background: #F5F5F5;
     
 }
 
 a.searchicon.selected {
-    background:#51297E;
-    color:#fff;
-    
+    background: #51297E;
+    color: #fff;
 }
 
 a.searchicon::after {
@@ -306,6 +350,7 @@ a.searchicon::after {
 
 a.searchicon.selected::after {
     content: "\f00d";  
+    left: 13px;
 }
 
 .maillinkur { font-weight:normal !important; font-size: 14px; }
@@ -392,6 +437,8 @@ a.searchicon.selected::after {
 .hlidarmenu ul .content a {
     color:#fff;
 }
+
+// Burger icon
 
 #grunge {
     width: 40px;

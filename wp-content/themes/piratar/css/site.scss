@@ -1,0 +1,59 @@
+@import "variables";
+@import "./components/bootstrap/scss/bootstrap";
+
+body {
+    font-size: 18px;
+    background-color: #fff;
+    color: #222;
+    font-family: $font-serif;
+    padding:0;
+    margin: 84px 0 0 0;
+    height: 100%;
+    line-height: 1.75;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: $font-sans;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 1.5em 0 1em 0;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.25em;
+}
+
+a, a:hover {
+    //@include x-transition($transition); 
+}
+
+p {
+    margin: 1em 0;
+}
+
+//
+// Sections
+//
+
+.section {
+    padding: 4em;
+}
+
+.section-top {
+    padding: 2em 4em;
+    background: $color-purple;
+    .section-title {
+        color: #fff;
+        text-align: center;
+        margin: 0;
+    }
+}

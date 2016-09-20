@@ -1,14 +1,10 @@
 $(function(){
 	
-    $('#grunge').click(function(){
-		//$(this).toggleClass('open');
-	});
-    
-    $('menu a').click(function(event) { 
-		console.log("click");
+    $('menu a').slice(0,-1).click(function(event) { 
+		
 		var currentId = $(this).parent().attr('id');
         if (currentId == "menu-item-38328" && "menu-item-30" ) {
-			
+		
             
         } else {
             
@@ -32,9 +28,6 @@ $(function(){
             }
             
         }
-		
-		
-		
 
 	});
     
@@ -49,68 +42,40 @@ $(function(){
 
 	});
     
-    currentPos = $(document).scrollTop();
-	if (currentPos > 34) {
-		//$("header").addClass("scroll");
-	} else {
-		//$("header").removeClass("scroll");
-	}
-    
     $('a.searchicon').click(function(event) { 
 		var currentId = $(this).parent().attr('id');
 		event.preventDefault();
-	
+	    event.stopPropagation();
 		if($(this).hasClass("selected")) {
-			
+			$("header").removeClass("search-on");
 			$(this).removeClass('selected');
             $('.overlayer').animate({ opacity: 0 },100);
 			$(".searchbox").hide();
 			
 		} else {
+            $("header").addClass("search-on");
 			$("#menu-main-menu li").removeClass('selected');
-                //$(this).parent().addClass('selected');
-                $(".submenu .rammi").hide();
-                $('menu a').parent().removeClass('selected');
-                $('.submenu').removeClass("open");
-                $('.overlayer').removeClass("open");
+            $(".submenu .rammi").hide();
+            $('menu a').parent().removeClass('selected');
+            $('.submenu').removeClass("open");
+            $('.overlayer').removeClass("open");
             $(this).addClass('selected');
 			$(".searchbox").show();
+            $("header .searchbox form #s").focus();
+            $("body").one("click", function(event){
+                 if ($("header").hasClass("search-on")) {
+                    $('a.searchicon').trigger("click");   
+                 }
+                 
+            });
 		}
         
 	});
-    
-    $('.activatemap').click(function(event) { 
-		$(".activatemap").hide();
-	});
-    
-    $('#showtours a').click(function(event) { 
-		var currentId = $(this).parent().attr('id');
-        var currentTitle = $(this).attr('title');
-        var currenthref = $(this).attr('href');
-		event.preventDefault();
-        $('.showtours').slick('slickUnfilter');
-        $('.showtours').slick('slickFilter','.'+currentId);
-        var filtered = true;
 
-        $('div#filtertitle').html("<a href='"+currenthref+"'>View all tours in <strong>" + currentTitle + "</strong></a>")
-        $('#showtours a').parent().removeClass('selected');
-        if (currentId == "daytours") { 
-            $('.toursdisplayed').show(); 
-            $('.js-filter').parent().removeClass("selected");
-            $(".toursdisplayed li:first").addClass("selected");
-        } else {  
-            $('.toursdisplayed').hide(); 
-            $('.js-filter').parent().removeClass("selected");
-            $(".toursdisplayed li:first").addClass("selected");
-        }
-        $('#'+currentId).addClass('selected');
-	});
+    $(".searchbox").on("click", function(event){
+        event.stopPropagation();
+    });
     
-	
-    
-    SamuelLJackson();
-    
-    //var clientId = '81f0e65a47e14fda85d8983ddc2e6df8';
     var clientId = '6797026f054749d59c8e87943c3706e7';
 	$(".instagram.tag").instagram({
         hash: "piratar",
@@ -150,53 +115,3 @@ $(function(){
     });
 
 });
-
-$(window).scroll(function () {
-	topbar = $(".topbar").height();
-	windowheight = $( window ).height()-topbar;
-	currentPos = $(document).scrollTop();
-	if (currentPos > 44) {
-		//$("header").addClass("scroll");
-	} else {
-		//$("header").removeClass("scroll");
-	}
-});
-
-function SamuelLJackson() {
-	$(".stardinskiptirmali").html($(window).width());
-	staerd = $(".wrapper").width()/6;
-	$(".kynning").width(staerd*2);
-	$(".facebook").width(staerd*2);
-	$(".twitter").width(staerd);
-	$(".instagram").width(staerd);
-	$(".kynning, .facebook, .instagram, .twitter").height(staerd);
-}
-var d = new Date();
-if (d.getHours() < 10) {
-    getHours = "0" + d.getHours();
-} else {
-    getHours = d.getHours();
-}
-if (d.getMinutes() < 10) {
-    getMinutes = "0" + d.getMinutes();
-} else {
-    getMinutes = d.getMinutes();
-}
-//document.getElementById("localtime").innerHTML = getHours + ":" + getMinutes;
-
-//var myVar = setInterval(myTimer, 1000);
-
-/*function myTimer() {
-    var d = new Date();
-    if (d.getHours() < 10) {
-        getHours = "0" + d.getHours();
-    } else {
-        getHours = d.getHours();
-    }
-    if (d.getMinutes() < 10) {
-        getMinutes = "0" + d.getMinutes();
-    } else {
-        getMinutes = d.getMinutes();
-    }
-    document.getElementById("localtime").innerHTML = getHours + ":" + getMinutes;
-}*/
