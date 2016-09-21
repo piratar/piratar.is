@@ -2,7 +2,7 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-<div class="section section-top">
+<div class="section section-card section-title">
 
     <div class="container-fluid">
 

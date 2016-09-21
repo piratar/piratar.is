@@ -100,6 +100,10 @@
                 </li><!--.content -->
                       <?php } ?>
             </ul>
+            <?php if (($childpages->current_post+1) % 3 == 0) {
+                ?>
+            </div><div class="padding">
+            <?php } ?>
             <?php endwhile; wp_reset_query(); ?>
             </div>
 
@@ -136,6 +140,10 @@
                 </li><!--.content -->
                       <?php } ?>
             </ul>
+            <?php if (($childpages->current_post+1) % 3 == 0) {
+                ?>
+            </div><div class="padding">
+            <?php } ?>
             <?php endwhile; wp_reset_query(); ?>
             </div>
 
@@ -170,6 +178,10 @@
                 </li><!--.content -->
                       <?php } ?>
             </ul>
+            <?php if (($childpages->current_post+1) % 3 == 0) {
+                ?>
+            </div><div class="padding">
+            <?php } ?>
             <?php endwhile; wp_reset_query(); ?>
             </div>
 
@@ -205,6 +217,10 @@
                 </li><!--.content -->
                       <?php } ?>
             </ul>
+            <?php if (($childpages->current_post+1) % 3 == 0) {
+                ?>
+            </div><div class="padding">
+            <?php } ?>
             <?php endwhile; wp_reset_query(); ?>
             </div>
 
@@ -213,8 +229,10 @@
         <div id="svunta_menu-item-102" class="rammi">
             <div class="padding">
                 <?php 
-                $childpages = new WP_Query( array('post_type' => 'page', 'post_parent' => 11, 'posts_per_page' => 100, 'orderby' => 'menu_order', 'order' => 'ASC')); 
-                while ( $childpages->have_posts() ) : $childpages->the_post(); ?>
+                $childpages = new WP_Query( array('post_type' => 'page', 'post_parent' => 11, 'posts_per_page' => 100, 'orderby' => 'menu_order', 'order' => 'ASC'));
+                while ( $childpages->have_posts() ) : $childpages->the_post(); 
+                ?>
+                
                <ul>
                    <?php 
                     $fela_sidu_ur_megamenu = get_field('fela_sidu_ur_megamenu');
@@ -239,6 +257,10 @@
                 </li><!--.content -->
                       <?php } ?>
             </ul>
+            <?php if (($childpages->current_post+1) % 3 == 0) {
+                ?>
+            </div><div class="padding">
+            <?php } ?>
             <?php endwhile; wp_reset_query(); ?>
             </div>
 
@@ -273,6 +295,10 @@
                 </li><!--.content -->
                       <?php } ?>
             </ul>
+            <?php if (($childpages->current_post+1) % 3 == 0) {
+                ?>
+            </div><div class="padding">
+            <?php } ?>
             <?php endwhile; wp_reset_query(); ?>
             </div>
             <!-- Ég eyddi öllu nema þessum til að stytta kóðann --> 

@@ -4,103 +4,137 @@
     get_header();
 ?>
 
-<div id="imagebanner" class="karolina">
-    <div id="videokilltheradiostar"></div>
-    <article>
-        <h1>Hópfjármögnun Pírata</h1>
-        <h2>Kraftur fjöldans í samstarfi við Karolina Fund</h2>
-        <p><a href="http://piratar.karolinafund.com/">Styrkja Pírata</a></p>
-        <!--figure style="background-image:url(wp-content/themes/piratar/img/piratar-crop.jpg);">
+<div class="section section-card section-bg-image section-text-white section-align-center" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/kosningar-2016.jpg);">
 
-        </figure-->
-        <div class="intro"></div>
-    </article>
-</div>
+    <div class="section-overlay">
 
-<div id="boxin_kynning">
-    <div class="wrapper">
-        <div class="box" style="height:270px;">
-            <?php the_field('frontbox_left', 37894); ?>
-        </div>
-        <div class="box middlebox" >
-            <!--<h2>Viðburðadagatal</h2>
-            <?php //echo do_shortcode('[ecs-list-events limit="3"]'); ?>
-            <p>&nbsp;</p>
-            <a href="/vidburdir/">Opna dagatal</a>-->
-            <?php the_content(); ?>
-        </div>
-        <div class="box" style="height:270px;">
-            <?php the_field('frontbox_right', 37894); ?>
-        </div>
-    </div>
-</div>
+        <div class="container-fluid">
 
+            <div class="row">
 
+                <div class="col-sm-12">
 
+                    <h1>Hópfjármögnun Pírata</h1>
+                    <h2>Kraftur fjöldans í samstarfi við Karolina Fund</h2>
+                    <p><a href="http://piratar.karolinafund.com/" class="btn btn-primary">Styrkja</a></p>
 
-<div class="frettir">
-    <div class="wrapper">
-        <div class="ord">
-            <div class="box nedrabox" style="height:400px;">
-                <?php the_field('frontbox_lover_right', 37894); ?>
-            </div>
-        </div>
-
-        <?php
-            $i = 1;
-            $custom_query = new WP_Query('frettaflokkur=frettir&posts_per_page=5');
-            while($custom_query->have_posts()) : $custom_query->the_post();
-            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
-            $class = "";
-            if ($i == 1) {
-                $class = "fyrsta";
-            } else if ($i > 3) {
-                $class = "nedri";
-            }
-        ?>
-        <?php if ($i == 1) { ?>
-
-        <?php } ?>
-            <article class="blogarticle <?php echo $class; ?>">
-               <?php if ($i == 1) { ?><h2 class="section-title"><a href="/piratar-a-thingi/frettir/">Fréttir</a></h2><?php } ?>
-                <div class="hr hr-short hr-center avia-builder-el-11 el_after_av_textblock el_before_av_textblock "><span class="hr-inner hr-inner-news"></span></div>
-                <?php if(has_post_thumbnail( $post->ID ) ) { ?>
-                <figure style="background-image: url(<?php echo $image[0]; ?>);background-size:contain;">
-                    <a href="<?php the_permalink(); ?>"><img width="270" border="0" height="131" alt="" src="<?php echo $image[0]; ?>"></a>
-                    <div class="date"><span><?php the_time('F'); ?></span><?php the_time('j'); ?></div>
-                </figure>
-                <?php } else {  ?>
-            <?php $logo = 'http://piratar.gre.is/wp-content/uploads/2016/07/logo.png'; ?>
-                <figure class="" style="background-image: url(<?php echo $logo; ?>);background-size:contain;">
-                    <a href="<?php the_permalink(); ?>"><img width="270" border="0" height="131" alt="" src="<?php echo $image[0]; ?>"></a>
-                    <div class="date"><span><?php the_time('F'); ?></span><?php the_time('j'); ?></div>
-                </figure>
-            <?php } ?>
-                <div class="smaforsidutexti">
-                    <h2><a class="purple" href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></h2>
-                    <p><?php echo excerpt(25); ?><a class="purple" href="<?php the_permalink(); ?>">Lesa meira</a></p>
                 </div>
-            </article>
-        <?php if ($i == 1) { ?>
-        <div class="splitter h20"></div>
-        <?php } ?>
-        <?php
-            $i++;
-            endwhile;
-        ?>
-        <?php wp_reset_postdata(); // reset the query ?>
-        <div class="splitter h20"></div>
-        <div class="splitter h20"></div>
-        <h2><a href="/piratar-a-thingi/frettir/">Sjá allar fréttir</a></h2>
+
+            </div>
+
+        </div>
+
     </div>
 
 </div>
-<div class="socialbar nomobile">
-    <div class="wrapper">
-        <h2 class="section-title">Samfélagsmiðlar</h2>
-        <div class="hr hr-short hr-center avia-builder-el-11 el_after_av_textblock el_before_av_textblock "><span class="hr-inner "><span class="hr-inner-style"></span></span></div>
-        <?php echo do_shortcode('[instagram-feed]'); ?>
+
+<div class="section section-bg-graylightest">
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-sm-4">
+
+                <?php the_field('frontbox_left', 37894); ?>
+
+            </div>
+
+            <div class="col-sm-4">
+
+                <?php the_content(); ?>
+
+            </div>
+
+            <div class="col-sm-4">
+
+                <?php the_field('frontbox_right', 37894); ?>
+
+            </div>
+
+        </div>
+
     </div>
+
+</div>
+
+<?php
+    $news = new WP_Query('frettaflokkur=frettir&posts_per_page=5');
+?>
+
+<!--div class="box nedrabox" style="height:400px;">
+    <?php the_field('frontbox_lover_right', 37894); ?>
+</div-->
+
+<div class="section section-grid">
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-sm-12">
+                <h2 class="the-title">Fréttir</h2>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+        <?php 
+            while($news->have_posts()) : $news->the_post();
+            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+            // if(has_post_thumbnail( $post->ID ) )
+        ?>
+
+            <div class="grid-item <?php if($news->current_post == 0) { echo " col-sm-8"; } else { echo " col-sm-4"; } ?><?php if(has_post_thumbnail($post->ID)) echo " grid-bg-image" ?>" style="background-image: url(<?php if(has_post_thumbnail($post->ID)) echo $image[0] ?>);">
+
+                <article>
+
+                    <div class="grid-wrap">
+
+                        <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+                        <div class="date"><?php the_time('F j'); ?></div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <?php if (($news->current_post+1) % 3 == 0) {
+                ?><!--/div><div class="row"--><?php
+            } ?>
+
+
+        <?php endwhile; ?>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="section section-content socialbar nomobile">
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-sm-12">
+            
+                <h2 class="the-title">Samfélagsmiðlar</h2>
+        
+                <div class="hr hr-short hr-center avia-builder-el-11 el_after_av_textblock el_before_av_textblock "><span class="hr-inner "><span class="hr-inner-style"></span></span></div>
+        
+                <?php echo do_shortcode('[instagram-feed]'); ?>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </div>
 
 <?php get_footer(); ?>

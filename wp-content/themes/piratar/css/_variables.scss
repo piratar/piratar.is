@@ -10,3 +10,39 @@ $color-font: #000;
 $color-font-meta: $color-graydark;
 
 $transition: all 175ms cubic-bezier(0.400, 0.150, 0.000, 0.975);
+$shadow: 0px 0px 8px 0 fade_out($color-dark, 0.9);
+
+//
+// BS 
+//
+
+// Colors
+
+$gray-dark:                 #261D2B !default;
+$gray:                      #B3B0B5 !default;
+$gray-light:                #E9E8E9 !default;
+$gray-lighter:              #E9E8E9 !default;
+$gray-lightest:             #E9E8E9 !default;
+
+$brand-primary:             #51297E !default;
+$brand-success:             #5cb85c !default;
+$brand-info:                #5bc0de !default;
+$brand-warning:             #f0ad4e !default;
+
+// Links
+
+$link-hover-decoration: none !default;
+
+// Fonts
+
+$font-family-sans-serif: $font-sans !default;
+$font-family-serif: $font-serif !default;
+$font-size-root: 18px !default;
+$line-height-base: 1.75 !default;
+
+// Buttons
+
+$btn-border-radius:  2em;
+$btn-padding-x:                  1.5rem !default;
+$btn-padding-y:                  0.5rem !default;
+$btn-line-height:                2 !default;
