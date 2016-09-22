@@ -14,8 +14,8 @@
 
                 <div class="col-sm-12">
 
-                    <h1>Hópfjármögnun Pírata</h1>
-                    <h2>Kraftur fjöldans í samstarfi við Karolina Fund</h2>
+                    <h1>Við viljum að þú ráðir</h1>
+                    <h2>Meira lýðræði í krafti fjöldans</h2>
                     <p><a href="http://piratar.karolinafund.com/" class="btn btn-primary">Styrkja</a></p>
 
                 </div>
@@ -28,27 +28,210 @@
 
 </div>
 
-<div class="section section-bg-graylightest">
+<div class="section section-content section-bg-gray">
 
-    <div class="container-fluid">
+    <div class="section-overlay">
 
-        <div class="row">
+        <div class="container-fluid">
 
-            <div class="col-sm-4">
+            <div class="row">
 
-                <?php the_field('frontbox_left', 37894); ?>
-
-            </div>
-
-            <div class="col-sm-4">
-
-                <?php the_content(); ?>
+                <div class="col-sm-12">
+                    <h2 class="the-title">Stefnan</h2>
+                </div>
 
             </div>
 
-            <div class="col-sm-4">
+            <div class="row">
 
-                <?php the_field('frontbox_right', 37894); ?>
+                <div class="col-sm-4">
+
+                    <h2>Heilbrigðiskerfi fyrir alla</h2>
+                    
+                    <p>Praesent ante est, suscipit non consequat a, auctor nec erat. Fusce vitae nisl mollis risus iaculis blandit ac id velit.</p>
+
+                </div>
+
+                <div class="col-sm-4">
+
+                    <h2>Betra og meira lýðræði</h2>
+                    
+                    <p>Fusce iaculis, neque vel volutpat hendrerit, sem elit tristique nisi, a convallis neque libero et quam.</p>
+
+                </div>
+
+                <div class="col-sm-4">
+
+                    <h2>Auðlindirnar okkar</h2>
+                    
+                    <p>Morbi ultricies aliquam elit, in pellentesque tellus tempor quis. Sed finibus est sed nunc ullamcorper, a imperdiet urna venenatis.</p>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-4">
+
+                    <h2>Nýja stjórnarskrá</h2>
+                    
+                    <p>Praesent ante est, suscipit non consequat a, auctor nec erat. Fusce vitae nisl mollis risus iaculis blandit ac id velit.</p>
+
+                </div>
+
+                <div class="col-sm-4">
+
+                    <h2>Heiðarleiki og gegnsægi</h2>
+                    
+                    <p>Fusce iaculis, neque vel volutpat hendrerit, sem elit tristique nisi, a convallis neque libero et quam.</p>
+
+                </div>
+
+                <div class="col-sm-4">
+
+                    <h2>Út með sérhagsmuni</h2>
+                    
+                    <p>Morbi ultricies aliquam elit, in pellentesque tellus tempor quis. Sed finibus est sed nunc ullamcorper, a imperdiet urna venenatis.</p>
+
+                </div>
+
+            </div>
+
+             <div class="row">
+
+                <div class="col-sm-12 text-xs-center">
+                    <a href="#" class="btn btn-primary">Stefnuskrá</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="section section-people">
+
+    <div class="section-overlay">
+
+        <div class="container-fluid">
+
+             <div class="row">
+
+                <div class="col-sm-12">
+                    <h2 class="the-title">Fólkið</h2>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-12">
+
+                    <h3>Suðvesturkjördæmi <a href="#" class="pull-right">Sjá alla</a></h3>
+
+                    <ul class="row">
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">1</span></figure><div class="person-wrap"><a href="#">Smári</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">2</span></figure><div class="person-wrap"><a href="#">Oktavía</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">3</span></figure><div class="person-wrap"><a href="#">Þórólfur</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">4</span></figure><div class="person-wrap"><a href="#">Alfheiður</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">5</span></figure><div class="person-wrap"><a href="#">Elsa</a> <span class="person-meta">Suður</span></div></li>
+                    </ul>                        
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-12">
+
+                    <h3>Reykjavíkurkjördæmi norður <a href="#" class="pull-right">Sjá alla</a></h3>
+
+                    <ul class="row">
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">1</span></figure><div class="person-wrap"><a href="#">Smári</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">2</span></figure><div class="person-wrap"><a href="#">Oktavía</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">3</span></figure><div class="person-wrap"><a href="#">Þórólfur</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">4</span></figure><div class="person-wrap"><a href="#">Alfheiður</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">5</span></figure><div class="person-wrap"><a href="#">Elsa</a> <span class="person-meta">Suður</span></div></li>
+                    </ul>                        
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-12">
+
+                    <h3>Reykjavíkurkjördæmi suður <a href="#" class="pull-right">Sjá alla</a></h3>
+
+                    <ul class="row">
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">1</span></figure><div class="person-wrap"><a href="#">Smári</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">2</span></figure><div class="person-wrap"><a href="#">Oktavía</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">3</span></figure><div class="person-wrap"><a href="#">Þórólfur</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">4</span></figure><div class="person-wrap"><a href="#">Alfheiður</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">5</span></figure><div class="person-wrap"><a href="#">Elsa</a> <span class="person-meta">Suður</span></div></li>
+                    </ul>                        
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-12">
+
+                    <h3>Suðurkjördæmi <a href="#" class="pull-right">Sjá alla</a></h3>
+
+                    <ul class="row">
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">1</span></figure><div class="person-wrap"><a href="#">Smári</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">2</span></figure><div class="person-wrap"><a href="#">Oktavía</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">3</span></figure><div class="person-wrap"><a href="#">Þórólfur</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">4</span></figure><div class="person-wrap"><a href="#">Alfheiður</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">5</span></figure><div class="person-wrap"><a href="#">Elsa</a> <span class="person-meta">Suður</span></div></li>
+                    </ul>                        
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-12">
+
+                    <h3>Norðausturkjördæmi <a href="#" class="pull-right">Sjá alla</a></h3>
+
+                    <ul class="row">
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">1</span></figure><div class="person-wrap"><a href="#">Smári</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">2</span></figure><div class="person-wrap"><a href="#">Oktavía</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">3</span></figure><div class="person-wrap"><a href="#">Þórólfur</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">4</span></figure><div class="person-wrap"><a href="#">Alfheiður</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">5</span></figure><div class="person-wrap"><a href="#">Elsa</a> <span class="person-meta">Suður</span></div></li>
+                    </ul>                        
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-12">
+
+                    <h3>Norðvesturkjördæmi <a href="#" class="pull-right">Sjá alla</a></h3>
+
+                    <ul class="row">
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">1</span></figure><div class="person-wrap"><a href="#">Smári</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">2</span></figure><div class="person-wrap"><a href="#">Oktavía</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">3</span></figure><div class="person-wrap"><a href="#">Þórólfur</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">4</span></figure><div class="person-wrap"><a href="#">Alfheiður</a> <span class="person-meta">Suður</span></div></li>
+                        <li class="person"><figure><div><img src="http://piratar.dev/wp-content/uploads/2016/07/smari.png"><div class="person-overlay"></div></div><span class="person-num">5</span></figure><div class="person-wrap"><a href="#">Elsa</a> <span class="person-meta">Suður</span></div></li>
+                    </ul>                        
+
+                </div>
 
             </div>
 
@@ -66,7 +249,7 @@
     <?php the_field('frontbox_lover_right', 37894); ?>
 </div-->
 
-<div class="section section-grid">
+<div class="section section-grid section-bg-gray">
 
     <div class="container-fluid">
 
@@ -106,7 +289,7 @@
             } ?>
 
 
-        <?php endwhile; ?>
+        <?php endwhile; wp_reset_query(); ?>
 
         </div>
 
@@ -115,7 +298,37 @@
 </div>
 
 
-<div class="section section-content socialbar nomobile">
+<div class="section section-content">
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-sm-4">
+
+                <?php the_field('frontbox_left', 37894); ?>
+
+            </div>
+
+            <div class="col-sm-4">
+
+                <?php the_content(); ?>
+
+            </div>
+
+            <div class="col-sm-4">
+
+                <?php the_field('frontbox_right', 37894); ?>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="section section-content section-bg-gray socialbar nomobile">
 
     <div class="container-fluid">
 

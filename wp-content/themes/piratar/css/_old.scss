@@ -121,22 +121,7 @@ a {
 	display:none;
 }
 
-figure {
-    /*background-color: #f7f2e4;*/
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: block;
-    float: left;
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
-    padding: 0;
-    position: relative;
-    text-align: center;
-    width: 100%;
-    z-index: 1;
-}
+
 
 #imagebanner .intro { position: absolute; top: 140px; width:800px;z-index: 2; left:50%; margin-left: -400px;  }
 .search-results #imagebanner .intro { top: 40px;  }
@@ -599,12 +584,6 @@ time {
 }
 
 .socialbar {
-    float: left;
-    padding: 40px 0;
-    min-height: 400px;
-    position: relative;
-    width: 100%;
-    text-align: center;
     background:#f4f4f4;
 }
 
@@ -846,30 +825,7 @@ a.moreinfo {
     font-size:14px;
 }
 
-footer a { color:#51297e; }
 
-footer .box {
-    width:calc(34% - 20px);
-    float:left;
-    margin:0 10px;
-    color:#4f4f4f;
-    font-size: 14px;
-}
-
-footer .box.first {
-    width:calc(33% - 10px);
-    margin:0 10px 0 0;
-}
-
-footer .box.last {
-    width:calc(33% - 10px);
-    margin:0 0px 0 10px;
-}
-
-#footerLine {
-    padding: 30px 0;
-    border-top: 1px solid #666;
-}
 
 .efnid {
 	width:100%;
@@ -1671,10 +1627,7 @@ article figure a {
     width: 100%;
 }
 
-footer h2 ,footer h3 { color:#4f4f4f; }
 
-footer ul { margin-bottom: 20px; width:100%; }
-footer ul li { width:100%;  }
 
 .blogarticle {
     float: left;
@@ -1784,18 +1737,6 @@ footer ul li { width:100%;  }
 }
 
 .alpha img { height: auto; max-width:100%; }
-
-//
-// Footer
-//
-
-footer {
-    background:#e6e6e6;
-    width:100%;
-    float: left;
-    padding: 30px 0;
-    color:#4f4f4f;
-}
 
 
 //

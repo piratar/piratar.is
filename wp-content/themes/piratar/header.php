@@ -42,7 +42,7 @@
 
     <div class="wrapper" id="lilja">
 
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo"><?php bloginfo( 'name' ); ?></a>
+         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="<?php bloginfo( 'name' ); ?>"></a>
 
         <div class="menubar">
 
@@ -96,7 +96,7 @@
 
 
                         <?php endwhile; wp_reset_query(); ?>
-                    </div></p>
+                    </div>
                 </li><!--.content -->
                       <?php } ?>
             </ul>
@@ -136,7 +136,7 @@
 
 
                         <?php endwhile; wp_reset_query(); ?>
-                    </div></p>
+                    </div>
                 </li><!--.content -->
                       <?php } ?>
             </ul>
@@ -169,10 +169,10 @@
                         //Loop through the sub-pages of the child pages next
                         $subpages = new WP_Query( array('post_type' => 'page', 'post_parent' => $this_subpage,'posts_per_page' => -1,'orderby' => 'menu_order', 'order' => 'ASC'));
                         while ( $subpages->have_posts() ) : $subpages->the_post(); ?>
-                            <ul class="children">
-                               <!--<a href="<?php //the_permalink(); ?>"><?php //the_title(); ?></a>-->
+                            <div class="children">
+                               
                                 <div class="content"><?php the_field('sidulysing'); ?></div>
-                            </ul>
+                            </div>
                         <?php endwhile; wp_reset_query(); ?>
 
                 </li><!--.content -->
@@ -208,10 +208,10 @@
                         //Loop through the sub-pages of the child pages next
                         $subpages = new WP_Query( array('post_type' => 'page', 'post_parent' => $this_subpage,'posts_per_page' => -1,'orderby' => 'menu_order', 'order' => 'ASC'));
                         while ( $subpages->have_posts() ) : $subpages->the_post(); ?>
-                            <ul class="children">
+                            <div class="children">
                                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                 <div class="content"><?php the_field('sidulysing'); ?></div>
-                            </ul>
+                            </div>
                         <?php endwhile; wp_reset_query(); ?>
 
                 </li><!--.content -->
@@ -248,10 +248,10 @@
                         //Loop through the sub-pages of the child pages next
                         $subpages = new WP_Query( array('post_type' => 'page', 'post_parent' => $this_subpage,'posts_per_page' => -1,'orderby' => 'menu_order', 'order' => 'ASC'));
                         while ( $subpages->have_posts() ) : $subpages->the_post(); ?>
-                            <ul class="children">
+                            <div class="children">
                                 <!--<a href="<?php //the_permalink(); ?>"><?php //the_title(); ?></a>-->
                                 <div class="content"><?php the_field('sidulysing'); ?></div>
-                            </ul>
+                            </div>
                         <?php endwhile; wp_reset_query(); ?>
 
                 </li><!--.content -->

@@ -125,22 +125,6 @@ a {
 #imagebanner article figure img {
   display: none; }
 
-figure {
-  /*background-color: #f7f2e4;*/
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: block;
-  float: left;
-  height: 100%;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: relative;
-  text-align: center;
-  width: 100%;
-  z-index: 1; }
-
 #imagebanner .intro {
   position: absolute;
   top: 140px;
@@ -602,12 +586,6 @@ time {
   margin: 10px 0; }
 
 .socialbar {
-  float: left;
-  padding: 40px 0;
-  min-height: 400px;
-  position: relative;
-  width: 100%;
-  text-align: center;
   background: #f4f4f4; }
 
 /* Ég slökkti á þessu til að losna við þetta 10px bil á milli GoogleMaps og Footerinn*/
@@ -821,28 +799,6 @@ a.moreinfo {
   display: block;
   padding-top: 5px;
   font-size: 14px; }
-
-footer a {
-  color: #51297e; }
-
-footer .box {
-  width: calc(34% - 20px);
-  float: left;
-  margin: 0 10px;
-  color: #4f4f4f;
-  font-size: 14px; }
-
-footer .box.first {
-  width: calc(33% - 10px);
-  margin: 0 10px 0 0; }
-
-footer .box.last {
-  width: calc(33% - 10px);
-  margin: 0 0px 0 10px; }
-
-#footerLine {
-  padding: 30px 0;
-  border-top: 1px solid #666; }
 
 .efnid {
   width: 100%;
@@ -1642,16 +1598,6 @@ article figure a {
   height: 100%;
   width: 100%; }
 
-footer h2, footer h3 {
-  color: #4f4f4f; }
-
-footer ul {
-  margin-bottom: 20px;
-  width: 100%; }
-
-footer ul li {
-  width: 100%; }
-
 .blogarticle {
   float: left;
   height: 310px;
@@ -1750,13 +1696,6 @@ footer ul li {
 .alpha img {
   height: auto;
   max-width: 100%; }
-
-footer {
-  background: #e6e6e6;
-  width: 100%;
-  float: left;
-  padding: 30px 0;
-  color: #4f4f4f; }
 
 /* =Content
 -------------------------------------------------------------- */
@@ -2348,12 +2287,9 @@ header menu li.current-menu-item a, header menu li.current-page-ancestor a {
   background: #F5F5F5; }
 
 header a.logo {
-  background: url(../img/piratar_logo.png);
-  background-size: 183px 60px;
   width: 183px;
   height: 60px;
   display: block;
-  text-indent: -3000px;
   float: left;
   position: relative;
   z-index: 502;
@@ -2411,7 +2347,8 @@ header .searchbox input[type="submit"] {
   width: 2.5em;
   text-indent: 300px;
   overflow: hidden;
-  cursor: pointer; }
+  cursor: pointer;
+  box-shadow: none; }
 
 header .searchbox span {
   position: absolute;
@@ -2427,7 +2364,7 @@ header .searchbox span:after {
   position: relative;
   color: #51297e;
   top: 0.25em;
-  right: -1.75em; }
+  right: -2.5em; }
 
 header.search-on menu {
   opacity: 0.35; }
@@ -7517,8 +7454,9 @@ p {
 .btn {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  font-weight: 700;
-  box-shadow: 0px 0px 8px 0 rgba(38, 29, 43, 0.1); }
+  font-weight: 500;
+  box-shadow: 0px 0px 8px 0 rgba(38, 29, 43, 0.1);
+  border: 0; }
 
 .section {
   padding: 4em; }
@@ -7536,13 +7474,15 @@ p {
     margin-bottom: 2em;
     position: relative;
     top: -0.75em; }
+  .section a {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1); }
+  .section a.btn {
+    border: 0; }
   .section.section-text-white {
     color: #fff;
     background: #261D2B; }
   .section.section-align-center {
     text-align: center; }
-  .section.section-bg-graylightest {
-    background: #E9E8E9; }
   .section.section-bg-image {
     background-size: cover;
     padding: 0; }
@@ -7551,6 +7491,8 @@ p {
       background-image: linear-gradient(to bottom, rgba(38, 29, 43, 0) 0%, rgba(38, 29, 43, 0.35) 100%);
       background-repeat: repeat-x;
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00261D2B', endColorstr='#59261D2B', GradientType=0); }
+  .section.section-bg-gray {
+    background-color: #E9E8E9; }
 
 .section-card {
   padding: 4em; }
@@ -7579,15 +7521,19 @@ p {
   padding-left: 1px;
   padding-right: 1px;
   vertical-align: bottom;
-  min-height: 16em; }
+  min-height: 16em;
+  margin-bottom: 2px; }
   .section-grid .grid-item h1 {
     font-size: 1.25em;
     margin: 0; }
+    .section-grid .grid-item h1 a {
+      color: #fff; }
   .section-grid .grid-item article {
+    color: #fff;
     padding: 2em;
-    background-color: #E9E8E9;
     min-height: 24em;
-    position: relative; }
+    position: relative;
+    background-color: #51297E; }
     .section-grid .grid-item article .grid-wrap {
       position: absolute;
       bottom: 2em;
@@ -7596,17 +7542,117 @@ p {
   .section-grid .grid-item.grid-bg-image {
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center; }
-    .section-grid .grid-item.grid-bg-image h1 a {
-      color: #fff; }
+    background-position: center center;
+    background-clip: content-box; }
     .section-grid .grid-item.grid-bg-image article {
-      color: #fff;
       background-color: transparent;
       background-image: linear-gradient(to bottom, rgba(38, 29, 43, 0) 0%, rgba(38, 29, 43, 0.35) 100%);
       background-repeat: repeat-x;
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00261D2B', endColorstr='#59261D2B', GradientType=0); }
     .section-grid .grid-item.grid-bg-image .date {
       color: rgba(255, 255, 255, 0.65); }
+
+.section-people h2.the-title {
+  margin-bottom: 1em; }
+
+.section-people h3 {
+  margin-top: 0;
+  margin-bottom: 2em; }
+  .section-people h3 a {
+    font-size: 1em; }
+
+.section-people .row {
+  padding-left: 0; }
+
+.section-people .person {
+  display: block;
+  list-style: none;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  width: 20%;
+  float: left;
+  padding: 0 15px;
+  font-size: 0.85em; }
+  .section-people .person figure {
+    position: relative;
+    margin-bottom: 0; }
+    .section-people .person figure div {
+      border-radius: 100%;
+      overflow: hidden; }
+    .section-people .person figure .person-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-image: linear-gradient(to bottom, rgba(38, 29, 43, 0) 0%, rgba(38, 29, 43, 0.35) 100%);
+      background-repeat: repeat-x;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00261D2B', endColorstr='#59261D2B', GradientType=0); }
+    .section-people .person figure img {
+      max-width: 100%; }
+    .section-people .person figure .person-num {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 1rem;
+      background: #261D2B;
+      color: #FFF;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.4rem;
+      position: absolute;
+      bottom: 0;
+      right: 0; }
+  .section-people .person .person-wrap {
+    padding-top: 0.25em;
+    text-align: center;
+    line-height: 1.25;
+    position: absolute;
+    bottom: 1em;
+    left: 0;
+    width: 100%;
+    color: #fff; }
+    .section-people .person .person-wrap a {
+      color: #fff;
+      font-weight: 700; }
+    .section-people .person .person-wrap .person-meta {
+      color: rgba(255, 255, 255, 0.65);
+      display: block; }
+
+.section-footer {
+  font-size: 0.85em;
+  color: #fff;
+  background: #000; }
+  .section-footer .logo img {
+    height: 60px;
+    width: auto;
+    fill: currentColor; }
+  .section-footer .footer-about {
+    text-align: center;
+    margin-top: 2em;
+    color: rgba(255, 255, 255, 0.65);
+    font-family: "Montserrat", sans-serif; }
+    .section-footer .footer-about a {
+      color: rgba(255, 255, 255, 0.65); }
+  .section-footer h3 {
+    margin-top: 0; }
+  .section-footer ul {
+    list-style: none;
+    padding: 0; }
+    .section-footer ul li {
+      display: inline-block;
+      margin-right: 0.5rem;
+      width: 3em;
+      height: 3em;
+      text-align: center;
+      line-height: 2.9em;
+      background: #fff;
+      border-radius: 1.5em; }
+      .section-footer ul li i {
+        font-size: 1.5em;
+        color: #261D2B;
+        vertical-align: middle; }
 
 .home .section-bg-image h1 {
   margin-top: 4em !important; }
@@ -7618,3 +7664,16 @@ p {
   padding: 0; }
   .home .section #sb_instagram #sbi_images .sbi_item {
     padding: 1px !important; }
+
+.home .section #sb_instagram #sbi_load {
+  margin-top: 3em; }
+  .home .section #sb_instagram #sbi_load a {
+    line-height: 2;
+    padding: .5rem 1.5rem;
+    border-radius: 2em;
+    font-size: 1rem;
+    background: #000;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase; }
+  .home .section #sb_instagram #sbi_load .sbi_follow_btn a {
+    background: #51297E; }

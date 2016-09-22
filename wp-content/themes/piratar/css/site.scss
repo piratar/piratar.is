@@ -43,8 +43,9 @@ p {
 .btn {
     font-family: $font-sans;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 500;
     box-shadow: $shadow;
+    border: 0;
 }
 
 //
@@ -70,6 +71,12 @@ p {
         position: relative;
         top: -0.75em;
     }
+    a {
+        border-bottom: 2px solid rgba(0,0,0,0.1);
+    }
+    a.btn {
+        border: 0;
+    }
     // Fonts
     &.section-text-white {
         color: #fff;
@@ -79,9 +86,6 @@ p {
         text-align: center;
     }
     // Background
-    &.section-bg-graylightest {
-        background: $gray-lightest;
-    }
     &.section-bg-image {
         background-size: cover;
         padding: 0;
@@ -89,6 +93,9 @@ p {
             padding: 4em;
             @include gradient-y(fade_out($gray-dark, 1), fade_out($gray-dark, 0.65));
         }
+    }
+    &.section-bg-gray {
+        background-color: $gray-lightest;
     }
 }
 
@@ -132,15 +139,20 @@ p {
         padding-right: 1px;
         vertical-align: bottom;
         min-height: 16em;
+        margin-bottom: 2px;
         h1 {
             font-size: 1.25em;
             margin: 0;
+            a {
+                color: #fff;
+            }
         }
         article {
+            color: #fff;
             padding: 2em;
-            background-color: $gray-lightest;
             min-height: 24em;
             position: relative;
+            background-color: $brand-primary;
             .grid-wrap {
                 position: absolute;
                 bottom: 2em;
@@ -153,16 +165,138 @@ p {
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
-            h1 a {
-                color: #fff;
-            }
+            background-clip: content-box;
             article {
-                color: #fff;
                 background-color: transparent;
                 @include gradient-y(fade_out($gray-dark, 1), fade_out($gray-dark, 0.65));
             }
             .date {
                 color: rgba(255,255,255,0.65);
+            }
+        }
+    }
+}
+
+
+// People
+
+.section-people {
+    h2.the-title {
+        margin-bottom: 1em;
+    }
+    h3 {
+        margin-top: 0;
+        margin-bottom: 2em;
+        a {
+            font-size: 1em;
+        }
+    }
+    .row {
+        padding-left: 0;
+    }
+    .person {
+        display: block;
+        list-style: none;
+        margin-bottom: 1rem;
+        position: relative;
+        overflow: hidden;
+        width: 20%;
+        float: left;
+        padding: 0 15px;
+        font-size: 0.85em;
+        figure {
+            position: relative;
+            margin-bottom: 0;
+            div {
+                border-radius: 100%;
+                overflow: hidden;
+            }
+            .person-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                @include gradient-y(fade_out($gray-dark, 1), fade_out($gray-dark, 0.65));
+            }
+            img {
+                max-width: 100%;
+            }
+            .person-num {
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 1rem;
+                background: $gray-dark;
+                color: #FFF;
+                font-family: $font-sans;
+                font-weight: 700;
+                text-align: center;
+                line-height: 1.4rem;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+        .person-wrap {
+            padding-top: 0.25em;
+            text-align: center;
+            line-height: 1.25;
+            position: absolute;
+            bottom: 1em;
+            left: 0;
+            width: 100%;
+            color: #fff;
+            a {
+                color: #fff;
+                font-weight: 700;
+            }
+            .person-meta {
+                color: rgba(255,255,255,0.65);
+                display: block;
+            }
+        }
+    }
+}
+
+// Footer
+
+.section-footer {
+    font-size: 0.85em;
+    color: #fff;
+    background: #000;
+    .logo img {
+        height: 60px;
+        width: auto;
+        fill: currentColor;
+    }
+    .footer-about {
+        text-align: center;
+        margin-top: 2em;
+        color: rgba(255,255,255,0.65);
+        font-family: $font-sans;
+        a {
+            color: rgba(255,255,255,0.65);
+        }
+    }
+    h3 {
+        margin-top: 0;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        li {
+            display: inline-block;
+            margin-right: 0.5rem;
+            width: 3em;
+            height: 3em;
+            text-align: center;
+            line-height: 2.9em;
+            background: #fff;
+            border-radius: 1.5em;
+            i {
+                font-size: 1.5em;
+                color: $gray-dark;
+                vertical-align: middle;
             }
         }
     }
@@ -186,5 +320,21 @@ p {
     padding: 0;
     .sbi_item {
         padding: 1px !important;
+    }
+}
+
+.home .section #sb_instagram #sbi_load {
+    margin-top: 3em;
+    a {
+        line-height: 2;
+        padding: .5rem 1.5rem;
+        border-radius: 2em;
+        font-size: 1rem;
+        background: #000;
+        font-family: $font-sans;
+        text-transform: uppercase;
+    }
+    .sbi_follow_btn a {
+        background: $brand-primary;
     }
 }

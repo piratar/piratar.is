@@ -87,12 +87,9 @@ header menu li.current-menu-item a, header menu li.current-page-ancestor a {
 }
 
 header a.logo {
-	background:url(../img/piratar_logo.png);
-    background-size: 183px 60px;
 	width: 183px;
     height:60px;
 	display:block;
-	text-indent:-3000px;
 	float:left;
     position: relative;
     z-index: 502;
@@ -160,6 +157,7 @@ header .searchbox input[type="submit"]{
 	text-indent:300px;
 	overflow:hidden;
     cursor: pointer;
+    box-shadow: none;
 }
 
 header .searchbox span {
@@ -177,7 +175,7 @@ header .searchbox span:after {
     position: relative;
     color: #51297e;
     top: 0.25em;
-    right: -1.75em;
+    right: -2.5em;
 }
 
 header.search-on menu {
