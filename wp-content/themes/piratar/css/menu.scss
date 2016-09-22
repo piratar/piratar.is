@@ -100,22 +100,6 @@ header a.logo {
     margin-top:12px;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) {
-	a.logo {
-	    background: url(../img/piratar_logo_x2.png) no-repeat;
-	    background-size: 183px 60px;
-        width: 183px;
-        height:60px;
-	}
-    
-    menu li.selected a:before { 
-        background:url(../img/menu_arrowx2.png);
-        background-size: 45px 15px;
-        width:45px;
-        height:15px;
-    }
-}
-
 header .menubar {
 	float:right;
 	width:calc(100% - 201px);

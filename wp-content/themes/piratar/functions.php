@@ -90,28 +90,6 @@ function remove_menus( ) {
 
 
 //add_action('all_admin_notices', 'my_admin_notices');
-function my_admin_notices() {
-	global $pagenow;
-	
-    if ($_GET['post_type'] == 'fundargerdir' ) {
-    ?>
-    <div class="notice notice-success is-dismissible">
-		<h3>-ATH- Fundarfærslur eru flokkaðar vandlega með ýmissum Flokkum | Hakið einungis í þann flokk sem Fundargerðafærslan á við! (ef ekki viss contact webmaster) -ATH-</h3>
-	</div>
-    <?php
-    }    
-	
-	if ($_GET['post_type'] == 'bokhald' && ('post-new.php' == $pagenow ) ) {
-    ?>
-    <div class="notice notice-success is-dismissible">
-
-		<h3>-ATH- Veljið mánuð & hakið í viðeigandi bókhalds ár í glugganum hægra megin -ATH-</h3>
-	</div>
-    <?php
-	}	
-}
-add_action( 'admin_notices', 'my_admin_notices' );
-
 
 
 add_action( 'admin_menu' , 'remove_menus' );

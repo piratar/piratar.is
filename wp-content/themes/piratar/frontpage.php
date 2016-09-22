@@ -265,7 +265,7 @@
 
         <?php 
             while($news->have_posts()) : $news->the_post();
-            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
             // if(has_post_thumbnail( $post->ID ) )
         ?>
 

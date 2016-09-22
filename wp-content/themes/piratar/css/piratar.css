@@ -1842,29 +1842,6 @@ img.alignleft {
 .justify {
   text-align: justify; }
 
-.post-spt {
-  border-top: 1px dashed #ccc;
-  margin-bottom: 15px; }
-
-.post-meta {
-  background: #eee;
-  margin: 10px -10px;
-  padding: 2px 10px; }
-
-.post-tag {
-  margin: 10px 0; }
-
-.sticky {
-  background: #f6f6f6;
-  border: 0px solid #ccc;
-  margin: -10px -10px 10px -10px;
-  padding: 0 10px; }
-
-.sticky .post-meta {
-  background: transparent;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd; }
-
 p.page-link span {
   border: 1px solid #ccc;
   padding: 3px 8px; }
@@ -2012,13 +1989,6 @@ a.more-link:visited {
 /* EVENT TITLE */
 .title_time {
   color: white; }
-
-/* PÓST CONTENT (GAMLA 'efnid') */
-.post_content {
-  width: 100%;
-  float: left;
-  min-height: 200px;
-  padding: 20px 0; }
 
 /* CSS fyrir aðildarfélög-template */
 .yfir_rammi {
@@ -2298,18 +2268,6 @@ header a.logo {
   -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   margin-top: 12px; }
-
-@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) {
-  a.logo {
-    background: url(../img/piratar_logo_x2.png) no-repeat;
-    background-size: 183px 60px;
-    width: 183px;
-    height: 60px; }
-  menu li.selected a:before {
-    background: url(../img/menu_arrowx2.png);
-    background-size: 45px 15px;
-    width: 45px;
-    height: 15px; } }
 
 header .menubar {
   float: right;
@@ -7506,7 +7464,38 @@ p {
 
 .section-title {
   padding: 2em 4em;
-  background: #51297E; }
+  text-align: center;
+  background: #E9E8E9; }
+  .section-title h1.the-title,
+  .section-title h2.the-title {
+    padding: 1.75em 0 0 0;
+    margin-bottom: 2em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    position: static;
+    font-size: 2.5em;
+    color: #261D2B;
+    text-align: center;
+    display: inline-block;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1); }
+  .section-title .section-overlay {
+    display: none; }
+  .section-title.section-bg-image {
+    position: relative;
+    background-size: cover;
+    background-position: center center; }
+    .section-title.section-bg-image .the-title {
+      padding: 2.75em 0 0 0;
+      margin-bottom: 3em;
+      color: #fff;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2); }
+    .section-title.section-bg-image .section-overlay {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      left: 0; }
 
 .section-grid .row {
   display: flex;
@@ -7653,6 +7642,16 @@ p {
         font-size: 1.5em;
         color: #261D2B;
         vertical-align: middle; }
+
+.post .post-title {
+  margin-bottom: 0; }
+
+.post .post-meta {
+  color: #B3B0B5;
+  font-family: "Montserrat", sans-serif; }
+
+.post .post-content {
+  margin-top: 1em; }
 
 .home .section-bg-image h1 {
   margin-top: 4em !important; }

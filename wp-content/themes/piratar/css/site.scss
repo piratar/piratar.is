@@ -119,7 +119,43 @@ p {
 
 .section-title {
     padding: 2em 4em;
-    background: $brand-primary;
+    text-align: center;
+    background: $gray-lightest;
+    h1.the-title,
+    h2.the-title {
+        padding: 1.75em 0 0 0;
+        margin-bottom: 2em;
+        font-family: $font-sans;
+        font-weight: 700;
+        position: static;
+        font-size: 2.5em;
+        color: $gray-dark;
+        text-align: center;
+        display: inline-block;
+        border-bottom: 2px solid rgba(0,0,0,0.1);
+    }
+    .section-overlay {
+        display: none;
+    }
+    &.section-bg-image {
+        position: relative;
+        background-size: cover;
+        background-position: center center;
+        .the-title {
+            padding: 2.75em 0 0 0;
+            margin-bottom: 3em;
+            color: #fff;
+            border-bottom: 2px solid rgba(255,255,255,0.2);       
+        }
+        .section-overlay {
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+        }
+    }
 }
 
 // Grid
@@ -299,6 +335,19 @@ p {
                 vertical-align: middle;
             }
         }
+    }
+}
+
+.post {
+    .post-title {
+        margin-bottom: 0;
+    }
+    .post-meta {
+        color: $gray;
+        font-family: $font-sans;
+    }
+    .post-content {
+        margin-top: 1em;
     }
 }
 
