@@ -19,20 +19,29 @@
     </div>
 <?php endif; ?>
 
-<div class="efnid" id="readmore">
-    <div class="wrapper">
-        <div class="alpha">
-        <?php while ( have_posts() ) : the_post(); ?>
+<div class="section section-content">
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-sm-9 push-sm-1">
+
+                <?php while ( have_posts() ) : the_post(); ?>
             <?php if(!has_post_thumbnail( $post->ID ) ): ?>
                 <h1 class=""><?php the_title(); ?></h1>
                 <span class=""><i><?php the_date('d.m.Y'); ?></i></span>
             <?php endif; ?>
             <?php //the_breadcrumb();  ?>
             <?php the_content(); ?>
-        <?php endwhile; ?>
+        <?php endwhile; ?>         
+
+            </div>
+
         </div>
-        <div class="splitter h20"></div>
+
     </div>
+
 </div>
 
 
