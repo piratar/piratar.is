@@ -33,6 +33,7 @@
 
                 <?php echo $image[0] ?>
 
+
                 <?php while ( have_posts() ) : the_post(); ?>
                     <?php if(!has_post_thumbnail( $post->ID ) ): ?>
                         <h1 class=""><?php the_title(); ?></h1>
