@@ -122,9 +122,6 @@ a {
 .category-blog #imagebanner {
   display: none; }
 
-#imagebanner article figure img {
-  display: none; }
-
 #imagebanner .intro {
   position: absolute;
   top: 140px;
@@ -194,31 +191,6 @@ a {
   font-size: 40px;
   text-transform: uppercase;
   line-height: 1; }
-
-article figure {
-  /*background-color: white;*/
-  /*background-color: #f7f2e4;*/
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: block;
-  float: left;
-  height: 100%;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: relative;
-  text-align: center;
-  width: 100%;
-  z-index: 1; }
-
-article figure img {
-  display: none !important; }
-
-article figure a {
-  display: block;
-  height: 100%;
-  width: 100%; }
 
 .blogitem {
   width: calc(50% - 40px);
@@ -1590,14 +1562,6 @@ a.cart-link {
     width: 100%;
     z-index: 1;
 }*/
-article figure img {
-  display: none !important; }
-
-article figure a {
-  display: block;
-  height: 100%;
-  width: 100%; }
-
 .blogarticle {
   float: left;
   height: 310px;
@@ -7416,6 +7380,9 @@ p {
   box-shadow: 0px 0px 8px 0 rgba(38, 29, 43, 0.1);
   border: 0; }
 
+img {
+  max-width: 100%; }
+
 .section {
   padding: 4em; }
   .section .row > div > h2:first-child,
@@ -7517,6 +7484,9 @@ p {
     margin: 0; }
     .section-grid .grid-item h1 a {
       color: #fff; }
+  .section-grid .grid-item .date {
+    color: rgba(255, 255, 255, 0.65);
+    font-family: "Montserrat", sans-serif; }
   .section-grid .grid-item article {
     color: #fff;
     padding: 2em;
@@ -7538,8 +7508,6 @@ p {
       background-image: linear-gradient(to bottom, rgba(38, 29, 43, 0) 0%, rgba(38, 29, 43, 0.35) 100%);
       background-repeat: repeat-x;
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00261D2B', endColorstr='#59261D2B', GradientType=0); }
-    .section-grid .grid-item.grid-bg-image .date {
-      color: rgba(255, 255, 255, 0.65); }
 
 .section-people h2.the-title {
   margin-bottom: 1em; }
@@ -7653,6 +7621,28 @@ p {
 .post .post-content {
   margin-top: 1em; }
 
+.post .post-featured {
+  display: block;
+  margin-bottom: 2em; }
+
+.post figure > a {
+  border: 0; }
+
+.figure-round .figure-wrap {
+  border-radius: 100%;
+  overflow: hidden; }
+
+.figure-small {
+  width: 12em; }
+
+.figure-left {
+  float: left;
+  margin-right: 1.5em; }
+
+.figure-right {
+  float: right;
+  margin-left: 1.5em; }
+
 .home .section-bg-image h1 {
   margin-top: 4em !important; }
 
@@ -7676,3 +7666,15 @@ p {
     text-transform: uppercase; }
   .home .section #sb_instagram #sbi_load .sbi_follow_btn a {
     background: #51297E; }
+
+.single-frettir .section-title {
+  background: transparent;
+  text-align: left;
+  padding: 4em 4em 0 4em; }
+  .single-frettir .section-title h2.the-title {
+    margin-bottom: 0;
+    text-align: left;
+    display: inline; }
+  .single-frettir .section-title .post-date {
+    color: #B3B0B5;
+    font-family: "Montserrat", sans-serif; }

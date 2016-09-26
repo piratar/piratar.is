@@ -49,6 +49,10 @@ p {
     border: 0;
 }
 
+img {
+    max-width: 100%;
+}
+
 //
 // Sections
 //
@@ -185,6 +189,10 @@ p {
                 color: #fff;
             }
         }
+        .date {
+            color: rgba(255,255,255,0.65);
+            font-family: $font-sans;
+        }
         article {
             color: #fff;
             padding: 2em;
@@ -207,9 +215,6 @@ p {
             article {
                 background-color: transparent;
                 @include gradient-y(fade_out($gray-dark, 1), fade_out($gray-dark, 0.65));
-            }
-            .date {
-                color: rgba(255,255,255,0.65);
             }
         }
     }
@@ -340,6 +345,9 @@ p {
     }
 }
 
+
+// Post
+
 .post {
     .post-title {
         margin-bottom: 0;
@@ -351,7 +359,39 @@ p {
     .post-content {
         margin-top: 1em;
     }
+    .post-featured {
+        display: block;
+        margin-bottom: 2em;
+    }
+    figure > a {
+        border: 0;
+    }
 }
+
+
+// Figure
+
+.figure-round {
+    .figure-wrap {
+        border-radius: 100%;
+        overflow: hidden;
+    }
+}
+
+.figure-small {
+    width: 12em;
+}
+
+.figure-left {
+    float: left;
+    margin-right: 1.5em;
+}
+
+.figure-right {
+    float: right;
+    margin-left: 1.5em;
+}
+
 
 //
 // Custom for individual pages
@@ -388,4 +428,24 @@ p {
     .sbi_follow_btn a {
         background: $brand-primary;
     }
+}
+
+// Fréttir
+
+.single-frettir {
+    .section-title {
+        background: transparent;
+        text-align: left;
+        padding: 4em 4em 0 4em;
+        h2.the-title {
+            margin-bottom: 0;
+            text-align: left;
+            display: inline;
+        }
+        .post-date {
+            color: $gray;
+            font-family: $font-sans;
+
+        }
+    }   
 }

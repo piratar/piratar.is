@@ -117,9 +117,6 @@ a {
 
 .category-blog #imagebanner { display:none; }
 
-#imagebanner article figure img{
-	display:none;
-}
 
 
 
@@ -136,33 +133,8 @@ a {
 .page .intro h2 { width:100%; text-align:center;padding:0;margin:0;font-size:40px;text-transform:uppercase;line-height:1; }
 
 
-article figure {
-	/*background-color: white;*/
-    /*background-color: #f7f2e4;*/
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: block;
-    float: left;
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
-    padding: 0;
-    position: relative;
-    text-align: center;
-    width: 100%;
-    z-index: 1;
-}
 
-article figure img {
-    display: none !important;
-}
 
-article figure a {
-    display: block;
-    height: 100%;
-    width: 100%;
-}
 
 .blogitem {
 	width:calc(50% - 40px);
@@ -1617,15 +1589,6 @@ a.cart-link { float:right; }
     z-index: 1;
 }*/
 
-article figure img {
-    display: none !important;
-}
-
-article figure a {
-    display: block;
-    height: 100%;
-    width: 100%;
-}
 
 
 

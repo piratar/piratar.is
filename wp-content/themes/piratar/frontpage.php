@@ -245,10 +245,6 @@
     $news = new WP_Query('frettaflokkur=frettir&posts_per_page=5');
 ?>
 
-<!--div class="box nedrabox" style="height:400px;">
-    <?php the_field('frontbox_lover_right', 37894); ?>
-</div-->
-
 <div class="section section-grid section-bg-gray">
 
     <div class="container-fluid">
@@ -276,7 +272,7 @@
                     <div class="grid-wrap">
 
                         <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-                        <div class="date"><?php the_time('F j'); ?></div>
+                        <div class="date"><?php the_time('d.m.Y'); ?></div>
 
                     </div>
 
