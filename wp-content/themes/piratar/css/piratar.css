@@ -1769,30 +1769,6 @@ img.alignleft {
   margin: 0 7px 2px 0;
   display: inline; }
 
-.wp-caption {
-  border: 1px solid #ccc;
-  padding-top: 4px;
-  text-align: center;
-  margin: 10px 0;
-  max-width: 550px;
-  height: auto; }
-
-.wp-caption img {
-  width: auto;
-  height: auto;
-  margin: 0;
-  padding: 0; }
-
-.wp-caption .wp-caption-text {
-  margin: 0;
-  line-height: 15px; }
-
-.wp-caption.alignright {
-  margin: 10px 0 10px 10px; }
-
-.wp-caption.alignleft {
-  margin: 10px 10px 10px 0; }
-
 /* classes */
 .clear {
   clear: both; }
@@ -7384,7 +7360,7 @@ img {
   max-width: 100%; }
 
 .section {
-  padding: 4em; }
+  padding: 4rem; }
   .section .row > div > h2:first-child,
   .section .row > div > h1:first-child {
     margin-top: 0; }
@@ -7527,15 +7503,20 @@ img {
   margin-bottom: 1rem;
   position: relative;
   overflow: hidden;
-  width: 20%;
   float: left;
   padding: 0 15px;
   font-size: 0.85em; }
   .section-people .person figure {
     position: relative;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    padding-top: 100%; }
     .section-people .person figure div {
       border-radius: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
       overflow: hidden; }
     .section-people .person figure .person-overlay {
       position: absolute;
@@ -7543,9 +7524,9 @@ img {
       left: 0;
       bottom: 0;
       right: 0;
-      background-image: linear-gradient(to bottom, rgba(38, 29, 43, 0) 0%, rgba(38, 29, 43, 0.35) 100%);
+      background-image: linear-gradient(to bottom, rgba(38, 29, 43, 0) 0%, rgba(38, 29, 43, 0.5) 100%);
       background-repeat: repeat-x;
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00261D2B', endColorstr='#59261D2B', GradientType=0); }
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00261D2B', endColorstr='#80261D2B', GradientType=0); }
     .section-people .person figure img {
       max-width: 100%; }
     .section-people .person figure .person-num {
@@ -7562,20 +7543,38 @@ img {
       bottom: 0;
       right: 0; }
   .section-people .person .person-wrap {
-    padding-top: 0.25em;
     text-align: center;
     line-height: 1.25;
     position: absolute;
-    bottom: 1em;
+    bottom: 1.5em;
     left: 0;
     width: 100%;
-    color: #fff; }
+    color: #fff;
+    padding: 0 4em; }
     .section-people .person .person-wrap a {
       color: #fff;
       font-weight: 700; }
     .section-people .person .person-wrap .person-meta {
       color: rgba(255, 255, 255, 0.65);
       display: block; }
+
+@media (min-width: 992px) {
+  .section-people .person {
+    width: 20%; } }
+
+.section-candidate figure.figure.figure-small {
+  display: block;
+  margin: 1em auto 0 auto;
+  width: 8em; }
+
+.section-candidate h2.the-title {
+  padding-top: 0;
+  margin-bottom: 0; }
+
+.section-candidate p {
+  color: #B3B0B5;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 2em; }
 
 .section-footer {
   font-size: 0.85em;
@@ -7606,6 +7605,8 @@ img {
       line-height: 2.9em;
       background: #fff;
       border-radius: 1.5em; }
+      .section-footer ul li a {
+        border: 0; }
       .section-footer ul li i {
         font-size: 1.5em;
         color: #261D2B;
@@ -7625,21 +7626,67 @@ img {
   display: block;
   margin-bottom: 2em; }
 
-.post figure > a {
-  border: 0; }
+.post .post-video {
+  position: relative;
+  padding-top: 56.25%; }
+  .post .post-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important; }
 
-.figure-round .figure-wrap {
+.post figure, .post figure.wp-caption {
+  border: 0;
+  width: auto !important;
+  max-width: none; }
+  .post figure > a, .post figure.wp-caption > a {
+    border: 0; }
+  .post figure figcaption, .post figure.wp-caption figcaption {
+    font-family: "Montserrat", sans-serif;
+    color: #B3B0B5;
+    padding: 1em 0;
+    text-align: left;
+    line-height: 1.75; }
+
+.post blockquote {
+  padding-left: 3em;
+  color: #B3B0B5;
+  position: relative;
+  font-family: "Montserrat", sans-serif; }
+  .post blockquote:before {
+    content: "“";
+    position: absolute;
+    left: 0;
+    height: 1px;
+    top: -0.475em;
+    font-size: 6em;
+    font-family: "Montserrat", sans-serif; }
+
+figure.figure.figure-round .figure-wrap {
+  position: relative;
+  padding-top: 100%;
+  height: auto;
   border-radius: 100%;
   overflow: hidden; }
+  figure.figure.figure-round .figure-wrap img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%; }
 
-.figure-small {
-  width: 12em; }
+figure.figure.figure-small {
+  width: 16em; }
 
-.figure-left {
+figure.figure.figure-medium {
+  width: 24em; }
+
+figure.figure.figure-left {
   float: left;
   margin-right: 1.5em; }
 
-.figure-right {
+figure.figure.figure-right {
   float: right;
   margin-left: 1.5em; }
 
@@ -7666,6 +7713,13 @@ img {
     text-transform: uppercase; }
   .home .section #sb_instagram #sbi_load .sbi_follow_btn a {
     background: #51297E; }
+
+.home .stefna-cta {
+  position: relative; }
+  .home .stefna-cta > div:last-child {
+    position: absolute;
+    bottom: 1em;
+    right: 0; }
 
 .single-frettir .section-title {
   background: transparent;

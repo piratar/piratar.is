@@ -1,12 +1,10 @@
 <!DOCTYPE html>
+
 <html <?php language_attributes(); ?> class="no-js">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
-    <meta http-equiv="cleartype" content="on">
-    <meta name="p:domain_verify" content="845dbe69683ef984602c7f8ef1a9b602"/>
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +12,7 @@
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
     <link href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/piratar.min.css" rel="stylesheet">
 
-    <title> <?php wp_title('', true,''); ?> </title>
+    <title><?php is_front_page() ? bloginfo('description') : wp_title('–'); ?> – <?php bloginfo('name'); ?></title>
 
     <script type="text/javascript">
 
@@ -34,7 +32,7 @@
 
 </head>
 
-<body <?php body_class(); ?>>  
+<body <?php body_class("site-main"); ?>>  
 
 <header>
 

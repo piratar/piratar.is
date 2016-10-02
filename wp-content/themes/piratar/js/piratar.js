@@ -10154,7 +10154,7 @@ return jQuery;
 
 $(function(){
 	
-    $('menu a').slice(0,-1).click(function(event) { 
+    $('.site-main menu a').slice(0,-1).click(function(event) { 
 		
 		var currentId = $(this).parent().attr('id');
         if (currentId == "menu-item-38328" && "menu-item-30" ) {

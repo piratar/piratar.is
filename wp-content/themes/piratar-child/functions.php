@@ -1,15 +1,15 @@
-﻿<?php
-
-
+<?php
 function my_theme_enqueue_styles() {
     wp_enqueue_style( 'parentchild-style', get_template_directory_uri() . '/style.css' );
-    wp_enqueue_style( 'parentchild-editorstyle', get_template_directory_uri() . '/css/editor-style.css' );
-    wp_enqueue_style( 'parentchild-flag-icon', get_template_directory_uri() . '/css/flag-icon.css' );
-    wp_enqueue_style( 'parentchild-awesome', get_template_directory_uri() . '/css/font-awesome.min.css' );
-    wp_enqueue_style( 'parentchild-frame', get_template_directory_uri() . '/css/frame.css' );
-    wp_enqueue_style( 'parentchild-menu', get_template_directory_uri() . '/css/menu.css' );
-    wp_enqueue_style( 'parentchild-responsive', get_template_directory_uri() . '/css/responsive.css' );
-	
-	
-} 	add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+}
+add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
+// Show all frambjóðendur og kjördæmi archive pages
+function my_modify_main_query( $query ) {
+	if ($query->is_main_query() && !is_admin()) {
+		$query->query_vars["posts_per_page"] = -1;
+		$query->query_vars["orderby"] = "menu_order";
+		$query->query_vars["order"] = "ASC";
+	}
+}
+add_action( "pre_get_posts", "my_modify_main_query" );

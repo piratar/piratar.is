@@ -649,11 +649,12 @@ function pirates_frettir_cpt() {
             'show_ui' 		=> true,
             'show_in_menu' 	=> true,
             'capability_type'   => 'post',
+            'publicly_queryable' => true,
             'map_meta_cap' 	=> true,
-            'hierarchical' 	=> true,
+            'hierarchical' 	=> false,
             'query_var' 	=> true,
-            'has_archive' 	=> false,
-			'rewrite' =>	array( 'slug' => 'frettir/%frettaflokkur%'),
+            'has_archive' 	=> true,
+			'rewrite' =>	array( 'slug' => 'frettir'),
             'supports' 		=> array('title','editor','thumbnail'),
             'labels' 		=> array (
                 'name'              => 'Fréttir',
@@ -679,9 +680,7 @@ function pirates_frettir_cpt() {
 function pirates_frettaflokkur_tax() {
 	register_taxonomy(
 		'frettaflokkur',
-		array (
-			0 => 'frettir',
-		),
+		'frettir',
 		array(
 			'hierarchical'      => true,
 			'labels' 		=> array (
@@ -702,7 +701,7 @@ function pirates_frettaflokkur_tax() {
 			'show_ui'           => true,
 			'query_var'         => true,
 			'show_admin_column' => true,
-			'rewrite' => array('slug' => 'flokkstitill')
+			'rewrite' => array('slug' => 'frettaflokkur')
 		) );
 } add_action('init', 'pirates_frettaflokkur_tax');
 
@@ -957,11 +956,11 @@ function pirates_frambjodendur_cpt() {
             'show_in_menu' 	=> true,
             'capability_type'   => 'post',
             'map_meta_cap' 	=> true,
-            'hierarchical' 	=> true,
+            'hierarchical' 	=> false,
             'query_var' 	=> true,
             'has_archive' 	=> false,
 			'rewrite' =>	array( 'slug' => 'frambjodendur'),
-            'supports' 		=> array('title','editor','thumbnail'),
+            'supports' 		=> array('title','editor','thumbnail', 'page-attributes'),
             'labels' 		=> array (
                 'name'              => 'Frambjóðendur',
                 'singular_name'     => 'Frambjóðendur',
@@ -1860,98 +1859,8 @@ add_shortcode('megamenu-events-loop', 'megamenu_events_loop_shortcode');
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+add_filter( 'redirect_canonical','custom_disable_redirect_canonical' ); 
+function custom_disable_redirect_canonical( $redirect_url ){
+    if ( is_singular('frettir') ) $redirect_url = false;
+    return $redirect_url;
+}

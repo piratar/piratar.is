@@ -51,7 +51,7 @@
 
 <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/piratar.min.js"></script>
 
-<div class="instagram tag"></div>
 <?php wp_footer(); ?>
+
 </body>
 </html>

@@ -8,7 +8,7 @@
              <div class="row">
 
                 <div class="col-sm-12">
-                    <h2 class="the-title">Frambjóðendur</h2>
+                    <h2 class="the-title">Fólkið</h2>
                 </div>
 
             </div>

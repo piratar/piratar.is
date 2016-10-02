@@ -1,26 +1,20 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
+
 <html <?php language_attributes(); ?> class="no-js">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
-    <meta http-equiv="cleartype" content="on">
-    <meta name="p:domain_verify" content="845dbe69683ef984602c7f8ef1a9b602"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
+    <link href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/piratar.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <title><?php is_front_page() ? bloginfo('description') : wp_title('', true, 'right'); ?> – <?php bloginfo('name'); ?></title>
 
-    <title> <?php wp_title('', true,''); ?> </title>
-
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-instagram/0.2.2/jquery.instagram.min.js"></script>
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
@@ -35,32 +29,21 @@
 
     </script>
     <?php wp_head(); ?>
-</head>
-<body <?php body_class(); ?>>
-<header>
-<div id="grunge"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-    <div id="subheader"></div>
-    <div class="wrapper" id="lilja">
-        <div class="secondary">
 
-                <?php
-                    wp_nav_menu( array(
-                        'theme_location' => 'secondary',
-                        'depth'          => 2,
-                    ) );
-                ?>
-        </div>
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo"><?php bloginfo( 'name' ); ?></a>
+</head>
+
+<body <?php body_class("site-kosningar"); ?>>
+
+<header>
+
+    <div id="grunge"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+    <div class="wrapper" id="lilja">
+ 
+        <a href="http://piratar.is" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="<?php bloginfo( 'name' ); ?>"></a>
+
         <div class="menubar">
-            <div class="splitter"></div>
-            <div class="searchbox">
-                <form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-                    <input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s"  placeholder="Search..."/>
-                    <span><input type="submit" class="btn fa-input" value="go"></span>
-                </form>
-            </div>
-            <div class="splitter"></div>
-            <a href="#" class="searchicon">Search</a>
+
             <menu>
                 <?php
                     wp_nav_menu( array(
@@ -69,6 +52,7 @@
                     ) );
                 ?>
             </menu>
+
         </div>
     </div>
 
@@ -142,7 +126,7 @@
 
 
                         <?php endwhile; wp_reset_query(); ?>
-                    </div></p>
+                    </p></div>
                 </li><!--.content -->
                       <?php } ?>
             </ul>

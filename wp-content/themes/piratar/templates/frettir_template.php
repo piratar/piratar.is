@@ -1,5 +1,5 @@
 ﻿<?php
-    /* Template Name: Fréttir */
+    /* Template Name: Fréttir old */
     get_header();
 
     // set the "paged" parameter (use 'page' if the query is on a static front page)

@@ -1,6 +1,6 @@
 ﻿<?php
     /*
-    Template Name: Alþingiskosningar
+    Template Name: Alþingiskosningar - old
     */
 get_header(); ?>
 

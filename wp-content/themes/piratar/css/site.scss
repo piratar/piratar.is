@@ -58,7 +58,7 @@ img {
 //
 
 .section {
-    padding: 4em;
+    padding: 4rem;
     .row > div > h2:first-child,
     .row > div > h1:first-child {
         margin-top: 0;
@@ -243,15 +243,20 @@ img {
         margin-bottom: 1rem;
         position: relative;
         overflow: hidden;
-        width: 20%;
         float: left;
         padding: 0 15px;
         font-size: 0.85em;
         figure {
             position: relative;
             margin-bottom: 0;
+            padding-top: 100%;
             div {
                 border-radius: 100%;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
                 overflow: hidden;
             }
             .person-overlay {
@@ -260,7 +265,7 @@ img {
                 left: 0;
                 bottom: 0;
                 right: 0;
-                @include gradient-y(fade_out($gray-dark, 1), fade_out($gray-dark, 0.65));
+                @include gradient-y(fade_out($gray-dark, 1), fade_out($gray-dark, 0.5));
             }
             img {
                 max-width: 100%;
@@ -281,14 +286,14 @@ img {
             }
         }
         .person-wrap {
-            padding-top: 0.25em;
             text-align: center;
             line-height: 1.25;
             position: absolute;
-            bottom: 1em;
+            bottom: 1.5em;
             left: 0;
             width: 100%;
             color: #fff;
+            padding: 0 4em;
             a {
                 color: #fff;
                 font-weight: 700;
@@ -299,7 +304,32 @@ img {
             }
         }
     }
+    @include media-breakpoint-up(lg) {
+        .person {
+            width: 20%;
+        }
+    }
 }
+
+// Candidate
+
+.section-candidate {
+    figure.figure.figure-small {
+        display: block;
+        margin: 1em auto 0 auto;
+        width: 8em;
+    }
+    h2.the-title {
+        padding-top: 0;
+        margin-bottom: 0;
+    }
+    p {
+        color: $gray;
+        font-family: $font-sans;
+        margin-bottom: 2em;
+    }
+}
+
 
 // Footer
 
@@ -336,6 +366,9 @@ img {
             line-height: 2.9em;
             background: #fff;
             border-radius: 1.5em;
+            a {
+                border: 0;
+            }
             i {
                 font-size: 1.5em;
                 color: $gray-dark;
@@ -363,34 +396,85 @@ img {
         display: block;
         margin-bottom: 2em;
     }
-    figure > a {
+    .post-video {
+        position: relative;
+        padding-top: 56.25%;
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+    figure, figure.wp-caption {
         border: 0;
+        width: auto !important;
+        max-width: none;
+        > a {
+            border: 0;
+        }
+        figcaption {
+            font-family: $font-sans;
+            color: $gray;
+            padding: 1em 0;
+            text-align: left;
+            line-height: 1.75;
+        }
+    }
+    blockquote {
+        padding-left: 3em;
+        color: $gray;
+        position: relative;
+        font-family: $font-sans;
+        &:before {
+            content: "“";
+            position: absolute;
+            left: 0;
+            height: 1px;
+            top: -0.475em;
+            font-size: 6em;
+            font-family: $font-sans;
+        }
     }
 }
 
 
 // Figure
 
-.figure-round {
-    .figure-wrap {
-        border-radius: 100%;
-        overflow: hidden;
+figure.figure {
+    &.figure-round {
+        .figure-wrap {
+            position: relative;
+            padding-top: 100%;
+            height: auto;
+            border-radius: 100%;
+            overflow: hidden;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+    &.figure-small {
+        width: 16em;
+    }
+    &.figure-medium {
+        width: 24em;
+    }
+    &.figure-left {
+        float: left;
+        margin-right: 1.5em;
+    }
+    &.figure-right {
+        float: right;
+        margin-left: 1.5em;
     }
 }
 
-.figure-small {
-    width: 12em;
-}
-
-.figure-left {
-    float: left;
-    margin-right: 1.5em;
-}
-
-.figure-right {
-    float: right;
-    margin-left: 1.5em;
-}
 
 
 //
@@ -427,6 +511,15 @@ img {
     }
     .sbi_follow_btn a {
         background: $brand-primary;
+    }
+}
+
+.home .stefna-cta {
+    position: relative;
+    > div:last-child {
+        position: absolute;
+        bottom: 1em;
+        right: 0;
     }
 }
 
