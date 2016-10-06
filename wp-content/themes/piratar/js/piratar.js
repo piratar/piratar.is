@@ -10199,16 +10199,23 @@ $(function(){
     });
 
     $("#mobile-button a").on("click", function(event){
-        $("header .menubar").toggle();
         if (!$("body").hasClass("mobile-open")) {
+            $("header .menubar").show();
             $("body").addClass("mobile-open");
         } else {
+            $("header .menubar").hide();
             $("body").removeClass("mobile-open");
             $('.submenu').removeClass("open");
             $('.overlayer').removeClass("open");
             $('.submenu div.rammi').hide();
         }
         event.preventDefault();
+    });
+
+    $(window).resize(function(){
+        if (document.documentElement.clientWidth > 992) {
+            $("header .menubar").removeAttr("style");
+        }
     });
 
     // Fixed menu kosningar
