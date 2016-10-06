@@ -1,22 +1,51 @@
 ﻿<?php get_header(); ?>
 
-<div class="efnid">
-	<div class="wrapper">
-		<div class="alpha full">
-			<?php while ( have_posts() ) : the_post(); ?>
-			<h2 class="section-title"></h2>
+<?php while ( have_posts() ) : the_post(); ?>
 
-            <h2 class="section-title"><?php the_title(); ?></h2>
+<?php $cand_terms = wp_get_post_terms($post->ID, "kjordaemi"); ?>
 
-            <div class="hr hr-short hr-center avia-builder-el-11 el_after_av_textblock el_before_av_textblock ">
-			<span class="hr-inner ">
-			<span class="hr-inner-style">
-			</span></span>
-			</div>
+<div class="section section-title section-candidate">
 
-            <?php get_template_part( 'content', "frambjodandi" ); ?>
-			<?php endwhile; ?>
-		</div>
-	</div>
+    <div class="section-overlay"></div>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+        	<div class="col-sm-12">
+
+        		<figure class="figure figure-round figure-small"><div class="figure-wrap"><?php the_post_thumbnail('large'); ?></div></figure>
+
+	            <h2 class="the-title"><?php the_title(); ?></h2>
+
+	            <p><?php echo $cand_terms[0]->name; ?></p>
+
+        	</div>
+
+        </div>
+
+    </div>
+
 </div>
+
+<div class="section section-content">
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+        	<div class="col-sm-12 col-lg-9 push-lg-1">
+
+	            <?php get_template_part( 'content', "frambjodandi" ); ?>           
+
+        	</div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<?php endwhile; ?>
+
 <?php get_footer(); ?>

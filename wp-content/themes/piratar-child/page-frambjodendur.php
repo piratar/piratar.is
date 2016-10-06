@@ -1,6 +1,6 @@
 ﻿<?php 
     /*
-	Template Name: Kosningarforsíða
+	Template Name: Frambjóðendur kosningar
 	*/
 
 get_header(); ?>
@@ -30,24 +30,8 @@ get_header(); ?>
 </div>
 
 
+ <?php get_template_part( 'content', "frambjodendur" ); ?>	            
 
-<div class="section section-content section-kosningar">
-
-    <div class="container-fluid">
-
-        <div class="row">
-
-        	<div class="col-sm-12 col-lg-8">
-
-	            <?php get_template_part( 'content', "page" ); ?>	            
-
-        	</div>
-
-        </div>
-
-    </div>
-
-</div>
 
 <?php endwhile; ?>
 

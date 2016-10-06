@@ -1,8 +1,11 @@
-<?php get_header(); ?>
+<?php 
+    /*
+	Template Name: Kosningarforsíða - Prófkjör
+	*/
+	
+get_header(); ?>
 
-
-<body>
-	<div id="imagebanner">
+	<div id="imagebanner" style="display:none">
 		<div id="videokilltheradiostar"></div>
 		<article>
 			<figure style="background-image:url(wp-content/themes/piratar/img/piratar-crop.jpg);">
@@ -15,16 +18,24 @@
 		<div id="boxin_kynning">
 		<div class="wrapper">
 			<div class="box">
-				<a href="/kosningar/profkjor-althingiskosningar/profkjor-nordvestur/"><h2>Norðvesturkjördæmi</h2></a>
 				<?php the_field('nordvesturbox', 42); ?>
 			</div>
 			<div class="box">
-				<a href="/kosningar/profkjor-althingiskosningar/profkjor-sudur/"><h2>Suðurkjördæmi</h2></a>
 				<?php the_field('sudurbox', 42); ?>
 			</div>
 			<div class="box">
-				<a href="/kosningar/profkjor-althingiskosningar/profkjor-hofudborgarsvaedi/"><h2>Höfuðborgarsvæðið</h2></a>
 				<?php the_field('capitalbox', 42); ?>            
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="box">
+				<?php the_field('forsidubox_4', 42); ?>
+			</div>
+			<div class="box">
+				<?php the_field('forsidubox_5', 42); ?>
+			</div>
+			<div class="box">
+				<?php the_field('forsidubox_6', 42); ?>            
 			</div>
 		</div>
 	</div>
@@ -82,7 +93,7 @@
 					<div class="smaforsidutexti">
 						
 						<h2><a class="title_uppercase" href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></h2>
-						<p><?php the_excerpt(); ?> </p>
+						 <p><?php echo excerpt(25); ?><a class="title_uppercase" href="<?php the_permalink(); ?>">Lesa meira</a></p>
 					</div>
 				</article>
 			<?php if ($i == 1) { ?>
@@ -98,7 +109,17 @@
 		</div>
 
 	</div>
-</body>
 
+			
+<!-- EKKI STROKA ÚT - TAKK ~ ARNAR 
+
+<div class='ord'>
+<h2 class="section-title">Orðskýring</h2>
+<h3> Borgararéttindi </h3>
+<p>Borgararéttindi eru flokkur mannréttinda sem almennt má segja að tryggi jafnan rétt allra til þáttöku í lýðræðislegu þjóðfélagi. Oft er talað um að borgararéttindi megi skilgreina sem réttindi sem veita borgurunum frelsi frá afskiptum ríkisvaldsins á einn eða annan hátt.  Dæmi um borgararéttindi eru tjáningarfrelsi, félagafrelsi, trúfrelsi og rétturinn til sanngjarnrar málsmeðferðar
+</p><a href="/taka-thatt/piratafraedarinn/borgararettindi/" class="nanar">Nánar</a>
+</div>
+				
+-->
 
 <?php get_footer(); ?>

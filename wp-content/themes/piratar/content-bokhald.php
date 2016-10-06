@@ -1,4 +1,6 @@
-﻿<h3>Veljið ár til að skoða bókhald Pírata:</h3>
+﻿<h3>Bókhald Pírata</h3>
+
+<ul>
 <?php 
 
 // your taxonomy name
@@ -15,12 +17,13 @@ foreach( $terms as $term ) {
   // if no entries attached to the term
   if( 0 == $term->count )
     // display only the term name
-    echo '<h4>' . $term->name . '</h4>';
+    echo '<li>' . $term->name . '</li>';
 
   // if term has more than 0 entries
   elseif( $term->count > 0 )
     // display link to the term archive
-    echo '<h4><a href="'. get_term_link( $term ) .'">'. $term->name .'</a></h4>';
+    echo '<li><a href="'. get_term_link( $term ) .'">'. $term->name .'</a></li>';
 
 }
 ?>
+</ul>

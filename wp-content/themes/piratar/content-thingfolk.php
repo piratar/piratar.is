@@ -2,15 +2,23 @@
 
 <?php $loop = new WP_Query( array( 'post_type' => 'thingfolk', 'posts_per_page' => -1,'orderby'=>'menu_order','order'=>'ASC') ); ?>
 
-<div class="splitter h20"></div>
 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-<div class="thingfolks_listi">
-    <div class="narrow"><a href="<?php echo esc_url(get_permalink()); ?>"><?php the_post_thumbnail('thingfolk_thumb', array( 'class' => 'thingfolk_thumb_img')); ?></a></div>
-    <div class="wide">
-        <h3>
-            <a href="<?php echo esc_url(get_permalink()); ?>" ><?php the_title(); ?></a>
-        </h3>
+    <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
+
+<div class="row">
+
+    <div class="col-sm-2">
+
+        <figure class="figure figure-round">
+            <div class="figure-wrap"><a href="<?php echo esc_url(get_permalink()); ?>"><img src="<?php echo  $image[0]; ?>"></a></div>
+        </figure>
+    
+    </div>
+
+    <div class="col-sm-10">
+
+        <h2><a href="<?php echo esc_url(get_permalink()); ?>" ><?php the_title(); ?></a></h2>
 
         <p>
             Netfang:
@@ -19,7 +27,10 @@
             Vefur:
             <a target="_blank" href="<?php echo esc_url(get_field( "thingfolk_vefur" )); ?>"><?php echo get_field( "thingfolk_vefur" ); ?></a>
         </p>
+
     </div>
+
 </div>
+
 <?php endwhile; ?>
 

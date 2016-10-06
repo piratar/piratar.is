@@ -1,8 +1,32 @@
 ﻿<?php get_header(); ?>
 
-<div class="efnid">
-    <div class="wrapper">
-        <div class="alpha full">
+<div class="section section-card section-title">
+
+    <div class="section-overlay"></div>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-sm-12">
+
+                <h2 class="the-title">Bókhald</h2>           
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="section section-content">
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-sm-12 col-lg-9 push-lg-1">
 
 <?php
     $custom_terms = get_terms('bokhalds_ar');
@@ -32,7 +56,12 @@
          }
     }
 ?>
-        </div>
     </div>
+
+        </div>
+
+    </div>
+
 </div>
+
 <?php get_footer(); ?>

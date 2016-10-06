@@ -173,15 +173,16 @@ jQuery(document).ready(function($) {
 	$dividers.addClass( "Divider" );
 
 	$menu.mmenu({
-		counters: true,
-			extensions: ["pageshadow", "effect-slide-menu"],
-			iconPanels: true,
+		
+			extensions: ["theme-black", "fullscreen"],
 			offCanvas: {
 				moveBackground: false
 			},
-			navbar: {
-				add: false
-			}
+			navbars: [
+				{
+					content: [ "prev", "title" ]
+				}
+			]
 	}, {
 		
 			offCanvas: {

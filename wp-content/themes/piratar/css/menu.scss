@@ -1,0 +1,434 @@
+@import "variables";
+
+//
+//  Header & menu
+// 
+
+header {
+    width: 100%;
+    background: #fff;
+    height: 84px;
+    float: left;
+    position: fixed;
+    z-index: 501;
+    top: 0;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.10);
+}
+
+header .wrapper {
+    max-width: none;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+header a.nanar { 
+    background:#51297E;
+    color: #fff !important;
+    display: inline !important;
+    padding:5px 10px;
+}
+
+header menu {
+	background:transparent;
+	height:41px;
+	line-height:41px;
+	padding:0;
+	margin: 24px auto 0;
+	float:right;
+}
+
+header ul {
+	list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+header li {
+	float:left;
+}
+
+
+header menu li a {
+	background:transparent;
+	color:#51297E;
+	line-height: 34px;
+	height: 38px;
+	padding:0 0.5em;
+	display:block;
+	position:relative;
+    font-weight: 700;
+    font-family: $font-sans;
+    text-decoration: none;
+    font-size: $font-small;
+    text-transform: uppercase;
+}
+
+header menu li a:hover {
+	color: #000;
+}
+
+header menu li.selected a {
+	background: #fff;
+	color: $gray;
+}
+
+header menu li.current-menu-item a, header menu li.current-page-ancestor a {
+	color: #000;
+}
+
+header a.logo {
+	width: 183px;
+    height:60px;
+	display:block;
+	float:left;
+    position: relative;
+    z-index: 502;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    margin-top:12px;
+}
+
+header .menubar {
+	float:right;
+	width:calc(100% - 201px);
+	//margin-left:44px;
+}
+
+header .searchbox {
+    background: #FFF;
+    float: right;
+    height: 2.5em;
+    position: absolute;
+    top: 20px;
+    width: 344px;
+    right: 6.9em;
+    display: none;
+    box-shadow: 0px 0px 8px 0 fade_out($gray-dark, 0.9);
+    z-index: 500;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+header .searchbox input[type="text"]{
+	border: 0;
+	float: left;
+	height: 2.5em;
+	line-height:32px;
+    text-indent: 1em;
+	width: 300px;
+	font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    outline: none;
+}
+
+header .searchbox input[type="submit"]{
+	background: transparent;
+	border: 0;
+	float:right;
+	height: 2.5em;
+	width:2.5em;
+	text-indent:300px;
+	overflow:hidden;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+header .searchbox span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #51297e;
+}
+
+header .searchbox span:after {
+    font-family: FontAwesome;
+    content: "\f002";
+    font-size: 16px;
+    pointer-events: none;
+    position: relative;
+    color: #51297e;
+    top: 0.25em;
+    right: -2.5em;
+}
+
+header.search-on menu {
+    opacity: 0.35;
+}
+
+#svunta_menu-item-61, #svunta_menu-item-62, #svunta_menu-item-63, #svunta_menu-item-64, #svunta_menu-item-65, #svunta_menu-item-66 {
+    display: none;
+}
+
+.submenu {
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 84px;
+    right: 0;
+    z-index: 400;
+    background: #FFF;
+    box-shadow: 0px 0 4px 0px fade_out($gray-dark, 0.9);
+    padding: 0 4em;
+}
+
+.submenu.open {
+    border-top: 1px solid $gray-lightest;
+}
+
+.submenu div.rammi {
+    position: relative;
+    z-index: -1;
+    margin-bottom: -1px;
+}
+.submenu div.rammi {
+    display: none;
+}
+.submenu div.rammi.active {
+    display: block;
+}
+.submenu div.rammi .padding {
+    border-left: 1px solid $gray-lightest;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+.submenu div.rammi .info {
+    float: left;
+    font-weight: 400;
+    width: 25%;
+    display:none;
+}
+.submenu div.rammi h2 {
+    border-bottom: 3px solid #51297e;
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 0px;
+    text-align: left;
+    width: 100%;
+}
+.submenu div.rammi h3 {
+    
+    margin: 0 0 1px;
+    padding: 0;
+}
+.submenu div.rammi a {
+    display: block;
+}
+.submenu div.rammi .padding > ul {
+    //float: left;
+    width: 33.333%;
+    min-height: 200px;
+    display: table-cell;
+    vertical-align: top;
+    border-right: 1px solid $gray-lightest;
+    border-bottom: 1px solid $gray-lightest;
+    padding: 1em 2em;
+}
+
+.submenu div.rammi ul li ul {
+    width: 100%;
+    min-height: auto;
+}
+
+.submenu div.rammi ul .content {
+   
+}
+
+.submenu div.rammi ul .content p {
+    margin-bottom: 1em;
+}
+
+.submenu div.rammi ul .content a {
+    text-decoration: none;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+
+.submenu div.rammi ul .content a:hover {
+    border-bottom: 2px solid #51297e;
+}
+
+.submenu div.rammi ul li {
+
+}
+
+.submenu > .rammi > .padding > ul > li > a {
+    display: inline-block;
+    font-weight: 700;
+    padding-bottom: 0;
+    font-family: $font-sans;
+    text-decoration: none;
+}
+
+.submenu div.rammi ul li ul li {
+    border-top: 0 none;
+    float: left;
+    font-weight: normal;
+    margin-right: 0;
+    margin-top: 1px;
+    padding: 0;
+    text-indent: 0px;
+    width: 250px;
+}
+
+.submenu > .rammi > .padding > ul > li {
+    min-height: 100px;
+}
+
+.overlayer {
+    background: rgba(0, 0, 0, 0) repeat scroll 0 0;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 104px;
+    width: 100%;
+    z-index: 500;
+}
+
+.overlayer.open {
+    background: fade_out($color-dark, 0.4);
+    display: block;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+
+a.searchicon {
+    float: right;
+    height: 38px;
+    overflow: hidden;
+    text-indent: -3000px;
+    width: 38px;
+    position: relative;
+    margin-top: 22px;
+    line-height: 0.8;
+    border-radius: 2em;
+}
+
+a.searchicon:hover {
+    background: #F5F5F5;
+    
+}
+
+a.searchicon.selected {
+    background: #51297E;
+    color: #fff;
+}
+
+a.searchicon::after {
+    content: "\f002";
+    font-family: FontAwesome;
+    font-size: 16px;
+    left: 12px;
+    pointer-events: none;
+    position: absolute;
+    top: 12px;
+    text-indent:0;
+}
+
+a.searchicon.selected::after {
+    content: "\f00d";  
+    left: 13px;
+}
+
+.maillinkur { font-weight:normal !important;  }
+
+.readmore { 
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background: #fff none repeat scroll 0 0;
+    color: #51297E !important;
+    display: block;
+    font-weight: normal !important;
+    padding: 5px;
+    width: 80px;
+}
+
+.svunta_title {
+    clear: both;
+    color: #444 !important;
+    float: left;
+    margin-bottom: 20px !important;
+    text-align: left;
+    width: 100%;
+}
+
+#svunta_menu-item-603 .tour { 
+    width:calc(50% - 20px);
+    min-height:140px;
+    background: transparent none repeat scroll 0 0 !important;
+    border-bottom:none;
+    font-size: 13px;
+}
+
+#svunta_menu-item-603 .tour .mynd { 
+    height: 90px;
+}
+
+
+#svunta_menu-item-603 .tour h2 {
+    background: transparent none repeat scroll 0 0 !important;
+    color: #fff;
+    float: left;
+    font-size: 16px;
+    margin:5px 0 0;
+    position: relative;
+    width: 100%;
+}
+
+#svunta_menu-item-543 ul li { 
+    text-align: left; 
+    font-size: 14px;
+}
+
+#svunta_menu-item-543 .info ul li { 
+    border-top: 1px solid #fff;
+}
+
+.hlidarmenu ul {
+    background: #51297e;
+    float:left;
+    width: calc(100% - 20px);
+    padding:10px;
+}
+
+.hlidarmenu ul > li > a {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.4);
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding-bottom: 2px;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #fff;
+}
+
+.hlidarmenu ul .content {
+    padding:0;
+    width: calc(100% - 0px);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.hlidarmenu ul .content a {
+    color:#fff;
+}
+
+// Burger icon
+
+#grunge {
+    height: 30px;
+    margin: 20px auto;
+    cursor: pointer;
+    position: fixed;
+    right: 1em;
+    z-index: 1002;
+    display:none;
+    color: $brand-primary;
+    font-size: 2em;
+}

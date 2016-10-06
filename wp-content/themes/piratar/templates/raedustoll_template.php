@@ -12,29 +12,55 @@
     $frettir_loop = new  WP_Query( $args );
 ?>
 
-<div class="efnid">
-    <div class="wrapper">
-        <div class="alpha full">
-            <div class="splitter h20"></div>
-            <h2 class="section-title"><?php echo the_title(); ?></h2>
-                <div class="splitter h20"></div>
-                <div class="hr hr-short hr-center avia-builder-el-11 el_after_av_textblock el_before_av_textblock "><span class="hr-inner "><span class="hr-inner-style"></span></span></div>
-                <div class="splitter h20"></div>
-        <?php
+<div class="section section-card section-title <?php if($image) echo " section-bg-image" ?>" style="background-image: url(<?php echo $image[0] ?>);">
+
+    <div class="section-overlay"></div>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-sm-12">
+
+                <h2 class="the-title"><?php echo the_title(); ?></h2>           
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="section section-content">
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-sm-12 col-lg-9 push-lg-1">
+
+                <?php
             while($frettir_loop->have_posts()) : $frettir_loop->the_post(); 
         ?>
-                <div class="thingmal_rss_feed">
-                    <h3>
+                <article class="post">
+                    <h2 class="post-title">
                         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                    </h3>
-                    <small><?php the_date('j F Y , g:i a'); ?></small>
+                    </h2>
+                    <small class="post-meta"><?php the_date('j F Y , g:i a'); ?></small>
                     <p><?php echo get_the_excerpt(); ?>
                         <a href="<?php echo esc_url( get_permalink() ); ?>" title="">Lesa meira</a>
                         <!--nextpage-->
                     </p>
-                </div>
-        <?php endwhile; ?>
+                </article>
+        <?php endwhile; ?>                
+
+            </div>
+
         </div>
+
     </div>
+
 </div>
+
 <?php get_footer(); ?>

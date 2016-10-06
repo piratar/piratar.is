@@ -1,79 +1,99 @@
-<?php get_header(); ?>
+<?php 
+get_header(); ?>
 
-<div id="imagebanner" class="archivechange">
-    <article>
-        <?php 
-            //$size ="full";
-            $queried_object = get_queried_object();
-            $term_id = $queried_object->term_id;
-            $taxonomy = $queried_object->taxonomy;
-            $term = get_term( $term_id, $taxonomy );
-            $subhead = get_field('sub_headline', $term);
-            $image = s8_get_taxonomy_image_src($term, $size);
+<div class="section section-title">
 
-        if ($image['src']): ?>
-            <figure style="background-image:url(<?php echo $image['src']; ?>);">
-                <img title="Mynd" alt="" src="<?php echo $image['src']; ?>">
-            </figure>
-        <?php else : ?> 
-            <figure style="background-image:url(https://piratar.is/wp-content/uploads/2015/10/northernlights-web.jpg);">
-                <img title="Mynd" alt="" src="https://piratar.is/wp-content/uploads/2015/10/northernlights-web.jpg">
-            </figure>
-        <?php endif; ?> 
-        <div class="wrapper">
-            <div class="tourinfo">          
-                <h1 class="tour-title"><?php echo single_tag_title( '', false ); ?></h1>
-                <h3 class="tour-subheadline"><?php echo $subhead; ?></h3>
+    <div class="section-overlay"></div>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-sm-12">
+
+                <h1 class="the-title">Fréttir</h1>           
+
             </div>
+
         </div>
-    </article>
-</div>
 
-<div class="efnid">
-    <div class="wrapper">
-        <div class="alpha full">
-            <?php if ( in_category( 'blog' )) { ?>
-            <div class="splitter h20"></div>
-            <h2 class="section-title blog">Blog</h2>
-            <div class="splitter h20"></div>
-            <div class="hr hr-short hr-center avia-builder-el-11 el_after_av_textblock el_before_av_textblock "><span class="hr-inner "><span class="hr-inner-style"></span></span></div>
-
-            <div class="splitter h20"></div>
-            <?php } else { ?>
-
-            <div ><?php echo category_description(); ?></div>
-            <div class="splitter h20"></div>
-            <div class="splitter h20"></div>
-            <!--div class="hr hr-short hr-center avia-builder-el-11 el_after_av_textblock el_before_av_textblock "><span class="hr-inner "><span class="hr-inner-style"></span></span></div-->
-
-            <div class="splitter h20"></div>
-        <?php }  ?>
-        <?php if ( have_posts() ) : ?>
-
-            <?php while ( have_posts() ) : the_post(); ?>
-                <?php
-                    if ( in_category( 'blog' )) {
-                        get_template_part( 'content', "blog" );
-                    } elseif ( in_category( 'staff-member' )) {
-                        get_template_part( 'content', "blog" );
-                    } else {
-                        get_template_part( 'content', get_post_format() );
-                    }
-                ?>
-            <?php endwhile; ?>
-            <div class="splitter h20"></div>
-            <?php
-            the_posts_pagination( array(
-                'prev_text'          => __( 'Previous', 'piratar' ),
-                'next_text'          => __( 'Next', 'piratar' ),
-                'before_page_number' => '',
-            ) );
-            //piratar_the_posts_pagination();
-            ?>
-        <?php else: ?>
-            <?php get_template_part( 'content', 'none' ); ?>
-        <?php endif; ?>
-        </div>
     </div>
+
 </div>
+
+
+<div class="section section-content">
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-sm-12 col-lg-9 push-lg-1">
+
+                <?php while ( have_posts() ) : the_post(); ?>
+
+                 <article class="post">
+
+                        <h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                        <div class="post-meta"><?php the_time('d.m.Y'); ?></div>
+
+                        <?php the_excerpt(); ?>
+
+                </article>                
+
+
+                <?php endwhile; ?>
+
+                <div class="nav-previous alignleft"><?php next_posts_link( 'Eldri fréttir' ); ?></div>
+                <div class="nav-next alignright"><?php previous_posts_link( 'Nýrri fréttir' ); ?></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="section section-content section-bg-gray">
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-sm-12">
+
+                <h2 class="the-title">Flokkar</h2>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+                <?php
+
+                $args = array( 'parent' => 0 );
+ 
+                $terms = get_terms( 'frettaflokkur', $args );
+                if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+                    //echo '<ul class="row">';
+                    foreach ( $terms as $term ) {
+                        echo '<div class="col-sm-4"><a href="' . get_term_link($term) . '">' . $term->name . '</a></div>';
+                    }
+                    //echo '</ul>';
+                }
+
+                ?>
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
 <?php get_footer(); ?>
