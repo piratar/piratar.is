@@ -62,7 +62,7 @@
             
         </div>
 
-        <div id="mobile-button"><a href="#">Valmymd <i class="fa fa-bars" aria-hidden="true"></i><i class="fa fa-times" aria-hidden="true"></i></a></div>
+        <div id="mobile-button"><a href="#">Valmynd <i class="fa fa-bars" aria-hidden="true"></i><i class="fa fa-times" aria-hidden="true"></i></a></div>
         <div id="mobile-back"><a href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a></div>
 
     </div>
