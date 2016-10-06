@@ -10165,6 +10165,7 @@ $(function(){
             event.preventDefault();
             $(".searchicon").removeClass('selected');
 			$(".searchbox").hide();
+            $("#mobile-back").addClass("on");
  
             if($(this).parent().hasClass("selected")) {
                 $("#"+currentId).removeClass('selected');
@@ -10172,6 +10173,7 @@ $(function(){
                 $('menu a').parent().removeClass('selected');
                 $('.submenu').removeClass("open");
                 $('.overlayer').removeClass("open");
+                $("#mobile-back").removeClass("on");
             } else {
                 $('menu li').removeClass('selected')
                 $('.submenu div.rammi').hide();
@@ -10179,12 +10181,93 @@ $(function(){
                 $("#svunta_"+currentId).show();	
                 $('.submenu').addClass("open");
                 $('.overlayer').addClass("open");
+
             }
             
         }
 
 	});
+
+
+    // Mobile menu
+
+    $("#mobile-back").on("click", function(event){
+        $('.submenu').removeClass("open");
+        $('.submenu div.rammi').hide();
+        $("#mobile-back").removeClass("on");
+        event.preventDefault();
+    });
+
+    $("#mobile-button a").on("click", function(event){
+        $("header .menubar").toggle();
+        if (!$("body").hasClass("mobile-open")) {
+            $("body").addClass("mobile-open");
+        } else {
+            $("body").removeClass("mobile-open");
+            $('.submenu').removeClass("open");
+            $('.overlayer').removeClass("open");
+            $('.submenu div.rammi').hide();
+        }
+        event.preventDefault();
+    });
+
+    // Fixed menu kosningar
+
+    if ($("body").hasClass("site-kosningar") && $(".menu-fixed").length) {
+
+        moveMenu();
+
+        $(window).resize(moveMenu);
     
+        $(window).scroll(function(){
+
+            moveMenu();
+
+            var elm_top = $(".section-kosningar").offset().top;
+            var scroll_top = $(window).scrollTop();
+
+            if (elm_top - scroll_top < 112) {
+                $("body").addClass("kosningar-fixed");
+            } else {
+                $("body").removeClass("kosningar-fixed");
+            }
+
+        });
+
+        $(".menu-fixed li a").click(function(){
+            elm = $(this).attr("href");
+            $('html, body').animate({
+                scrollTop: $(elm).offset().top - 150
+            }, 250);
+        });
+
+    }
+
+    function moveMenu() {
+        if (document.documentElement.clientWidth > 976) {
+            if (!$(".menu-fixed").hasClass("menu-moved")) {
+                $(".menu-fixed").addClass("menu-moved").prependTo(".section-kosningar");
+            }
+        } else {
+            if ($(".menu-fixed").hasClass("menu-moved")) {
+                $(".menu-fixed").removeClass("menu-moved").prependTo(".section-kosningar .col-sm-12");
+            }
+        }
+    }
+    
+    // Frambjóðendur
+
+    $(".section-people .person").on("click", function(event){
+        link = $(this).find(".person-wrap a").attr("href");
+        if (event.ctrlKey || event.shiftKey || event.metaKey) {
+            window.open(link, '_blank');
+        } else {
+            window.location = link;
+        }
+        //event.stopPropagation();
+        event.preventDefault();
+    });
+
     $('.overlayer').click(function() { 
 		
 		var currentId = $("menu .selected").attr('id');   

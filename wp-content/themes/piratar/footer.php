@@ -4,16 +4,16 @@
 
         <div class="row">
 
-            <div class="col-sm-4">
+            <div class="col-md-4">
 
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo-white.svg" alt="<?php bloginfo( 'name' ); ?>"></a>
 
             </div>
 
-            <div class="col-sm-4">
+            <div class="col-md-4">
 
                 <h3>Samfélagsmiðlar</h3>
-                <p>Skoðaðu okkur líkaðu við okkur til að nýjustu fréttir af okkur.</p>
+                <p>Fylgstu með okkur á samfélagsmiðlum.</p>
                 <ul>
                     <li><a href="https://www.facebook.com/Piratar.Island" target="_blank" title="Facebook"><i class="fa fa-facebook-official"></i></a></li>
                     <li><a href="https://twitter.com/PiratePartyIS" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
@@ -22,7 +22,7 @@
 
             </div>
 
-            <div class="col-sm-4">
+            <div class="col-md-4">
 
                 <h3>Píratapartýið</h3>
                 <p>Píratar eru stjórnmálaafl sem berst fyrir raunverulegu gegnsæi og ábyrgð í stjórnkerfinu, auknu aðgengi að upplýsingum, beinu lýðræði, upplýsingafrelsi og endurskoðun höfundarréttar.</p>

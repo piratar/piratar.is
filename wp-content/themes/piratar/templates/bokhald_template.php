@@ -27,7 +27,7 @@
 
         <div class="row">
 
-            <div class="col-sm-9 push-sm-1">
+            <div class="col-sm-12 col-lg-9 push-lg-1">
 
                 <?php the_content(); ?>
 

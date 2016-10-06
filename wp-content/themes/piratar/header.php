@@ -36,8 +36,6 @@
 
 <header>
 
-    <div id="grunge"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-
     <div class="wrapper" id="lilja">
 
          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="<?php bloginfo( 'name' ); ?>"></a>
@@ -63,6 +61,9 @@
             </menu>
             
         </div>
+
+        <div id="mobile-button"><a href="#">Valmymd <i class="fa fa-bars" aria-hidden="true"></i><i class="fa fa-times" aria-hidden="true"></i></a></div>
+        <div id="mobile-back"><a href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a></div>
 
     </div>
 

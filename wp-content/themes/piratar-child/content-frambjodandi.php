@@ -11,7 +11,7 @@ $value = get_field( "kosnignarvefur" );
 $x_hlekkur = get_field( "kosnignarvefur" );
 
 if ($x_hlekkur) {
-	echo '<p><a href="'. $x_hlekkur .'">Upplýsingar um frambjóðanda á kosningavef Pírata</a></p>';
+	//echo '<p><a href="'. $x_hlekkur .'">Upplýsingar um frambjóðanda á kosningavef Pírata</a></p>';
 }	
 
 ?>

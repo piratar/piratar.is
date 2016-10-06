@@ -40,12 +40,17 @@
 
     <div class="wrapper" id="lilja">
  
-        <a href="http://piratar.is" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="<?php bloginfo( 'name' ); ?>"></a>
+        <?php switch_to_blog(1); ?>
+
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo-white.svg" alt="<?php bloginfo( 'name' ); ?>"></a>
+
+        <?php restore_current_blog(); ?>
 
         <div class="menubar">
 
             <menu>
                 <?php
+                    
                     wp_nav_menu( array(
                         'theme_location' => 'primary',
                         'depth'          => 1,
@@ -54,6 +59,7 @@
             </menu>
 
         </div>
+
     </div>
 
     <div class="submenu">

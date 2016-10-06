@@ -17,12 +17,8 @@ header {
 
 header .wrapper {
     max-width: none;
-    padding-left: 4em;
-    padding-right: 4em;
-}
-
-.admin-bar header {
-    top: 32px;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 header a.nanar { 
@@ -37,7 +33,7 @@ header menu {
 	height:41px;
 	line-height:41px;
 	padding:0;
-	margin:22px auto 0;
+	margin: 24px auto 0;
 	float:right;
 }
 
@@ -58,32 +54,27 @@ header menu li a {
 	color:#51297E;
 	line-height: 34px;
 	height: 38px;
-	padding:0 0.75em;
+	padding:0 0.5em;
 	display:block;
 	position:relative;
     font-weight: 700;
-    border: 2px solid transparent;
     font-family: $font-sans;
     text-decoration: none;
-    font-size: 16px;
+    font-size: $font-small;
+    text-transform: uppercase;
 }
 
 header menu li a:hover {
-	color: #222;
+	color: #000;
 }
 
 header menu li.selected a {
 	background: #fff;
-	color: #222;
-    border-radius: 2em;
-    border: 2px solid #F5F5F5;
+	color: $gray;
 }
 
 header menu li.current-menu-item a, header menu li.current-page-ancestor a {
-	border: 2px solid #F5F5F5;
-    color: #222;
-    border-radius: 2em;
-    background: #F5F5F5;
+	color: #000;
 }
 
 header a.logo {
@@ -212,14 +203,13 @@ header.search-on menu {
 .submenu div.rammi h2 {
     border-bottom: 3px solid #51297e;
     display: inline-block;
-    font-size: 1.1em;
     font-weight: bold;
     margin-bottom: 0px;
     text-align: left;
     width: 100%;
 }
 .submenu div.rammi h3 {
-    font-size: 16px;
+    
     margin: 0 0 1px;
     padding: 0;
 }
@@ -243,7 +233,7 @@ header.search-on menu {
 }
 
 .submenu div.rammi ul .content {
-    font-size: 16px;
+   
 }
 
 .submenu div.rammi ul .content p {
@@ -265,7 +255,6 @@ header.search-on menu {
 
 .submenu > .rammi > .padding > ul > li > a {
     display: inline-block;
-    font-size: 1em;
     font-weight: 700;
     padding-bottom: 0;
     font-family: $font-sans;
@@ -346,7 +335,7 @@ a.searchicon.selected::after {
     left: 13px;
 }
 
-.maillinkur { font-weight:normal !important; font-size: 14px; }
+.maillinkur { font-weight:normal !important;  }
 
 .readmore { 
     -webkit-border-radius: 4px;
@@ -355,7 +344,6 @@ a.searchicon.selected::after {
     background: #fff none repeat scroll 0 0;
     color: #51297E !important;
     display: block;
-    font-size: 14px !important;
     font-weight: normal !important;
     padding: 5px;
     width: 80px;
@@ -434,105 +422,13 @@ a.searchicon.selected::after {
 // Burger icon
 
 #grunge {
-    width: 40px;
     height: 30px;
     margin: 20px auto;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: .5s ease-in-out;
-    -moz-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
     cursor: pointer;
     position: fixed;
-    right:20px;
-    top:20px;
+    right: 1em;
     z-index: 1002;
     display:none;
-}
-
-#grunge span {
-  display: block;
-  position: absolute;
-  height: 6px;
-  width: 50%;
-  background: #51297e;
-  opacity: 1;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
-}
-
-#grunge span:nth-child(even) {
-  left: 50%;
-  border-radius: 0 6px 6px 0;
-}
-
-#grunge span:nth-child(odd) {
-  left:0px;
-  border-radius: 6px 0 0 6px;
-}
-
-#grunge span:nth-child(1), #grunge span:nth-child(2) {
-  top: 0px;
-}
-
-#grunge span:nth-child(3), #grunge span:nth-child(4) {
-  top: 12px;
-}
-
-
-#grunge span:nth-child(5), #grunge span:nth-child(6) {
-  top: 24px;
-}
-
-#grunge.open span:nth-child(1),#grunge.open span:nth-child(6) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-#grunge.open span:nth-child(2),#grunge.open span:nth-child(5) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-#grunge.open span:nth-child(1) {
-  left: 5px;
-  top: 7px;
-}
-
-#grunge.open span:nth-child(2) {
-  left: calc(50% - 5px);
-  top: 7px;
-}
-
-#grunge.open span:nth-child(3) {
-  left: -50%;
-  opacity: 0;
-}
-
-#grunge.open span:nth-child(4) {
-  left: 100%;
-  opacity: 0;
-}
-
-#grunge.open span:nth-child(5) {
-  left: 5px;
-  top: 17px;
-}
-
-#grunge.open span:nth-child(6) {
-  left: calc(50% - 5px);
-  top: 17px;
+    color: $brand-primary;
+    font-size: 2em;
 }

@@ -4,14 +4,6 @@
 
         <div class="container-fluid">
 
-             <div class="row">
-
-                <div class="col-sm-12">
-                    <h2 class="the-title">Frambjóðendur</h2>
-                </div>
-
-            </div>
-
             <div class="row">
 
                 <div class="col-sm-12">
@@ -28,7 +20,7 @@
                             $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
                             $name = explode(" ", get_the_title()); $name = array_slice($name, 0, -1); $name = implode(" ", $name);
                             if ($image[0] == false) $image[0] =  get_template_directory_uri() . "/img/framb-default.png";
-                            if (get_post_field("menu_order", $post->ID) != 0 && $k <= 5) {
+                            if (get_post_field("menu_order", $post->ID) != 0) {
                         ?>
 
                         <li class="col-xs-6 col-lg-4 person"><figure><div><img src="<?php echo $image[0]; ?>"><div class="person-overlay"></div></div><span class="person-num"><?php echo $k; ?></span></figure><div class="person-wrap"><a href="<?php the_permalink(); ?>"><?php echo $name; ?></a></div></li>
@@ -57,7 +49,7 @@
                             $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
                             $name = explode(" ", get_the_title()); $name = array_slice($name, 0, -1); $name = implode(" ", $name);
                             if ($image[0] == false) $image[0] =  get_template_directory_uri() . "/img/framb-default.png";
-                            if (get_post_field("menu_order", $post->ID) != 0 && $k <= 5) {
+                            if (get_post_field("menu_order", $post->ID) != 0) {
                         ?>
 
                         <li class="col-xs-6 col-lg-4 person"><figure><div><img src="<?php echo $image[0]; ?>"><div class="person-overlay"></div></div><span class="person-num"><?php echo $k; ?></span></figure><div class="person-wrap"><a href="<?php the_permalink(); ?>"><?php echo $name; ?></a></div></li>
@@ -86,7 +78,7 @@
                             $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
                             $name = explode(" ", get_the_title()); $name = array_slice($name, 0, -1); $name = implode(" ", $name);
                             if ($image[0] == false) $image[0] =  get_template_directory_uri() . "/img/framb-default.png";
-                            if (get_post_field("menu_order", $post->ID) != 0 && $k <= 5) {
+                            if (get_post_field("menu_order", $post->ID) != 0) {
                         ?>
 
                         <li class="col-xs-6 col-lg-4 person"><figure><div><img src="<?php echo $image[0]; ?>"><div class="person-overlay"></div></div><span class="person-num"><?php echo $k; ?></span></figure><div class="person-wrap"><a href="<?php the_permalink(); ?>"><?php echo $name; ?></a></div></li>
@@ -115,7 +107,7 @@
                             $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
                             $name = explode(" ", get_the_title()); $name = array_slice($name, 0, -1); $name = implode(" ", $name);
                             if ($image[0] == false) $image[0] =  get_template_directory_uri() . "/img/framb-default.png";
-                            if (get_post_field("menu_order", $post->ID) != 0 && $k <= 5) {
+                            if (get_post_field("menu_order", $post->ID) != 0) {
                         ?>
 
                         <li class="col-xs-6 col-lg-4 person"><figure><div><img src="<?php echo $image[0]; ?>"><div class="person-overlay"></div></div><span class="person-num"><?php echo $k; ?></span></figure><div class="person-wrap"><a href="<?php the_permalink(); ?>"><?php echo $name; ?></a></div></li>
@@ -144,7 +136,7 @@
                             $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
                             $name = explode(" ", get_the_title()); $name = array_slice($name, 0, -1); $name = implode(" ", $name);
                             if ($image[0] == false) $image[0] =  get_template_directory_uri() . "/img/framb-default.png";
-                            if (get_post_field("menu_order", $post->ID) != 0 && $k <= 5) {
+                            if (get_post_field("menu_order", $post->ID) != 0) {
                         ?>
 
                         <li class="col-xs-6 col-lg-4 person"><figure><div><img src="<?php echo $image[0]; ?>"><div class="person-overlay"></div></div><span class="person-num"><?php echo $k; ?></span></figure><div class="person-wrap"><a href="<?php the_permalink(); ?>"><?php echo $name; ?></a></div></li>
@@ -173,7 +165,7 @@
                             $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
                             $name = explode(" ", get_the_title()); $name = array_slice($name, 0, -1); $name = implode(" ", $name);
                             if ($image[0] == false) $image[0] =  get_template_directory_uri() . "/img/framb-default.png";
-                            if (get_post_field("menu_order", $post->ID) != 0 && $k <= 5) {
+                            if (get_post_field("menu_order", $post->ID) != 0) {
                         ?>
 
                         <li class="col-xs-6 col-lg-4 person"><figure><div><img src="<?php echo $image[0]; ?>"><div class="person-overlay"></div></div><span class="person-num"><?php echo $k; ?></span></figure><div class="person-wrap"><a href="<?php the_permalink(); ?>"><?php echo $name; ?></a></div></li>
@@ -181,16 +173,6 @@
                         <?php $k++; } endwhile; wp_reset_query(); ?>
 
                     </ul>
-
-                </div>
-
-            </div>
-
-             <div class="row">
-
-                <div class="col-sm-12 text-sm-center">
-
-                    <a href="/kosningar/frambjodendur" class="btn btn-primary">Sjá alla</a>
 
                 </div>
 

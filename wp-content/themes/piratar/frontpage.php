@@ -14,9 +14,13 @@
 
                 <div class="col-sm-12">
 
-                    <h1>Við viljum að þú ráðir</h1>
-                    <h2>Meira lýðræði í krafti fjöldans</h2>
-                    <p><a href="http://piratar.karolinafund.com/" class="btn btn-primary">Styrkja</a> <a href="<?php echo get_site_url(); ?>/" class="btn btn-primary">Taka þátt</a></p>
+                    <h1>Endurræsum Ísland</h1>
+
+                    <p>
+                        <a href="<?php echo get_site_url(); ?>/kosningar" class="btn btn-primary">Áherslumál</a>
+                        <a href="http://piratar.karolinafund.com/" class="btn btn-primary">Styrkja</a>
+                        <a href="<?php echo get_site_url(); ?>/taka-thatt/hvernig-tek-eg-thatt/" class="btn btn-primary">Taka þátt</a>
+                    </p>
 
                 </div>
 
@@ -28,7 +32,7 @@
 
 </div>
 
-<div class="section section-content section-bg-gray">
+<div class="section section-content section-policy section-bg-gray">
 
     <div class="section-overlay">
 
@@ -37,14 +41,14 @@
             <div class="row">
 
                 <div class="col-sm-12">
-                    <h2 class="the-title">Stefnan</h2>
+                    <h2 class="the-title">Áherslumál</h2>
                 </div>
 
             </div>
 
             <div class="row">
 
-                <div class="col-sm-4">
+                <div class="policy-item col-md-6 col-lg-4">
 
                     <h2>Uppfærum Ísland með nýrri stjórnarskrá</h2>
                     
@@ -52,7 +56,7 @@
 
                 </div>
 
-                <div class="col-sm-4">
+                <div class="policy-item col-md-6 col-lg-4">
 
                     <h2>Tryggjum réttláta dreifingu arðs af auðlindum</h2>
                     
@@ -60,7 +64,7 @@
 
                 </div>
 
-                <div class="col-sm-4">
+                <div class="policy-item col-md-6 col-lg-4">
 
                     <h2>Endurreisum gjaldfrjálsa heilbrigðisþjónustu</h2>
                     
@@ -68,11 +72,8 @@
 
                 </div>
 
-            </div>
 
-            <div class="row stefna-cta">
-
-                <div class="col-sm-4">
+                <div class="col-md-6 col-lg-4">
 
                     <h2>Eflum aðkomu almennings að ákvarðanatöku</h2>
                     
@@ -80,7 +81,7 @@
 
                 </div>
 
-                <div class="col-sm-4">
+                <div class="col-md-6 col-lg-4">
 
                     <h2>Endurvekjum traust og tæklum spillingu</h2>
                     
@@ -88,25 +89,22 @@
 
                 </div>
 
-                <div class="col-sm-4">
+                <div class="col-md-6 col-lg-4 text-xs-center">
                     
-                    <p><a href="<?php echo get_site_url(); ?>/kosningar" class="btn btn-primary pull-right">Ýtarleg stefna Pírata</a></p>
+                    <p><a href="<?php echo get_site_url(); ?>/kosningar" class="btn btn-primary">Stefna &amp; framtíðarsýn</a></p>
 
                 </div>
 
-            </div>
 
+            </div>
 
         </div>
 
     </div>
 
 </div>
-
 <?php switch_to_blog(2); ?>
-
 <?php get_template_part( 'content', "frambjodendur" ); ?>
-
 <?php
     restore_current_blog();
     $news = new WP_Query('frettaflokkur=frettir&posts_per_page=5');
@@ -132,7 +130,7 @@
             // if(has_post_thumbnail( $post->ID ) )
         ?>
 
-            <div class="grid-item <?php if($news->current_post == 0) { echo " col-sm-8"; } else { echo " col-sm-4"; } ?><?php if(has_post_thumbnail($post->ID)) echo " grid-bg-image" ?>" style="background-image: url(<?php if(has_post_thumbnail($post->ID)) echo $image[0] ?>);">
+            <div class="grid-item <?php if($news->current_post == 0) { echo " col-xs-12 col-md-12 col-xl-8"; } else { echo " col-xs-12 col-md-6 col-xl-4"; } ?><?php if(has_post_thumbnail($post->ID)) echo " grid-bg-image" ?>" style="background-image: url(<?php if(has_post_thumbnail($post->ID)) echo $image[0] ?>);">
 
                 <article>
 
@@ -156,6 +154,15 @@
 
         </div>
 
+         <div class="row">
+
+            <div class="col-sm-12 text-xs-center">
+                <p>&nbsp;<br><a href="/frettir" class="btn btn-primary">Allar fréttir</a></p>
+            </div>
+
+        </div>
+
+
     </div>
 
 </div>
@@ -165,7 +172,7 @@
     $news = new WP_Query('frettaflokkur=i-fjolmidlum&posts_per_page=6');
 ?>
 
-<div class="section section-grid ">
+<div class="section section-grid section-grid-minimal">
 
     <div class="container-fluid">
 
@@ -185,7 +192,7 @@
             // if(has_post_thumbnail( $post->ID ) )
         ?>
 
-            <div class="grid-item col-sm-4 <?php if(has_post_thumbnail($post->ID)) echo " grid-bg-image" ?>" style="background-image: url(<?php if(has_post_thumbnail($post->ID)) echo $image[0] ?>);">
+            <div class="grid-item col-xs-12 col-md-6 col-xl-4 <?php if(has_post_thumbnail($post->ID)) echo " grid-bg-image" ?>" style="background-image: url(<?php if(has_post_thumbnail($post->ID)) echo $image[0] ?>);">
 
                 <article>
 
@@ -209,14 +216,7 @@
 
         </div>
 
-        <div class="row">
-
-            <div class="col-sm-12 text-xs-center">
-                <p>&nbsp;<br><a href="/frettir" class="btn btn-primary">Allar fréttir</a></p>
-            </div>
-
-        </div>
-
+       
     </div>
 
 </div>
@@ -228,19 +228,19 @@
 
         <div class="row">
 
-            <div class="col-sm-4">
+            <div class="col-md-4">
 
                 <?php the_field('frontbox_left', 37894); ?>
 
             </div>
 
-            <div class="col-sm-4">
+            <div class="col-md-4">
 
                 <?php the_content(); ?>
 
             </div>
 
-            <div class="col-sm-4">
+            <div class="col-md-4">
 
                 <?php the_field('frontbox_right', 37894); ?>
 

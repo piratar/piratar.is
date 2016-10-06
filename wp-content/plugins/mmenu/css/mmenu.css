@@ -1,4 +1,4 @@
-.mm-menu,.mm-panels,.mm-panels>.mm-panel{margin:0;left:0;right:0;top:36px;bottom:0;z-index:0;box-sizing:border-box}
+.mm-menu,.mm-panels,.mm-panels>.mm-panel{margin:0;left:0;right:0;top:0;bottom:0;z-index:0;box-sizing:border-box}
 .mm-btn,.mm-menu{box-sizing:border-box}
 .mm-listview a,.mm-listview a:hover,.mm-navbar a,.mm-navbar a:hover{text-decoration:none}
 .mm-hidden{display:none!important}
@@ -414,7 +414,7 @@ html.mm-opening .mm-menu.mm-front,html.mm-opening .mm-menu.mm-next{-webkit-trans
 .mm-menu.mm-tileview .mm-listview{margin:0}
 .wpmm-menu
 {
-	background-color: #f3f3f3 !important;
+	background-color: #000000 !important;
 }
 .wpmm-force-bg
 {

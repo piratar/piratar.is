@@ -3,7 +3,7 @@
 
 
 body {
-    font-size: 18px;
+    font-size: 14px;
     background-color: #fff;
     color: #222;
     font-family: $font-serif;
@@ -11,6 +11,12 @@ body {
     margin: 84px 0 0 0;
     height: 100%;
     line-height: 1.75;
+}
+
+@include media-breakpoint-up(sm) {
+    body {
+        font-size: 18px;
+    }
 }
 
 h1, h2, h3, h4, h5 {
@@ -42,6 +48,7 @@ p {
 }
 
 .btn {
+    font-size: 14px;
     font-family: $font-sans;
     text-transform: uppercase;
     font-weight: 500;
@@ -49,16 +56,191 @@ p {
     border: 0;
 }
 
+@include media-breakpoint-up(sm) {
+    .btn {
+        font-size: 18px;
+    }
+}
+
 img {
     max-width: 100%;
 }
+
+.wp-caption {
+    width: 100% !important;
+}
+
+.fa-round {
+    border-radius: 100%;
+    width: 2rem;
+    height: 2rem;
+    line-height: 1.65rem !important;
+    vertical-align: middle;
+    background: $brand-primary;
+    color: #fff;
+    text-align: center;
+    &:before {
+        font-size: 1rem;
+    }
+}
+
+//
+// Header (See menu.scss)
+//
+
+header #mobile-button,
+header #mobile-back {
+    float: right;
+    height: 80px;
+    a {
+        font-family: $font-sans;
+        line-height: 80px;
+        display: inline-block;
+        padding: 0 1em;
+        position: relative;
+        right: -1em;
+        text-transform: uppercase;
+        font-size: $font-small;
+        color: $gray;
+        i {
+            font-size: 21px;
+            color: $brand-primary;
+            position: relative;
+            top: 2px;
+            margin-left: 0.5em;
+        }
+        .fa-times {
+            display: none;
+        }
+    }
+}
+
+header #mobile-back {
+    display: none;
+    float: left;
+    a {
+        right: auto;
+        left: -1em;
+        i {
+            margin: 0;
+            color: $gray;
+        }
+    }
+    &.on {
+        a {
+            i {
+                color: $brand-primary;
+            }
+        }
+    }
+}
+
+body.mobile-open {
+    overflow: hidden;
+    header .logo {
+        display: none;
+    }
+    header #mobile-back {
+        display: block;
+    }
+    header #mobile-button {
+        .fa-times {
+            display: inline-block;
+        }
+        .fa-bars {
+            display: none;
+        }
+    }
+}
+
+header .menubar {
+    display: none;
+}
+
+.admin-bar header {
+    top: 32px;
+}
+
+@include media-breakpoint-up(lg) {
+   
+    header .menubar {
+        display: block;
+    }   
+    header .wrapper {
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+    #mobile-button {
+        display: none;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    header .menubar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: #fff;
+        .searchicon {
+            display: none !important;
+        }
+        menu {
+            margin: 80px 0 0 0;
+            height: auto;
+            background: transparent;
+            line-height: 1.75;
+            padding: 1em 0 0 0;
+            float: none;
+            ul li {
+                float: none;
+                text-align: center;
+                a {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    header .submenu {
+        padding: 0;
+        &.open {
+            position: fixed;
+            bottom: 0;
+            overflow-y: scroll;
+        }
+        .rammi {
+            &.active {
+                display: block;
+            }
+            .padding {
+                display: block;
+            }
+            .padding > ul {
+                width: 100%;
+                border-right: 0;
+                border-left: 0;
+                display: block;
+                min-height: 0;
+                float: none;
+                li {
+                    min-height: 0;
+                    float: none;
+                }
+            }
+        }
+    }
+}
+
+
+
 
 //
 // Sections
 //
 
 .section {
-    padding: 4rem;
+    padding: 1rem;
     .row > div > h2:first-child,
     .row > div > h1:first-child {
         margin-top: 0;
@@ -74,7 +256,7 @@ img {
         color: $gray;
         margin-bottom: 2em;
         position: relative;
-        top: -0.75em;
+        padding-top: 1em;
     }
     a {
         border-bottom: 2px solid rgba(0,0,0,0.1);
@@ -95,12 +277,28 @@ img {
         background-size: cover;
         padding: 0;
         .section-overlay {
-            padding: 4em;
+            padding: 2em;
             @include gradient-y(fade_out($gray-dark, 1), fade_out($gray-dark, 0.65));
         }
+
     }
     &.section-bg-gray {
         background-color: $gray-lightest;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .section {
+        padding: 4rem;
+        h2.the-title {
+            padding-top: 0;
+            top: -0.75em;
+        }
+        &.section-bg-image {
+            .section-overlay {
+                padding: 4rem;
+            }   
+        }
     }
 }
 
@@ -168,9 +366,11 @@ img {
 
 .section-grid {
     .row {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        @include media-breakpoint-up(sm) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
         width: 100%;
         margin-top: 2px;
         margin-right: -1px;
@@ -218,6 +418,26 @@ img {
             }
         }
     }
+    &.section-grid-minimal {
+        .grid-item {
+            min-height: 0;
+            h1 a {
+                color: $brand-primary;
+            }
+            article {
+                background: $gray-lightest;
+                min-height: 0;
+                height: 100%;
+                .grid-wrap {
+                    position: static;
+
+                }
+                .date {
+                    color: $gray;
+                }
+            }
+        }
+    }
 }
 
 
@@ -229,13 +449,16 @@ img {
     }
     h3 {
         margin-top: 0;
-        margin-bottom: 2em;
+        margin-bottom: 1em;
         a {
             font-size: 1em;
         }
     }
     .row {
         padding-left: 0;
+    }
+    .container-fluid > .row + .row {
+        margin-top: 2em;
     }
     .person {
         display: block;
@@ -245,7 +468,8 @@ img {
         overflow: hidden;
         float: left;
         padding: 0 15px;
-        font-size: 0.85em;
+        font-size: $font-small;
+        cursor: pointer;
         figure {
             position: relative;
             margin-bottom: 0;
@@ -287,16 +511,19 @@ img {
         }
         .person-wrap {
             text-align: center;
-            line-height: 1.25;
+            line-height: 1.75;
             position: absolute;
             bottom: 1.5em;
             left: 0;
             width: 100%;
             color: #fff;
-            padding: 0 4em;
             a {
                 color: #fff;
-                font-weight: 700;
+                background: $brand-primary;
+                border: 0;
+                padding: 0 0.75em;
+                display: inline-block;
+                border-radius: 1em;
             }
             .person-meta {
                 color: rgba(255,255,255,0.65);
@@ -304,7 +531,7 @@ img {
             }
         }
     }
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
         .person {
             width: 20%;
         }
@@ -334,9 +561,11 @@ img {
 // Footer
 
 .section-footer {
-    font-size: 0.85em;
+    font-size: $font-small;
     color: #fff;
     background: #000;
+    position: relative;
+    z-index: 500;
     .logo img {
         height: 60px;
         width: auto;
@@ -375,6 +604,66 @@ img {
                 vertical-align: middle;
             }
         }
+    }
+}
+
+// Menu
+
+.section-menu {
+    padding-top: 0;
+    padding-bottom: 0;
+    //border-bottom: 2px solid $gray-lightest;
+    background: $brand-primary;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        li {
+            display: inline-block;
+            padding: 0 0.5em;
+            line-height: 6em;
+            font-family: $font-sans;
+            font-weight: 700;
+            font-size: $font-small;
+            text-transform: uppercase;
+            a {
+                color: #fff;
+                border: 0;    
+            }
+        }
+    }
+}
+
+.menu-fixed {
+    @include media-breakpoint-up(lg) {
+        padding: 0 15px;
+        position: absolute;
+        right: 4em;
+        width: 25%;
+    }
+    list-style: none;
+    margin: 0;
+    font-size: $font-small;
+    font-family: $font-sans;
+    border-left: 2px solid $gray-lightest;
+    li {
+        font-weight: 700;
+        text-transform: uppercase;
+        display: block;
+        a {
+            border: 0;
+        }
+    }
+    li + li {
+        margin-top: 0.5em;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .kosningar-fixed .menu-fixed {
+        position: fixed;
+        top: 13em;
     }
 }
 
@@ -443,6 +732,7 @@ img {
 // Figure
 
 figure.figure {
+    display: block;
     &.figure-round {
         .figure-wrap {
             position: relative;
@@ -483,6 +773,66 @@ figure.figure {
 
 // Home
 
+.home .section-card h1 {
+    font-size: 3em;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    text-shadow: 0 0 8px rgba(0,0,0,0.85);
+}
+
+.home .section-card p {
+    margin-bottom: 0;
+}
+
+.home .section-card .tag {
+    background: #fff;
+    color: $gray;
+    position: relative;
+    left: -0.5em;
+    display: none;
+}
+
+@include media-breakpoint-up(sm) {
+    .home .section-card .tag {
+        display: inline-block;
+    }
+}
+
+.home .section-card p > .btn + .btn {
+    margin-left: 0.5em;
+}
+
+.home .section-card p > .btn {
+    margin-bottom: 0.5em;
+}
+
+.home .section-policy {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .policy-item {
+        flex: 0 1 auto;
+        margin-bottom: 1.5em;
+    }
+    .tag {
+        width: 2em;
+        height: 2em;
+        line-height: 2em;
+        border-radius: 2em;
+        padding: 0;
+        font-weight: 500;
+    }
+    .btn {
+        @include media-breakpoint-up(md) {
+            position: absolute;
+            right: 15px;
+            bottom: 0;
+        }
+    }
+
+}
+
 .home .section-bg-image h1 {
     margin-top: 4em !important;
 }
@@ -514,14 +864,7 @@ figure.figure {
     }
 }
 
-.home .stefna-cta {
-    position: relative;
-    > div:last-child {
-        position: absolute;
-        bottom: 1em;
-        right: 0;
-    }
-}
+
 
 // Fréttir
 
@@ -541,4 +884,17 @@ figure.figure {
 
         }
     }   
+}
+
+// Kosningar
+
+.site-kosningar header {
+    background: $brand-primary;
+    menu ul li a {
+        color: #fff;
+    }
+    menu li.current-menu-item a {
+        opacity: 0.65;
+    }
+
 }
