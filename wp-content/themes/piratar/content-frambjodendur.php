@@ -25,7 +25,7 @@
                         <?php
                             $k = 1;
                             while($kjord->have_posts()) : $kjord->the_post();
-                            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
+                            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'candidate' );
                             $name = explode(" ", get_the_title()); $name = array_slice($name, 0, -1); $name = implode(" ", $name);
                             if ($image[0] == false) $image[0] =  get_template_directory_uri() . "/img/framb-default.png";
                             if (get_post_field("menu_order", $post->ID) != 0 && $k <= 5) {
@@ -54,7 +54,7 @@
                         <?php
                             $k = 1;
                             while($kjord->have_posts()) : $kjord->the_post();
-                            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
+                            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'candidate' );
                             $name = explode(" ", get_the_title()); $name = array_slice($name, 0, -1); $name = implode(" ", $name);
                             if ($image[0] == false) $image[0] =  get_template_directory_uri() . "/img/framb-default.png";
                             if (get_post_field("menu_order", $post->ID) != 0 && $k <= 5) {
@@ -83,7 +83,7 @@
                         <?php
                             $k = 1;
                             while($kjord->have_posts()) : $kjord->the_post();
-                            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
+                            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'candidate' );
                             $name = explode(" ", get_the_title()); $name = array_slice($name, 0, -1); $name = implode(" ", $name);
                             if ($image[0] == false) $image[0] =  get_template_directory_uri() . "/img/framb-default.png";
                             if (get_post_field("menu_order", $post->ID) != 0 && $k <= 5) {
@@ -112,7 +112,7 @@
                         <?php
                             $k = 1;
                             while($kjord->have_posts()) : $kjord->the_post();
-                            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
+                            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'candidate' );
                             $name = explode(" ", get_the_title()); $name = array_slice($name, 0, -1); $name = implode(" ", $name);
                             if ($image[0] == false) $image[0] =  get_template_directory_uri() . "/img/framb-default.png";
                             if (get_post_field("menu_order", $post->ID) != 0 && $k <= 5) {
@@ -141,7 +141,7 @@
                         <?php
                             $k = 1;
                             while($kjord->have_posts()) : $kjord->the_post();
-                            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
+                            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'candidate' );
                             $name = explode(" ", get_the_title()); $name = array_slice($name, 0, -1); $name = implode(" ", $name);
                             if ($image[0] == false) $image[0] =  get_template_directory_uri() . "/img/framb-default.png";
                             if (get_post_field("menu_order", $post->ID) != 0 && $k <= 5) {
@@ -170,7 +170,7 @@
                         <?php
                             $k = 1;
                             while($kjord->have_posts()) : $kjord->the_post();
-                            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
+                            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'candidate' );
                             $name = explode(" ", get_the_title()); $name = array_slice($name, 0, -1); $name = implode(" ", $name);
                             if ($image[0] == false) $image[0] =  get_template_directory_uri() . "/img/framb-default.png";
                             if (get_post_field("menu_order", $post->ID) != 0 && $k <= 5) {

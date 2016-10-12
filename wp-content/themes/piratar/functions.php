@@ -52,6 +52,7 @@ if ( ! function_exists( 'piratar_setup' ) ) {
 		add_theme_support( 'post-thumbnails' );
 		
 		add_image_size( 'thingfolk_thumb', 220, 220 );
+		add_image_size( 'candidate', 400, 800 );
 		
 		add_theme_support( 'html5', array(
 			'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'

@@ -12,7 +12,7 @@
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
     <link href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/piratar.min.css" rel="stylesheet">
 
-    <title><?php is_front_page() ? bloginfo('description') : wp_title('–'); ?> – <?php bloginfo('name'); ?></title>
+    <title><?php is_front_page() ? bloginfo('description') : wp_title(''); ?> – <?php bloginfo('name'); ?></title>
 
     <script type="text/javascript">
 

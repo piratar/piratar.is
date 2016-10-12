@@ -7213,6 +7213,39 @@ p {
   box-shadow: 0px 0px 8px 0 rgba(38, 29, 43, 0.1);
   border: 0; }
 
+.btn-white {
+  font-weight: 700;
+  color: #51297E;
+  background-color: #fff;
+  border-color: transparent; }
+  .btn-white:hover {
+    color: #51297E;
+    background-color: #e6e6e6;
+    border-color: transparent; }
+  .btn-white:focus, .btn-white.focus {
+    color: #51297E;
+    background-color: #e6e6e6;
+    border-color: transparent; }
+  .btn-white:active, .btn-white.active,
+  .open > .btn-white.dropdown-toggle {
+    color: #51297E;
+    background-color: #e6e6e6;
+    border-color: transparent;
+    background-image: none; }
+    .btn-white:active:hover, .btn-white:active:focus, .btn-white:active.focus, .btn-white.active:hover, .btn-white.active:focus, .btn-white.active.focus,
+    .open > .btn-white.dropdown-toggle:hover,
+    .open > .btn-white.dropdown-toggle:focus,
+    .open > .btn-white.dropdown-toggle.focus {
+      color: #51297E;
+      background-color: #d4d4d4;
+      border-color: transparent; }
+  .btn-white.disabled:focus, .btn-white.disabled.focus, .btn-white:disabled:focus, .btn-white:disabled.focus {
+    background-color: #fff;
+    border-color: transparent; }
+  .btn-white.disabled:hover, .btn-white:disabled:hover {
+    background-color: #fff;
+    border-color: transparent; }
+
 @media (min-width: 544px) {
   .btn {
     font-size: 18px; } }
@@ -7590,6 +7623,40 @@ header .menubar {
   font-family: "Montserrat", sans-serif;
   margin-bottom: 2em; }
 
+.section-two {
+  padding: 0; }
+  .section-two .container-fluid {
+    padding: 0; }
+  .section-two .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0; }
+  .section-two .two-item {
+    flex: 0 1 auto;
+    padding: 3em 2em 8em 2em;
+    background-color: #51297E;
+    color: #fff;
+    position: relative; }
+    @media (min-width: 992px) {
+      .section-two .two-item {
+        padding: 4em 4em 8em 4em; } }
+    .section-two .two-item.two-color-black {
+      background-color: #000; }
+    .section-two .two-item.two-color-gray {
+      background-color: #B3B0B5; }
+    .section-two .two-item.two-color-purple {
+      background-color: #51297E; }
+    .section-two .two-item.two-color-purple-light {
+      background-color: #763cb8; }
+  .section-two .two-button {
+    position: absolute;
+    bottom: 2em;
+    left: 0;
+    right: 0; }
+    @media (min-width: 992px) {
+      .section-two .two-button {
+        bottom: 3em; } }
+
 .section-footer {
   font-size: 0.8em;
   color: #fff;
@@ -7753,9 +7820,14 @@ figure.figure {
 
 .home .section-card h1 {
   font-size: 3em;
-  margin-top: 3em;
+  margin-top: 3em !important;
   margin-bottom: 1em;
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.85); }
+  @media (min-width: 768px) {
+    .home .section-card h1 {
+      font-size: 4em !important;
+      margin-top: 2em !important;
+      margin-bottom: 0.75em; } }
 
 .home .section-card p {
   margin-bottom: 0; }
@@ -7799,9 +7871,6 @@ figure.figure {
     right: 15px;
     bottom: 0; } }
 
-.home .section-bg-image h1 {
-  margin-top: 4em !important; }
-
 .home .sb_instagram_header {
   display: none; }
 
@@ -7823,15 +7892,15 @@ figure.figure {
   .home .section #sb_instagram #sbi_load .sbi_follow_btn a {
     background: #51297E; }
 
-.single-frettir .section-title {
+.single-frettir .section-title, .single-ur-raedustol .section-title {
   background: transparent;
   text-align: left;
   padding: 4em 4em 0 4em; }
-  .single-frettir .section-title h2.the-title {
+  .single-frettir .section-title h2.the-title, .single-ur-raedustol .section-title h2.the-title {
     margin-bottom: 0;
     text-align: left;
     display: inline; }
-  .single-frettir .section-title .post-date {
+  .single-frettir .section-title .post-date, .single-ur-raedustol .section-title .post-date {
     color: #B3B0B5;
     font-family: "Montserrat", sans-serif; }
 

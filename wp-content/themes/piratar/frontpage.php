@@ -2,7 +2,10 @@
     /* Template Name: Forsíða */
 
     get_header();
+
 ?>
+
+
 
 <div class="section section-card section-bg-image section-text-white section-align-center" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/kosningar-2016.jpg);">
 
@@ -17,9 +20,8 @@
                     <h1>Endurræsum Ísland</h1>
 
                     <p>
-                        <a href="<?php echo get_site_url(); ?>/kosningar" class="btn btn-primary">Áherslumál</a>
-                        <a href="http://piratar.karolinafund.com/" class="btn btn-primary">Styrkja</a>
-                        <a href="<?php echo get_site_url(); ?>/taka-thatt/hvernig-tek-eg-thatt/" class="btn btn-primary">Taka þátt</a>
+                        <a href="http://piratar.karolinafund.com/" class="btn btn-primary btn-white">Styrkja</a>
+                        <a href="<?php echo get_site_url(); ?>/taka-thatt/hvernig-tek-eg-thatt/" class="btn btn-primary btn-white">Taka þátt</a>
                     </p>
 
                 </div>
@@ -32,7 +34,44 @@
 
 </div>
 
-<div class="section section-content section-policy section-bg-gray">
+
+<div class="section section-content section-two section-bg-gray">
+
+    <div class="section-overlay">
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="two-item two-color-purple text-xs-center col-md-6">
+
+                    <h2>Áherslumál</h2>
+                    
+                    <p>Við leggjum áherslu á nýja stjórnarskrá, auðlindir í almannaþágu, gjaldfrjálsa heilbrigðisþjónustu, þáttöku í ákvarðanatöku og átak gegn spillingu.</p>
+
+                    <p class="two-button"><a href="<?php echo get_site_url(); ?>/kosningar" class="btn btn-primary btn-white">Lesa meira</a></p>
+
+                </div>
+
+                <div class="two-item two-color-purple-light text-xs-center col-md-6">
+
+                    <h2>Framtíðarsýn</h2>
+                    
+                    <p>Ítarleg áætlun Pírata í öllum helstu málaflokkum. Þar á meðal velferðarmál, atvinnumál, landbúnaðarmál og lýðræðismál.</p>
+
+                    <p class="two-button"><a href="<?php echo get_site_url(); ?>/kosningar/framtidarsyn" class="btn btn-primary btn-white">Lesa meira</a></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--div class="section section-content section-policy section-bg-gray">
 
     <div class="section-overlay">
 
@@ -102,7 +141,7 @@
 
     </div>
 
-</div>
+</div-->
 <?php switch_to_blog(2); ?>
 <?php get_template_part( 'content', "frambjodendur" ); ?>
 <?php
