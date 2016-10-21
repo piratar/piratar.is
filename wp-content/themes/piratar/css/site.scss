@@ -19,6 +19,13 @@ body {
     }
 }
 
+@media (min-width: 1600px) {
+    body {
+        font-size: 24px;
+    }
+}
+
+
 h1, h2, h3, h4, h5 {
     font-family: $font-sans;
     font-weight: 700;
@@ -404,6 +411,8 @@ header .menubar {
             min-height: 24em;
             position: relative;
             background-color: $brand-primary;
+            cursor: pointer;
+            transition: $transition;
             .grid-wrap {
                 position: absolute;
                 bottom: 2em;
@@ -411,15 +420,25 @@ header .menubar {
                 right: 2em;
 
             }
+            &:hover {
+                transition: $transition;
+                background-color: lighten($brand-primary, 15%);
+            }
         }
+
         &.grid-bg-image {
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
             background-clip: content-box;
             article {
+                transition: $transition;
                 background-color: transparent;
-                @include gradient-y(fade_out($gray-dark, 1), fade_out($gray-dark, 0.65));
+                @include gradient-y(fade_out($gray-dark, 1), fade_out($gray-dark, 0.35));
+            }
+            article:hover {
+                transition: $transition;
+                @include gradient-y(fade_out($gray-dark, 0.65), fade_out($gray-dark, 0.25));   
             }
         }
     }
@@ -546,6 +565,8 @@ header .menubar {
 // Candidate
 
 .section-candidate {
+    position: relative;
+    overflow: hidden;
     figure.figure.figure-small {
         display: block;
         margin: 1em auto 0 auto;
@@ -556,9 +577,20 @@ header .menubar {
         margin-bottom: 0;
     }
     p {
-        color: $gray;
+        //color: $gray;
         font-family: $font-sans;
         margin-bottom: 2em;
+    }
+    .section-overlay {
+        display: block;
+        position: absolute;
+        top: -2em; left: -2em;
+        right: -2em; bottom: 0;
+        background-size: cover;
+        filter: blur(24px);
+        -webkit-filter: blur(24px);
+        opacity: 0.35;
+        background-position: center;
     }
 }
 
@@ -688,11 +720,14 @@ header .menubar {
 
 .menu-fixed {
     @include media-breakpoint-up(lg) {
-        padding: 0 15px;
+        padding: 4em !important;
         position: absolute;
-        right: 4em;
-        width: 25%;
+        right: 0;
+        top: 28.35em;
+        bottom: 0;
+        width: 29%;
     }
+    background: #fff;
     list-style: none;
     margin: 0;
     font-size: $font-small;
@@ -714,7 +749,7 @@ header .menubar {
 @include media-breakpoint-up(lg) {
     .kosningar-fixed .menu-fixed {
         position: fixed;
-        top: 13em;
+        top: 8em;
     }
 }
 
@@ -827,17 +862,20 @@ figure.figure {
 .home .section-card h1 {
     font-size: 3em;
     margin-top: 3em !important;
-    margin-bottom: 1em;
     @include media-breakpoint-up(md) {
         font-size: 4em !important;
         margin-top: 2em !important;
-        margin-bottom: 0.75em;
     }
     text-shadow: 0 0 8px rgba(0,0,0,0.85);
 }
 
-.home .section-card p {
+.home .section-card p:not(.buttons-ctas) {
+    text-shadow: 0 0 4px rgba(0,0,0,0.85);
+}
+
+.home .section-card p.buttons-ctas {
     margin-bottom: 0;
+    margin-top: 1.5em;
 }
 
 .home .section-card .tag {
@@ -948,4 +986,18 @@ figure.figure {
         opacity: 0.65;
     }
 
+}
+
+.section-kosningar .container-fluid .row {
+    h2 {
+        margin-top: 2em;
+        border-top: 2px solid $gray-lightest;
+        padding-top: 2em;
+        color: $brand-primary;
+    }
+    h2:first-child {
+        margin-top: 0;
+        border: 0;
+        padding-top: 0;
+    }
 }

@@ -42,7 +42,7 @@
  
         <?php switch_to_blog(1); ?>
 
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo-white.svg" alt="<?php bloginfo( 'name' ); ?>"></a>
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo-xp-white.svg" alt="<?php bloginfo( 'name' ); ?>"></a>
 
         <?php restore_current_blog(); ?>
 

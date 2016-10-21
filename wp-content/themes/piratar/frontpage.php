@@ -5,7 +5,36 @@
 
 ?>
 
+<?php if (get_field('fronttop_show')) { ?>
 
+<div class="section section-card section-bg-image section-text-white section-align-center" style="background-image: url(<?php the_field('fronttop_background'); ?>);">
+
+    <div class="section-overlay">
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-md-10 offset-md-1">
+
+                    <?php the_field('fronttop_content'); ?>
+
+                    <p class="buttons-ctas">
+                        <a href="http://piratar.karolinafund.com/" class="btn btn-primary btn-white">Styrkja</a>
+                        <a href="<?php echo get_site_url(); ?>/taka-thatt/hvernig-tek-eg-thatt/" class="btn btn-primary btn-white">Taka þátt</a>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div> 
+
+<?php } else { ?>
 
 <div class="section section-card section-bg-image section-text-white section-align-center" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/kosningar-2016.jpg);">
 
@@ -19,7 +48,7 @@
 
                     <h1>Endurræsum Ísland</h1>
 
-                    <p>
+                    <p class="buttons-ctas">
                         <a href="http://piratar.karolinafund.com/" class="btn btn-primary btn-white">Styrkja</a>
                         <a href="<?php echo get_site_url(); ?>/taka-thatt/hvernig-tek-eg-thatt/" class="btn btn-primary btn-white">Taka þátt</a>
                     </p>
@@ -34,6 +63,7 @@
 
 </div>
 
+<?php } ?>
 
 <div class="section section-content section-two section-bg-gray">
 
@@ -71,77 +101,6 @@
 
 </div>
 
-<!--div class="section section-content section-policy section-bg-gray">
-
-    <div class="section-overlay">
-
-        <div class="container-fluid">
-
-            <div class="row">
-
-                <div class="col-sm-12">
-                    <h2 class="the-title">Áherslumál</h2>
-                </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="policy-item col-md-6 col-lg-4">
-
-                    <h2>Uppfærum Ísland með nýrri stjórnarskrá</h2>
-                    
-                    <p>Píratar eru sannfærðir um að lögfesting nýrrar stjórnarskrár sé grunnforsenda mikilvægra samfélagslegra umbóta á Íslandi.</p>
-
-                </div>
-
-                <div class="policy-item col-md-6 col-lg-4">
-
-                    <h2>Tryggjum réttláta dreifingu arðs af auðlindum</h2>
-                    
-                    <p>Píratar vilja að íslenska þjóðin fái sanngjarnan arð af nýtingu sameiginlegra auðlinda sinna.</p>
-
-                </div>
-
-                <div class="policy-item col-md-6 col-lg-4">
-
-                    <h2>Endurreisum gjaldfrjálsa heilbrigðisþjónustu</h2>
-                    
-                    <p>Píratar standa vörð um þessi sjálfsögðu mannréttindi og stefna að því að heilbrigðisþjónusta og nauðsynleg lyfjakaup verði gjaldfrjáls.</p>
-
-                </div>
-
-
-                <div class="col-md-6 col-lg-4">
-
-                    <h2>Eflum aðkomu almennings að ákvarðanatöku</h2>
-                    
-                    <p>Píratar treysta fólkinu í landinu til þess að taka góðar og skynsamlegar ákvarðanir um líf sitt og samfélag.</p>
-
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-
-                    <h2>Endurvekjum traust og tæklum spillingu</h2>
-                    
-                    <p>Píratar álíta gagnsæi nauðsynlega forsendu fyrir ábyrgð í stjórnsýslu og upplýstri þátttöku almennings í lýðræðinu.</p>
-
-                </div>
-
-                <div class="col-md-6 col-lg-4 text-xs-center">
-                    
-                    <p><a href="<?php echo get_site_url(); ?>/kosningar" class="btn btn-primary">Stefna &amp; framtíðarsýn</a></p>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div-->
 <?php switch_to_blog(2); ?>
 <?php get_template_part( 'content', "frambjodendur" ); ?>
 <?php
@@ -252,6 +211,14 @@
 
 
         <?php endwhile; wp_reset_query(); ?>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-12 text-xs-center">
+                <p>&nbsp;<br><a href="/frettaflokkur/i-fjolmidlum/" class="btn btn-primary">Fleiri fréttir</a></p>
+            </div>
 
         </div>
 

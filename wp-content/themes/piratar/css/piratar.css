@@ -7183,6 +7183,10 @@ body {
   body {
     font-size: 18px; } }
 
+@media (min-width: 1600px) {
+  body {
+    font-size: 24px; } }
+
 h1, h2, h3, h4, h5 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -7495,22 +7499,33 @@ header .menubar {
     padding: 2em;
     min-height: 24em;
     position: relative;
-    background-color: #51297E; }
+    background-color: #51297E;
+    cursor: pointer;
+    transition: all 175ms cubic-bezier(0.4, 0.15, 0, 0.975); }
     .section-grid .grid-item article .grid-wrap {
       position: absolute;
       bottom: 2em;
       left: 2em;
       right: 2em; }
+    .section-grid .grid-item article:hover {
+      transition: all 175ms cubic-bezier(0.4, 0.15, 0, 0.975);
+      background-color: #763cb8; }
   .section-grid .grid-item.grid-bg-image {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-clip: content-box; }
     .section-grid .grid-item.grid-bg-image article {
+      transition: all 175ms cubic-bezier(0.4, 0.15, 0, 0.975);
       background-color: transparent;
-      background-image: linear-gradient(to bottom, rgba(38, 29, 43, 0) 0%, rgba(38, 29, 43, 0.35) 100%);
+      background-image: linear-gradient(to bottom, rgba(38, 29, 43, 0) 0%, rgba(38, 29, 43, 0.65) 100%);
       background-repeat: repeat-x;
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00261D2B', endColorstr='#59261D2B', GradientType=0); }
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00261D2B', endColorstr='#A6261D2B', GradientType=0); }
+    .section-grid .grid-item.grid-bg-image article:hover {
+      transition: all 175ms cubic-bezier(0.4, 0.15, 0, 0.975);
+      background-image: linear-gradient(to bottom, rgba(38, 29, 43, 0.35) 0%, rgba(38, 29, 43, 0.75) 100%);
+      background-repeat: repeat-x;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#59261D2B', endColorstr='#BF261D2B', GradientType=0); }
 
 .section-grid.section-grid-minimal .grid-item {
   min-height: 0; }
@@ -7609,19 +7624,31 @@ header .menubar {
   .section-people .person {
     width: 20%; } }
 
-.section-candidate figure.figure.figure-small {
-  display: block;
-  margin: 1em auto 0 auto;
-  width: 8em; }
-
-.section-candidate h2.the-title {
-  padding-top: 0;
-  margin-bottom: 0; }
-
-.section-candidate p {
-  color: #B3B0B5;
-  font-family: "Montserrat", sans-serif;
-  margin-bottom: 2em; }
+.section-candidate {
+  position: relative;
+  overflow: hidden; }
+  .section-candidate figure.figure.figure-small {
+    display: block;
+    margin: 1em auto 0 auto;
+    width: 8em; }
+  .section-candidate h2.the-title {
+    padding-top: 0;
+    margin-bottom: 0; }
+  .section-candidate p {
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 2em; }
+  .section-candidate .section-overlay {
+    display: block;
+    position: absolute;
+    top: -2em;
+    left: -2em;
+    right: -2em;
+    bottom: 0;
+    background-size: cover;
+    filter: blur(24px);
+    -webkit-filter: blur(24px);
+    opacity: 0.35;
+    background-position: center; }
 
 .section-two {
   padding: 0; }
@@ -7717,6 +7744,7 @@ header .menubar {
         border: 0; }
 
 .menu-fixed {
+  background: #fff;
   list-style: none;
   margin: 0;
   font-size: 0.8em;
@@ -7724,10 +7752,12 @@ header .menubar {
   border-left: 2px solid #E9E8E9; }
   @media (min-width: 992px) {
     .menu-fixed {
-      padding: 0 15px;
+      padding: 4em !important;
       position: absolute;
-      right: 4em;
-      width: 25%; } }
+      right: 0;
+      top: 28.35em;
+      bottom: 0;
+      width: 29%; } }
   .menu-fixed li {
     font-weight: 700;
     text-transform: uppercase;
@@ -7740,7 +7770,7 @@ header .menubar {
 @media (min-width: 992px) {
   .kosningar-fixed .menu-fixed {
     position: fixed;
-    top: 13em; } }
+    top: 8em; } }
 
 .post .post-title {
   margin-bottom: 0; }
@@ -7821,16 +7851,18 @@ figure.figure {
 .home .section-card h1 {
   font-size: 3em;
   margin-top: 3em !important;
-  margin-bottom: 1em;
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.85); }
   @media (min-width: 768px) {
     .home .section-card h1 {
       font-size: 4em !important;
-      margin-top: 2em !important;
-      margin-bottom: 0.75em; } }
+      margin-top: 2em !important; } }
 
-.home .section-card p {
-  margin-bottom: 0; }
+.home .section-card p:not(.buttons-ctas) {
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.85); }
+
+.home .section-card p.buttons-ctas {
+  margin-bottom: 0;
+  margin-top: 1.5em; }
 
 .home .section-card .tag {
   background: #fff;
@@ -7910,3 +7942,14 @@ figure.figure {
     color: #fff; }
   .site-kosningar header menu li.current-menu-item a {
     opacity: 0.65; }
+
+.section-kosningar .container-fluid .row h2 {
+  margin-top: 2em;
+  border-top: 2px solid #E9E8E9;
+  padding-top: 2em;
+  color: #51297E; }
+
+.section-kosningar .container-fluid .row h2:first-child {
+  margin-top: 0;
+  border: 0;
+  padding-top: 0; }

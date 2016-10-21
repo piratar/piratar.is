@@ -6,31 +6,6 @@
 <?php get_header(); ?>
 
 
-<div class="section section-menu">
-
-    <div class="container-fluid">
-
-        <div class="row">
-
-            <div class="col-sm-12">
-
-                <?php
-                                
-                    wp_nav_menu( array(
-                        'theme_location' => 'primary',
-                        'depth'          => 1,
-                    ));
-                ?>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-
 
 <div class="section section-title">
 

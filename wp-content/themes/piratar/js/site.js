@@ -121,6 +121,19 @@ $(function(){
         event.preventDefault();
     });
 
+    // Fréttir grid click
+
+    $(".section-grid .grid-item").on("click", function(event){
+        link = $(this).find("article h1 a").attr("href");
+        if (event.ctrlKey || event.shiftKey || event.metaKey) {
+            window.open(link, '_blank');
+        } else {
+            window.location = link;
+        }
+        //event.stopPropagation();
+        event.preventDefault();
+    });
+
     $('.overlayer').click(function() { 
 		
 		var currentId = $("menu .selected").attr('id');   

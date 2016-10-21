@@ -51,5 +51,53 @@ get_header(); ?>
 
 <?php endwhile; ?>
 
+
+<div class="section section-content section-two section-bg-gray">
+
+    <div class="section-overlay">
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <?php 
+
+                global $post;
+                $postslug = $post->post_name;
+
+                if ($postslug == "framtidarsyn") { ?>
+
+                <div class="two-item two-color-purple text-xs-center col-md-12">
+
+                    <h2>Áherslumál</h2>
+                    
+                    <p>Við leggjum áherslu á nýja stjórnarskrá, auðlindir í almannaþágu, gjaldfrjálsa heilbrigðisþjónustu, þáttöku í ákvarðanatöku og átak gegn spillingu.</p>
+
+                    <p class="two-button"><a href="<?php echo get_site_url(); ?>/" class="btn btn-primary btn-white">Lesa meira</a></p>
+
+                </div>
+
+                <?php } elseif ($postslug == "kosningarforsida") { ?>
+
+                <div class="two-item two-color-purple-light text-xs-center col-md-12">
+
+                    <h2>Framtíðarsýn</h2>
+                    
+                    <p>Ítarleg áætlun Pírata í öllum helstu málaflokkum. Þar á meðal velferðarmál, atvinnumál, landbúnaðarmál og lýðræðismál.</p>
+
+                    <p class="two-button"><a href="<?php echo get_site_url(); ?>/framtidarsyn" class="btn btn-primary btn-white">Lesa meira</a></p>
+
+                </div>
+
+                <?php } ?>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
 <?php get_footer(); ?>
 

@@ -16,7 +16,7 @@
 
                 <div class="col-sm-12">
 
-                    <h3>Suðvesturkjördæmi</h3>
+                    <h3><a href="<?php get_site_url(); ?>/kosningar/kjordaemi/sudvesturkjordaemi/" class="pull-right">Allir <span class="hidden-sm-down">í kjördæmi</span></a>Suðvesturkjördæmi</h3>
 
                     <?php $kjord = new WP_Query('kjordaemi=sudvesturkjordaemi&posts_per_page=-1&order=ASC&orderby=menu_order'); ?>
 
@@ -45,7 +45,7 @@
 
                 <div class="col-sm-12">
 
-                    <h3>Reykjavíkurkjördæmi norður</h3>
+                    <h3><a href="<?php get_site_url(); ?>/kosningar/kjordaemi/reykjavikurkjordaemi-nordur/" class="pull-right">Allir <span class="hidden-sm-down">í kjördæmi</span></a>Reykjavíkurkjördæmi norður</h3>
 
                     <?php $kjord = new WP_Query('kjordaemi=reykjavikurkjordaemi-nordur&posts_per_page=-1&order=ASC&orderby=menu_order'); ?>
 
@@ -74,7 +74,7 @@
 
                 <div class="col-sm-12">
 
-                    <h3>Reykjavíkurkjördæmi suður</h3>
+                    <h3><a href="<?php get_site_url(); ?>/kosningar/kjordaemi/reykjavikurkjordaemi-sudur/" class="pull-right">Allir <span class="hidden-sm-down">í kjördæmi</span></a>Reykjavíkurkjördæmi suður</h3>
 
                     <?php $kjord = new WP_Query('kjordaemi=reykjavikurkjordaemi-sudur&posts_per_page=-1&order=ASC&orderby=menu_order'); ?>
 
@@ -103,7 +103,7 @@
 
                 <div class="col-sm-12">
 
-                    <h3>Suðurkjördæmi</h3>
+                    <h3><a href="<?php get_site_url(); ?>/kosningar/kjordaemi/sudurkjordaemi/" class="pull-right">Allir <span class="hidden-sm-down">í kjördæmi</span></a>Suðurkjördæmi</h3>
                     
                     <?php $kjord = new WP_Query('kjordaemi=sudurkjordaemi&posts_per_page=-1&order=ASC&orderby=menu_order'); ?>
 
@@ -132,7 +132,7 @@
 
                 <div class="col-sm-12">
 
-                    <h3>Norðausturkjördæmi</h3>
+                    <h3><a href="<?php get_site_url(); ?>/kosningar/kjordaemi/nordausturkjordaemi/" class="pull-right">Allir <span class="hidden-sm-down">í kjördæmi</span></a>Norðausturkjördæmi</h3>
 
                     <?php $kjord = new WP_Query('kjordaemi=nordausturkjordaemi&posts_per_page=-1&order=ASC&orderby=menu_order'); ?>
 
@@ -161,7 +161,7 @@
 
                 <div class="col-sm-12">
 
-                    <h3>Norðvesturkjördæmi</h3>
+                    <h3><a href="<?php get_site_url(); ?>/kosningar/kjordaemi/nordvesturkjordaemi/" class="pull-right">Allir <span class="hidden-sm-down">í kjördæmi</span></a>Norðvesturkjördæmi</h3>
 
                     <?php $kjord = new WP_Query('kjordaemi=nordvesturkjordaemi&posts_per_page=-1&order=ASC&orderby=menu_order'); ?>
 
