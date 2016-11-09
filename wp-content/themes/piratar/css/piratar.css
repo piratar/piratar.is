@@ -2148,7 +2148,7 @@ header a.nanar {
   display: inline !important;
   padding: 5px 10px; }
 
-header menu {
+header .p-menu {
   background: transparent;
   height: 41px;
   line-height: 41px;
@@ -2164,7 +2164,7 @@ header ul {
 header li {
   float: left; }
 
-header menu li a {
+header .p-menu li a {
   background: transparent;
   color: #51297E;
   line-height: 34px;
@@ -2178,18 +2178,18 @@ header menu li a {
   font-size: 0.8em;
   text-transform: uppercase; }
 
-header menu li a:hover {
+header .p-menu li a:hover {
   color: #000; }
 
-header menu li.selected a {
+header .p-menu li.selected a {
   background: #fff;
   color: #B3B0B5; }
 
-header menu li.current-menu-item a, header menu li.current-page-ancestor a {
+header .p-menu li.current-menu-item a, header .p-menu li.current-page-ancestor a {
   color: #000; }
 
 header a.logo {
-  width: 183px;
+  width: 112px;
   height: 60px;
   display: block;
   float: left;
@@ -2256,7 +2256,7 @@ header .searchbox span:after {
   top: 0.25em;
   right: -2.5em; }
 
-header.search-on menu {
+header.search-on .p-menu {
   opacity: 0.35; }
 
 #svunta_menu-item-61, #svunta_menu-item-62, #svunta_menu-item-63, #svunta_menu-item-64, #svunta_menu-item-65, #svunta_menu-item-66 {
@@ -7327,6 +7327,12 @@ header .menubar {
 .admin-bar header {
   top: 32px; }
 
+.site-kosningar header #mobile-button a i {
+  color: #fff; }
+
+body.mobile-open.site-kosningar header #mobile-button a i {
+  color: #000; }
+
 @media (min-width: 992px) {
   header .menubar {
     display: block; }
@@ -7346,17 +7352,17 @@ header .menubar {
     background: #fff; }
     header .menubar .searchicon {
       display: none !important; }
-    header .menubar menu {
+    header .menubar .p-menu {
       margin: 80px 0 0 0;
       height: auto;
       background: transparent;
       line-height: 1.75;
       padding: 1em 0 0 0;
       float: none; }
-      header .menubar menu ul li {
+      header .menubar .p-menu ul li {
         float: none;
         text-align: center; }
-        header .menubar menu ul li a {
+        header .menubar .p-menu ul li a {
           font-size: 18px; }
   header .submenu {
     padding: 0; }
@@ -7936,11 +7942,11 @@ figure.figure {
     color: #B3B0B5;
     font-family: "Montserrat", sans-serif; }
 
-.site-kosningar header {
+.site-kosningar:not(.mobile-open) header {
   background: #51297E; }
-  .site-kosningar header menu ul li a {
+  .site-kosningar:not(.mobile-open) header .p-menu ul li a {
     color: #fff; }
-  .site-kosningar header menu li.current-menu-item a {
+  .site-kosningar:not(.mobile-open) header .p-menu li.current-menu-item a {
     opacity: 0.65; }
 
 .section-kosningar .container-fluid .row h2 {

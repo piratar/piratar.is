@@ -31,7 +31,7 @@
                             if (get_post_field("menu_order", $post->ID) != 0 && $k <= 5) {
                         ?>
 
-                        <li class="col-xs-6 col-lg-4 person"><figure><div><img src="<?php echo $image[0]; ?>"><div class="person-overlay"></div></div><span class="person-num"><?php echo $k; ?></span></figure><div class="person-wrap"><a href="<?php the_permalink(); ?>"><?php echo $name; ?></a></div></li>
+                        <li class="col-xs-6 col-lg-4 person"><figure><div><img src="<?php echo $image[0]; ?>" alt="<?php echo $name; ?>"><div class="person-overlay"></div></div><span class="person-num"><?php echo $k; ?></span></figure><div class="person-wrap"><a href="<?php the_permalink(); ?>"><?php echo $name; ?></a></div></li>
                     
                         <?php $k++; } endwhile; wp_reset_query(); ?>
 
@@ -60,7 +60,7 @@
                             if (get_post_field("menu_order", $post->ID) != 0 && $k <= 5) {
                         ?>
 
-                        <li class="col-xs-6 col-lg-4 person"><figure><div><img src="<?php echo $image[0]; ?>"><div class="person-overlay"></div></div><span class="person-num"><?php echo $k; ?></span></figure><div class="person-wrap"><a href="<?php the_permalink(); ?>"><?php echo $name; ?></a></div></li>
+                        <li class="col-xs-6 col-lg-4 person"><figure><div><img src="<?php echo $image[0]; ?>" alt="<?php echo $name; ?>"><div class="person-overlay"></div></div><span class="person-num"><?php echo $k; ?></span></figure><div class="person-wrap"><a href="<?php the_permalink(); ?>"><?php echo $name; ?></a></div></li>
                     
                         <?php $k++; } endwhile; wp_reset_query(); ?>
 
@@ -89,7 +89,7 @@
                             if (get_post_field("menu_order", $post->ID) != 0 && $k <= 5) {
                         ?>
 
-                        <li class="col-xs-6 col-lg-4 person"><figure><div><img src="<?php echo $image[0]; ?>"><div class="person-overlay"></div></div><span class="person-num"><?php echo $k; ?></span></figure><div class="person-wrap"><a href="<?php the_permalink(); ?>"><?php echo $name; ?></a></div></li>
+                        <li class="col-xs-6 col-lg-4 person"><figure><div><img src="<?php echo $image[0]; ?>" alt="<?php echo $name; ?>"><div class="person-overlay"></div></div><span class="person-num"><?php echo $k; ?></span></figure><div class="person-wrap"><a href="<?php the_permalink(); ?>"><?php echo $name; ?></a></div></li>
                     
                         <?php $k++; } endwhile; wp_reset_query(); ?>
 
@@ -118,7 +118,7 @@
                             if (get_post_field("menu_order", $post->ID) != 0 && $k <= 5) {
                         ?>
 
-                        <li class="col-xs-6 col-lg-4 person"><figure><div><img src="<?php echo $image[0]; ?>"><div class="person-overlay"></div></div><span class="person-num"><?php echo $k; ?></span></figure><div class="person-wrap"><a href="<?php the_permalink(); ?>"><?php echo $name; ?></a></div></li>
+                        <li class="col-xs-6 col-lg-4 person"><figure><div><img src="<?php echo $image[0]; ?>" alt="<?php echo $name; ?>"><div class="person-overlay"></div></div><span class="person-num"><?php echo $k; ?></span></figure><div class="person-wrap"><a href="<?php the_permalink(); ?>"><?php echo $name; ?></a></div></li>
                     
                         <?php $k++; } endwhile; wp_reset_query(); ?>
 
@@ -147,7 +147,7 @@
                             if (get_post_field("menu_order", $post->ID) != 0 && $k <= 5) {
                         ?>
 
-                        <li class="col-xs-6 col-lg-4 person"><figure><div><img src="<?php echo $image[0]; ?>"><div class="person-overlay"></div></div><span class="person-num"><?php echo $k; ?></span></figure><div class="person-wrap"><a href="<?php the_permalink(); ?>"><?php echo $name; ?></a></div></li>
+                        <li class="col-xs-6 col-lg-4 person"><figure><div><img src="<?php echo $image[0]; ?>" alt="<?php echo $name; ?>"><div class="person-overlay"></div></div><span class="person-num"><?php echo $k; ?></span></figure><div class="person-wrap"><a href="<?php the_permalink(); ?>"><?php echo $name; ?></a></div></li>
                     
                         <?php $k++; } endwhile; wp_reset_query(); ?>
 
@@ -176,7 +176,7 @@
                             if (get_post_field("menu_order", $post->ID) != 0 && $k <= 5) {
                         ?>
 
-                        <li class="col-xs-6 col-lg-4 person"><figure><div><img src="<?php echo $image[0]; ?>"><div class="person-overlay"></div></div><span class="person-num"><?php echo $k; ?></span></figure><div class="person-wrap"><a href="<?php the_permalink(); ?>"><?php echo $name; ?></a></div></li>
+                        <li class="col-xs-6 col-lg-4 person"><figure><div><img src="<?php echo $image[0]; ?>" alt="<?php echo $name; ?>"><div class="person-overlay"></div></div><span class="person-num"><?php echo $k; ?></span></figure><div class="person-wrap"><a href="<?php the_permalink(); ?>"><?php echo $name; ?></a></div></li>
                     
                         <?php $k++; } endwhile; wp_reset_query(); ?>
 

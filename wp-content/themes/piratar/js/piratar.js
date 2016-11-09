@@ -10154,7 +10154,7 @@ return jQuery;
 
 $(function(){
 	
-    $('.site-main menu a').slice(0,-1).click(function(event) { 
+    $('.site-main .p-menu a').slice(0,-1).click(function(event) { 
 		
 		var currentId = $(this).parent().attr('id');
         if (currentId == "menu-item-38328" && "menu-item-30" ) {
@@ -10170,12 +10170,12 @@ $(function(){
             if($(this).parent().hasClass("selected")) {
                 $("#"+currentId).removeClass('selected');
                 $("#svunta_"+currentId).hide();
-                $('menu a').parent().removeClass('selected');
+                $('.p-menu a').parent().removeClass('selected');
                 $('.submenu').removeClass("open");
                 $('.overlayer').removeClass("open");
                 $("#mobile-back").removeClass("on");
             } else {
-                $('menu li').removeClass('selected')
+                $('.p-menu li').removeClass('selected')
                 $('.submenu div.rammi').hide();
                 $(this).parent().addClass('selected');
                 $("#svunta_"+currentId).show();	
@@ -10241,11 +10241,12 @@ $(function(){
 
         });
 
-        $(".menu-fixed li a").click(function(){
-            elm = $(this).attr("href");
+        $(".menu-fixed li a").click(function(event){
+            elm = $(this).data("href");
             $('html, body').animate({
                 scrollTop: $(elm).offset().top - 150
             }, 250);
+            event.preventDefault();
         });
 
     }
@@ -10290,9 +10291,9 @@ $(function(){
 
     $('.overlayer').click(function() { 
 		
-		var currentId = $("menu .selected").attr('id');   
+		var currentId = $(".p-menu .selected").attr('id');   
         $("#svunta_"+currentId).hide();
-        $('menu a').parent().removeClass('selected');
+        $('.p-menu a').parent().removeClass('selected');
         $('.submenu').removeClass("open");
         $('.overlayer').removeClass("open");
 
@@ -10313,7 +10314,7 @@ $(function(){
             $("header").addClass("search-on");
 			$("#menu-main-menu li").removeClass('selected');
             $(".submenu .rammi").hide();
-            $('menu a').parent().removeClass('selected');
+            $('.p-menu a').parent().removeClass('selected');
             $('.submenu').removeClass("open");
             $('.overlayer').removeClass("open");
             $(this).addClass('selected');

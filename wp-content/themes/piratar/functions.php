@@ -1748,7 +1748,7 @@ function megamenu_news_loop_shortcode( $atts ) {
     
     while($frettir_loop->have_posts()) : $frettir_loop->the_post(); 
     
-	$output .= '<a id="'. $cssid .'" class="' . $cssclass . '" href="' . get_permalink() . '">' . get_the_title() . '</a>, ';
+	$output .= '<a class="' . $cssclass . '" href="' . get_permalink() . '">' . get_the_title() . '</a>, ';
 		
     endwhile;
 	

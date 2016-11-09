@@ -77,7 +77,7 @@
 
                     <h2>Áherslumál</h2>
                     
-                    <p>Við leggjum áherslu á nýja stjórnarskrá, auðlindir í almannaþágu, gjaldfrjálsa heilbrigðisþjónustu, þáttöku í ákvarðanatöku og átak gegn spillingu.</p>
+                    <p>Við leggjum áherslu á nýja stjórnarskrá, auðlindir í almannaþágu, gjaldfrjálsa heilbrigðisþjónustu, þátttöku í ákvarðanatöku og átak gegn spillingu.</p>
 
                     <p class="two-button"><a href="<?php echo get_site_url(); ?>/kosningar" class="btn btn-primary btn-white">Lesa meira</a></p>
 

@@ -28,7 +28,7 @@ header a.nanar {
     padding:5px 10px;
 }
 
-header menu {
+header .p-menu {
 	background:transparent;
 	height:41px;
 	line-height:41px;
@@ -49,7 +49,7 @@ header li {
 }
 
 
-header menu li a {
+header .p-menu li a {
 	background:transparent;
 	color:#51297E;
 	line-height: 34px;
@@ -64,21 +64,21 @@ header menu li a {
     text-transform: uppercase;
 }
 
-header menu li a:hover {
+header .p-menu li a:hover {
 	color: #000;
 }
 
-header menu li.selected a {
+header .p-menu li.selected a {
 	background: #fff;
 	color: $gray;
 }
 
-header menu li.current-menu-item a, header menu li.current-page-ancestor a {
+header .p-menu li.current-menu-item a, header .p-menu li.current-page-ancestor a {
 	color: #000;
 }
 
 header a.logo {
-	width: 183px;
+	width: 112px;
     height:60px;
 	display:block;
 	float:left;
@@ -153,7 +153,7 @@ header .searchbox span:after {
     right: -2.5em;
 }
 
-header.search-on menu {
+header.search-on .p-menu {
     opacity: 0.35;
 }
 

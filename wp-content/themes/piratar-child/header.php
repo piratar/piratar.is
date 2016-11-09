@@ -36,7 +36,7 @@
 
 <header>
 
-    <div id="grunge"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
 
     <div class="wrapper" id="lilja">
  
@@ -48,7 +48,7 @@
 
         <div class="menubar">
 
-            <menu>
+            <div class="p-menu">
                 <?php
                     
                     wp_nav_menu( array(
@@ -56,9 +56,11 @@
                         'depth'          => 1,
                     ) );
                 ?>
-            </menu>
+            </div>
 
         </div>
+
+        <div id="mobile-button"><a href="#">Valmynd <i class="fa fa-bars" aria-hidden="true"></i><i class="fa fa-times" aria-hidden="true"></i></a></div>
 
     </div>
 
@@ -184,3 +186,5 @@
     </div>
 
 </header>
+
+<div class="content">

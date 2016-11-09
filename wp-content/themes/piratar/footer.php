@@ -15,9 +15,11 @@
                 <h3>Samfélagsmiðlar</h3>
                 <p>Fylgstu með okkur á samfélagsmiðlum.</p>
                 <ul>
-                    <li><a href="https://www.facebook.com/Piratar.Island" target="_blank" title="Facebook"><i class="fa fa-facebook-official"></i></a></li>
-                    <li><a href="https://twitter.com/PiratePartyIS" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="https://www.youtube.com/user/PiratepartyIceland" title="YouTube" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                    <li><a href="https://www.facebook.com/Piratar.Island" target="_blank" title="Facebook"><span class="sr-only">Facebook</span><i class="fa fa-facebook-official"></i></a></li>
+                    <li><a href="https://twitter.com/PiratePartyIS" target="_blank" title="Twitter"><span class="sr-only">Twitter</span><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.youtube.com/user/PiratepartyIceland" title="YouTube" target="_blank"><span class="sr-only">YouTube</span><i class="fa fa-youtube-play"></i></a></li>
+                    <li><a href="https://www.snapchat.com/add/piratar-island" title="Snapchat" target="_blank"><span class="sr-only">Snapchat</span><i class="fa fa-snapchat-ghost"></i></a></li>
+                    
                 </ul>
 
             </div>
@@ -47,11 +49,15 @@
 
 </footer>
 
+</div>
+
 <div class="overlayer"></div>
 
 <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/piratar.min.js"></script>
 
 <?php wp_footer(); ?>
+
+
 
 </body>
 </html>

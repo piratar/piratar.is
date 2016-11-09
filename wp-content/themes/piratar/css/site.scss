@@ -173,6 +173,22 @@ header .menubar {
     top: 32px;
 }
 
+.site-kosningar header #mobile-button {
+    a {
+        i {
+            color: #fff;
+        }
+    }
+}
+
+body.mobile-open.site-kosningar header #mobile-button {
+    a {
+        i {
+            color: #000;
+        }
+    }
+}
+
 @include media-breakpoint-up(lg) {
    
     header .menubar {
@@ -198,7 +214,7 @@ header .menubar {
         .searchicon {
             display: none !important;
         }
-        menu {
+        .p-menu {
             margin: 80px 0 0 0;
             height: auto;
             background: transparent;
@@ -753,7 +769,6 @@ header .menubar {
     }
 }
 
-
 // Post
 
 .post {
@@ -975,14 +990,15 @@ figure.figure {
     }   
 }
 
+
 // Kosningar
 
-.site-kosningar header {
+.site-kosningar:not(.mobile-open) header {
     background: $brand-primary;
-    menu ul li a {
+    .p-menu ul li a {
         color: #fff;
     }
-    menu li.current-menu-item a {
+    .p-menu li.current-menu-item a {
         opacity: 0.65;
     }
 

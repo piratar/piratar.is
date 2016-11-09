@@ -36,6 +36,8 @@
 
 <header>
 
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
     <div class="wrapper" id="lilja">
 
          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo-xp.svg" alt="<?php bloginfo( 'name' ); ?>"></a>
@@ -44,6 +46,7 @@
 
             <div class="searchbox">
                 <form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                    <label for="s" class="sr-only">Leita</label>
                     <input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s"  placeholder="Leita..."/>
                     <span><input type="submit" class="btn fa-input" value="go"></span>
                 </form>
@@ -51,19 +54,19 @@
 
             <a href="#" class="searchicon">Leita</a>
             
-            <menu>
+            <div class="p-menu">
                 <?php
                     wp_nav_menu( array(
                         'theme_location' => 'primary',
                         'depth'          => 1,
                     ) );
                 ?>
-            </menu>
+            </div>
             
         </div>
 
         <div id="mobile-button"><a href="#">Valmynd <i class="fa fa-bars" aria-hidden="true"></i><i class="fa fa-times" aria-hidden="true"></i></a></div>
-        <div id="mobile-back"><a href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a></div>
+        <div id="mobile-back"><a href="#"><span class="sr-only">Til baka</span><i class="fa fa-chevron-left" aria-hidden="true"></i></a></div>
 
     </div>
 
@@ -321,3 +324,4 @@
 </header>
 
 
+<div id="content">

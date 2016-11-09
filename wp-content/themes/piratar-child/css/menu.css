@@ -1,4 +1,4 @@
-menu {
+.p-menu {
 	background:transparent;
 	height:41px;
 	line-height:41px;
@@ -24,7 +24,7 @@ li {
     width: 100%;
 }
 
-menu li a {
+.p-menu li a {
 	background:transparent;
 	color:#51297E;
 	line-height:41px;
@@ -36,16 +36,16 @@ menu li a {
     font-size: 18px;
 }
 
-menu li a:hover {
+.p-menu li a:hover {
 	background:#f4f4f4;
 }
 
-menu li.selected a {
+.p-menu li.selected a {
 	background:#51297E;
 	color:#fff;
 }
 
-menu li.current-menu-item a, menu li.current-page-ancestor a {
+.p-menu li.current-menu-item a, .p-menu li.current-page-ancestor a {
 	border-bottom:3px solid #51297E;
 }
 
@@ -74,7 +74,7 @@ a.logo {
         height:60px;
 	}
     
-    menu li.selected a:before { 
+    .p-menu li.selected a:before { 
         background:url(../img/menu_arrowx2.png);
         background-size: 45px 15px;
         width:45px;

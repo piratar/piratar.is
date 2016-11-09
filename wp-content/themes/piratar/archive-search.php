@@ -2,12 +2,35 @@
 /* Template Name: Custom Search */
 get_header(); ?>
 
-<div class="efnid">
-    <div class="wrapper">
-        <div class="alpha full">
-            <h3>Leitar niðurstöður fyrir : <?php echo "$s"; ?> </h3>   
-            <a href="#" onclick="history.go(-1)">Til baka</a>
-            <table>
+<div class="section section-card section-title">
+
+    <div class="section-overlay"></div>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-sm-12">
+
+                <h2 class="the-title">Leitarniðurstöður: <?php echo "$s"; ?></h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="section section-content">
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-sm-12 col-lg-9 push-lg-1">
+
+                <table>
                 <tr>
                     <td class="">Heiti samþykktrar stefnu</td>
                     <td class="">Dags samþ.</td>
@@ -20,9 +43,15 @@ get_header(); ?>
             <?php endwhile; ?>
             <?php endif; ?>
             </table>
+
+
+            </div>
+
         </div>
+
     </div>
+
 </div>
 
+
 <?php get_footer(); ?>
-<?php echo $value = get_field( "stefnumal_linkur" ); ?>
