@@ -1,6 +1,6 @@
 ﻿<?php get_header(); ?>
 
-<div class="efnid">
+<div class="container-fluid efnid">
     <div class="wrapper">
         <div class="alpha full">
             <?php while ( have_posts() ) : the_post(); ?>
