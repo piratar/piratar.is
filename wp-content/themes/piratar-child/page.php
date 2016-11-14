@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 
-<div class="efnid">
-	<div class="wrapper">
-		<div class="alpha full">
+<div class="section section-content">
+	<div class="container-fluid">
+		<div class="row">
 			
 			
 			<div class="splitter h20"></div>
@@ -14,8 +14,8 @@
 			
             <div class="splitter h20"></div>
             <?php get_template_part( 'content', "page" ); ?>
-			<?php endwhile; ?>
 		</div>
 	</div>
 </div>
+<?php endwhile; ?>
 <?php get_footer(); ?>
