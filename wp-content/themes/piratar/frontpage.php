@@ -65,50 +65,11 @@
 
 <?php } ?>
 
-<div class="section section-content section-two section-bg-gray">
-
-    <div class="section-overlay">
-
-        <div class="container-fluid">
-
-            <div class="row">
-
-                <div class="two-item two-color-purple text-xs-center col-md-6">
-
-                    <h2>Áherslumál</h2>
-                    
-                    <p>Við leggjum áherslu á nýja stjórnarskrá, auðlindir í almannaþágu, gjaldfrjálsa heilbrigðisþjónustu, þátttöku í ákvarðanatöku og átak gegn spillingu.</p>
-
-                    <p class="two-button"><a href="<?php echo get_site_url(); ?>/kosningar" class="btn btn-primary btn-white">Lesa meira</a></p>
-
-                </div>
-
-                <div class="two-item two-color-purple-light text-xs-center col-md-6">
-
-                    <h2>Framtíðarsýn</h2>
-                    
-                    <p>Ítarleg áætlun Pírata í öllum helstu málaflokkum. Þar á meðal velferðarmál, atvinnumál, landbúnaðarmál og lýðræðismál.</p>
-
-                    <p class="two-button"><a href="<?php echo get_site_url(); ?>/kosningar/framtidarsyn" class="btn btn-primary btn-white">Lesa meira</a></p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<?php switch_to_blog(2); ?>
-<?php get_template_part( 'content', "frambjodendur" ); ?>
 <?php
-    restore_current_blog();
     $news = new WP_Query('frettaflokkur=frettir&posts_per_page=5');
 ?>
 
-<div class="section section-grid section-bg-gray">
+<div class="section section-grid">
 
     <div class="container-fluid">
 
@@ -164,6 +125,80 @@
     </div>
 
 </div>
+
+
+<div class="section section-content section-bg-gray">
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <?php the_field('frontbox_left', 37894); ?>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <?php the_content(); ?>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <?php the_field('frontbox_right', 37894); ?>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="section section-content section-two section-bg-gray">
+
+    <div class="section-overlay">
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="two-item two-color-purple text-xs-center col-md-6">
+
+                    <h2>Áherslumál</h2>
+
+                    <p>Við leggjum áherslu á nýja stjórnarskrá, auðlindir í almannaþágu, gjaldfrjálsa heilbrigðisþjónustu, þátttöku í ákvarðanatöku og átak gegn spillingu.</p>
+
+                    <p class="two-button"><a href="<?php echo get_site_url(); ?>/kosningar" class="btn btn-primary btn-white">Lesa meira</a></p>
+
+                </div>
+
+                <div class="two-item two-color-purple-light text-xs-center col-md-6">
+
+                    <h2>Framtíðarsýn</h2>
+
+                    <p>Ítarleg áætlun Pírata í öllum helstu málaflokkum. Þar á meðal velferðarmál, atvinnumál, landbúnaðarmál og lýðræðismál.</p>
+
+                    <p class="two-button"><a href="<?php echo get_site_url(); ?>/kosningar/framtidarsyn" class="btn btn-primary btn-white">Lesa meira</a></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<?php switch_to_blog(2); ?>
+<?php get_template_part( 'content', "frambjodendur" ); ?>
+<?php
+    restore_current_blog();
+?>
 
 
 <?php
@@ -227,36 +262,6 @@
 
 </div>
 
-
-<div class="section section-content section-bg-gray">
-
-    <div class="container-fluid">
-
-        <div class="row">
-
-            <div class="col-md-4">
-
-                <?php the_field('frontbox_left', 37894); ?>
-
-            </div>
-
-            <div class="col-md-4">
-
-                <?php the_content(); ?>
-
-            </div>
-
-            <div class="col-md-4">
-
-                <?php the_field('frontbox_right', 37894); ?>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
 
 <div class="section section-content socialbar nomobile">
 
