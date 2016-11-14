@@ -20,7 +20,7 @@
                     <?php the_field('fronttop_content'); ?>
 
                     <p class="buttons-ctas">
-                        <a href="http://piratar.karolinafund.com/" class="btn btn-primary btn-white">Styrkja</a>
+                        <a href="<?php echo get_site_url(); ?>/taka-thatt/hvernig-tek-eg-thatt/styrkja-pirata/" class="btn btn-primary btn-white">Styrkja</a>
                         <a href="<?php echo get_site_url(); ?>/taka-thatt/hvernig-tek-eg-thatt/" class="btn btn-primary btn-white">Taka þátt</a>
                     </p>
 
@@ -49,7 +49,7 @@
                     <h1>Endurræsum Ísland</h1>
 
                     <p class="buttons-ctas">
-                        <a href="http://piratar.karolinafund.com/" class="btn btn-primary btn-white">Styrkja</a>
+                        <a href="<?php echo get_site_url(); ?>/taka-thatt/hvernig-tek-eg-thatt/styrkja-pirata/" class="btn btn-primary btn-white">Styrkja</a>
                         <a href="<?php echo get_site_url(); ?>/taka-thatt/hvernig-tek-eg-thatt/" class="btn btn-primary btn-white">Taka þátt</a>
                     </p>
 
