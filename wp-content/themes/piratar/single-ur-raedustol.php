@@ -11,7 +11,7 @@
 
         <div class="row">
 
-            <div class="col-sm-12 col-lg-9 push-lg-1">
+            <div class="col-sm-12 col-lg-9 push-lg-1 post">
 
                 <h2 class="the-title"><?php echo the_title(); ?></h2>
                 <div class="post-date"><?php the_date('d.m.Y'); ?></div>        
@@ -29,7 +29,7 @@
 
         <div class="row">
 
-            <div class="col-sm-12 col-lg-9 push-lg-1">
+            <div class="col-sm-12 col-lg-9 push-lg-1 post">
 
                 <article class="post">
 

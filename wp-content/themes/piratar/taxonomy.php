@@ -28,7 +28,7 @@ get_header(); ?>
 
         <div class="row">
 
-            <div class="col-sm-12 col-lg-9 push-lg-1">
+            <div class="col-sm-12 col-lg-9 push-lg-1 post">
 
                 <?php while ( have_posts() ) : the_post(); ?>
 
