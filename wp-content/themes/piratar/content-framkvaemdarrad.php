@@ -23,7 +23,7 @@
             <div class="splitter h20"></div>
 
             <?php
-                $custom_query = new WP_Query("fundarflokkur=framkvaemdarad&post_type=fundargerdir&posts_per_page=10&orderby=date&order=DESC"); 
+                $custom_query = new WP_Query("fundarflokkur=framkvaemdarad&post_type=fundargerdir&posts_per_page=10&orderby=meta_value&meta_key=dagsetning_fundar&meta_type=date&order=DESC");
                 while($custom_query->have_posts()) : $custom_query->the_post(); 
             ?>
 

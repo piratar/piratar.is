@@ -198,7 +198,7 @@
 
                         <ul>
                         <?php
-                            $custom_query = new WP_Query("fundarflokkur=$termname&post_type=fundargerdir&posts_per_page=999&orderby=date&order=ASC"); 
+                            $custom_query = new WP_Query("fundarflokkur=$termname&post_type=fundargerdir&posts_per_page=999&orderby=meta_value&meta_key=dagsetning_fundar&meta_type=date&order=DESC");
                             while($custom_query->have_posts()) : $custom_query->the_post();
                         ?>
                             <li><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></li>
