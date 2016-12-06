@@ -194,12 +194,15 @@
 
 </div>
 
+<?php
+/*
 <?php switch_to_blog(2); ?>
 <?php get_template_part( 'content', "frambjodendur" ); ?>
 <?php
     restore_current_blog();
 ?>
-
+*/
+?>
 
 <?php
     $news = new WP_Query('frettaflokkur=i-fjolmidlum&posts_per_page=6');
