@@ -12,3 +12,7 @@ RewriteRule ^([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*) $2 [L]
 RewriteRule ^([_0-9a-zA-Z-]+/)?(.*\.php)$ $2 [L]
 RewriteRule . index.php [L]
 
+# Remove this line if 2016-01-09 was a long time ago
+# and /stefnumal/grunnstefna-pirata/ no longer shows up in search
+# engine results.
+Redirect 301 /stefnumal/grunnstefna-pirata/ /stefna/grunnstefna/
