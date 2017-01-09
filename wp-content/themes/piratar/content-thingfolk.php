@@ -1,6 +1,6 @@
 ﻿<?php the_content(); ?>
 
-<?php $loop = new WP_Query( array( 'post_type' => 'thingfolk', 'posts_per_page' => -1,'orderby'=>'menu_order','order'=>'ASC') ); ?>
+<?php $loop = new WP_Query( array( 'post_type' => 'thingfolk', 'post_status' => 'publish', 'posts_per_page' => -1,'orderby'=>'menu_order','order'=>'ASC') ); ?>
 
 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
