@@ -7,6 +7,9 @@
 Thumbs.db
 .data/
 
+# purchased stuff that might not belong in an open repository
+wp-content/plugins/pdfembedder-premium
+
 # project specific
 /logs
 /node_modules
