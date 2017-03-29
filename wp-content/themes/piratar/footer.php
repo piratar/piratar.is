@@ -37,7 +37,7 @@
 
             <div class="footer-about col-sm-12">
 
-                <strong>©Píratar - Tortuga:</strong> Fiskislóð 31, 101 Reykjavík, <a href="mailto:piratar@piratar.is">piratar@piratar.is</a> Sími: 546-2000, Póstfang: Pósthólf 42, 121 Reykjavík
+                <strong>©Píratar - Tortuga:</strong> Síðumúli 23 (gengið inn frá Selmúla) - 108 Reykjavík, <a href="mailto:piratar@piratar.is">piratar@piratar.is</a> Sími: 546-2000, Póstfang: Pósthólf 42, 121 Reykjavík
 
             </div>
 
