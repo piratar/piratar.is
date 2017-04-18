@@ -4,20 +4,24 @@
 
 <div>
     <form role="search" action="<?php echo site_url('/'); ?>" method="get" id="searchform">
-        <input type="text" name="s" placeholder="Leita af úrskurði"/>
+        <input type="text" name="s" placeholder="Leita að úrskurði"/>
         <input type="hidden" name="post_type" value="urskurdir" /> <!-- // hidden 'products' value -->
         <input type="submit" alt="Search" value="Leita" />
     </form>
     <br>
 </div>
 
-<table>
-    <tr>
-        <td class="">Úrskurðir</td>
-        <td class="">Málsnúmer</td>
-        <td class="">Málsár</td>
-        <td class="">Dagsetning</td>
-    </tr>
+<table class="table">
+    <thead>
+        <tr>
+            <th class="">Úrskurðir</th>
+            <th class="">Málsnúmer</th>
+            <th class="">Málsár</th>
+            <th class="">Dagsetning</th>
+        </tr>
+    </thead>
+    
+    <tbody>
 
 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
     <?php
@@ -35,4 +39,5 @@
 
 <?php endwhile; ?>
 
+    </tbody>
 </table>
