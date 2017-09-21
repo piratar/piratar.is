@@ -29,6 +29,12 @@ There are two theme folders being used:
 * piratar        = piratar.is
 * piratar-child/ = piratar.is/kosningar
 
+# Development (branch)
+
+This URL pulls the development branch every 5 minutes (for now)
+
+http://dev.piratar.is:8080/
+
 
 # Setup with Docker Compose
 
